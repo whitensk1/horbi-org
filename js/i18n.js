@@ -27,6 +27,8 @@ window.HORBI_I18N = {
     footer: "HÖRBI · horbi.org",
     footer_privacy: "Privacy",
     footer_cookies: "Cookies",
+    footer_disclaimer:
+      "Product information on this website is for general reference only and may differ from packaging, labeling or the product as sold. Always follow the label and instructions of the product you purchase.",
     photo_soon: "Photo coming soon",
     seo_title: "HÖRBI — Liquid Chlorophyll & Food Supplements | Mint, Blackcurrant, Passion Fruit",
     seo_description:
@@ -62,6 +64,8 @@ window.HORBI_I18N = {
     footer: "HÖRBI · horbi.org",
     footer_privacy: "Datenschutz",
     footer_cookies: "Cookies",
+    footer_disclaimer:
+      "Produktinformationen auf dieser Website dienen nur der allgemeinen Orientierung und können von Verpackung, Kennzeichnung oder dem tatsächlich gelieferten Produkt abweichen. Maßgeblich sind Etikett und Gebrauchshinweise des erworbenen Produkts.",
     photo_soon: "Foto folgt",
     seo_title: "HÖRBI — Flüssigchlorophyll & Nahrungsergänzung | Minze, Johannisbeere, Maracuja",
     seo_description:
@@ -97,6 +101,8 @@ window.HORBI_I18N = {
     footer: "HÖRBI · horbi.org",
     footer_privacy: "Конфиденциальность",
     footer_cookies: "Cookie",
+    footer_disclaimer:
+      "Сведения о продуктах на сайте носят ознакомительный характер и могут отличаться от упаковки, маркировки или фактически поставляемого товара. Ориентируйтесь на этикетку и инструкцию к приобретённому продукту.",
     photo_soon: "Фото скоро",
     seo_title: "HÖRBI — жидкий хлорофилл и БАДы | мята, смородина, маракуйя",
     seo_description:
@@ -132,6 +138,8 @@ window.HORBI_I18N = {
     footer: "HÖRBI · horbi.org",
     footer_privacy: "Privacy",
     footer_cookies: "Cookie",
+    footer_disclaimer:
+      "Le informazioni sui prodotti presenti sul sito hanno carattere informativo e possono differire da confezione, etichetta o prodotto effettivamente fornito. Fate riferimento all’etichetta e alle istruzioni del prodotto acquistato.",
     photo_soon: "Foto in arrivo",
     seo_title: "HÖRBI — Clorofilla liquida e integratori | menta, ribes, maracuja",
     seo_description:

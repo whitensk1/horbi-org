@@ -661,6 +661,16 @@ img, video { display: block; max-width: 100%; }
   border-top: 1px solid var(--line);
   padding: 22px 18px 40px;
 }
+.foot-disclaimer {
+  width: min(var(--max), 100%);
+  margin: 14px auto 0;
+  max-width: 62ch;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--muted);
+  opacity: 0.72;
+  text-align: left;
+}
 .foot-inner {
   width: min(var(--max), 100%);
   margin: 0 auto;

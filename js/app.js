@@ -107,6 +107,7 @@
       "footer-text": "footer",
       "footer-privacy": "footer_privacy",
       "footer-cookies": "footer_cookies",
+      "footer-disclaimer": "footer_disclaimer",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
