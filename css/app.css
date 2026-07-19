@@ -439,7 +439,7 @@ img, video { display: block; max-width: 100%; }
   color: var(--muted);
 }
 
-/* Modal — constrained image + visible description */
+/* Modal — always fits viewport width; only thumbs scroll sideways */
 .overlay {
   position: fixed;
   inset: 0;
@@ -452,33 +452,46 @@ img, video { display: block; max-width: 100%; }
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
+  /* never let modal content grow the page sideways */
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 .overlay.open { opacity: 1; pointer-events: auto; }
 .sheet {
   width: min(980px, 100%);
+  max-width: 100%;
+  min-width: 0;
   max-height: min(92vh, 860px);
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 24px;
-  overflow: hidden;
+  /* vertical scroll only — horizontal overflow is clipped */
+  overflow-x: hidden;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   position: relative;
   box-shadow: 0 30px 80px rgba(0,0,0,0.18);
   transform: translateY(12px) scale(0.98);
   transition: transform 0.35s var(--ease);
+  box-sizing: border-box;
 }
 .overlay.open .sheet { transform: none; }
 .sheet-gallery {
   background: #eef1ea;
   min-height: 0;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   max-height: min(92vh, 860px);
+  overflow: hidden; /* thumbs scroll inside, not the whole sheet */
 }
 .sheet-main {
   flex: 1 1 auto;
   min-height: 220px;
+  min-width: 0;
   max-height: calc(92vh - 96px);
   display: grid;
   place-items: center;
@@ -488,6 +501,7 @@ img, video { display: block; max-width: 100%; }
 .sheet-main img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   max-height: calc(92vh - 120px);
   object-fit: contain;
   object-position: center;
@@ -503,9 +517,16 @@ img, video { display: block; max-width: 100%; }
   gap: 8px;
   padding: 10px 12px 12px;
   overflow-x: auto;
+  overflow-y: hidden;
   border-top: 1px solid var(--line);
   background: #f7f6f2;
   flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .thumbs button {
   flex: 0 0 56px;
@@ -533,8 +554,12 @@ img, video { display: block; max-width: 100%; }
   flex-direction: column;
   gap: 10px;
   min-height: 0;
+  min-width: 0;
+  max-width: 100%;
   max-height: min(92vh, 860px);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 .sheet-body .sku {
   font-size: 11px;
@@ -549,21 +574,32 @@ img, video { display: block; max-width: 100%; }
   letter-spacing: -0.03em;
   line-height: 1.15;
   font-weight: 800;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 #sheet-desc {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding-right: 4px;
+  padding-right: 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.5;
-  max-width: 100%;
   overflow-wrap: anywhere;
   word-break: break-word;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+#sheet-desc * {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 #sheet-desc .lead {
   color: var(--ink);
@@ -590,11 +626,11 @@ img, video { display: block; max-width: 100%; }
 }
 #sheet-desc ul {
   margin: 0 0 6px;
-  padding-left: 18px;
+  padding-left: 1.15em;
   max-width: 100%;
 }
 #sheet-desc li { margin-bottom: 3px; }
-/* tables: never blow past the card on mobile */
+/* tables: stack-friendly fixed layout, never wider than card */
 #sheet-desc .spec {
   width: 100%;
   max-width: 100%;
@@ -617,9 +653,9 @@ img, video { display: block; max-width: 100%; }
 #sheet-desc .spec th {
   background: var(--green-soft);
   color: var(--ink);
-  width: 42%;
+  width: 40%;
 }
-#sheet-desc .spec td { width: 58%; }
+#sheet-desc .spec td { width: 60%; }
 #sheet-desc .soon-line {
   font-size: clamp(1.1rem, 4.5vw, 1.6rem);
   font-weight: 900;
@@ -633,6 +669,13 @@ img, video { display: block; max-width: 100%; }
   gap: 8px;
   margin-top: 4px;
   flex: 0 0 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+.sheet-actions .btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 .x {
   position: absolute;
@@ -658,30 +701,44 @@ img, video { display: block; max-width: 100%; }
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   .sheet {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     max-height: 94vh;
     max-height: 94dvh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     border-radius: 18px;
     -webkit-overflow-scrolling: touch;
   }
-  .sheet-gallery { max-height: none; }
+  .sheet-gallery {
+    max-height: none;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
   .sheet-main {
     max-height: 38vh;
     min-height: 160px;
     padding: 10px;
+    min-width: 0;
   }
-  .sheet-main img { max-height: 36vh; }
+  .sheet-main img { max-height: 36vh; max-width: 100%; }
   .sheet-body {
     max-height: none;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
     padding: 16px 14px 18px;
     gap: 8px;
     min-width: 0;
+    max-width: 100%;
+    width: 100%;
   }
   .sheet-body h2 {
     font-size: 1.15rem;
@@ -689,9 +746,12 @@ img, video { display: block; max-width: 100%; }
   }
   #sheet-desc {
     max-height: none;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
     font-size: 13px;
     line-height: 1.45;
+    width: 100%;
+    min-width: 0;
   }
   #sheet-desc .lead { font-size: 14px; }
   #sheet-desc h4 {
@@ -700,6 +760,7 @@ img, video { display: block; max-width: 100%; }
   }
   #sheet-desc .spec {
     font-size: 12px;
+    width: 100%;
   }
   #sheet-desc .spec th,
   #sheet-desc .spec td {
@@ -707,6 +768,7 @@ img, video { display: block; max-width: 100%; }
   }
   .sheet-actions {
     flex-direction: column;
+    width: 100%;
   }
   .sheet-actions .btn {
     width: 100%;
@@ -718,16 +780,25 @@ img, video { display: block; max-width: 100%; }
   .nav-links > a:not(.keep) { display: none; }
   .lang button span.lang-code { display: none; }
   .hero { min-height: 78svh; padding-top: 88px; }
-  .overlay { padding: 0; }
+  .overlay {
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
   .sheet {
+    width: 100%;
+    max-width: 100vw;
     max-height: 100vh;
     max-height: 100dvh;
     border-radius: 16px 16px 0 0;
     margin-top: auto;
     min-height: min(92dvh, 100%);
+    overflow-x: hidden;
   }
   .sheet-body {
     padding: 14px 12px 20px;
+    width: 100%;
+    max-width: 100%;
   }
   .sheet-body h2 {
     font-size: 1.05rem;
@@ -735,22 +806,56 @@ img, video { display: block; max-width: 100%; }
   }
   #sheet-desc {
     font-size: 12.5px;
+    width: 100%;
   }
   #sheet-desc .lead {
     font-size: 13px;
   }
   #sheet-desc ul {
-    padding-left: 16px;
+    padding-left: 1.1em;
   }
-  #sheet-desc .spec {
-    font-size: 11.5px;
+  /* on very small screens stack table rows as cards */
+  #sheet-desc .spec,
+  #sheet-desc .spec thead,
+  #sheet-desc .spec tbody,
+  #sheet-desc .spec tr,
+  #sheet-desc .spec th,
+  #sheet-desc .spec td {
+    display: block;
+    width: 100%;
+  }
+  #sheet-desc .spec thead { display: none; }
+  #sheet-desc .spec tr {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    background: #fff;
   }
   #sheet-desc .spec th,
   #sheet-desc .spec td {
-    padding: 6px 7px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 10px;
+    width: 100%;
+  }
+  #sheet-desc .spec td:last-child { border-bottom: 0; }
+  #sheet-desc .spec td {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  #sheet-desc .spec th {
+    background: var(--green-soft);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
   #sheet-desc .soon-line {
     font-size: 1.15rem;
+  }
+  .thumbs {
+    width: 100%;
+    max-width: 100%;
   }
   .thumbs button {
     flex: 0 0 48px;

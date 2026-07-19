@@ -157,6 +157,7 @@
 
     $("overlay").classList.add("open");
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflowX = "hidden";
   }
 
   function setMain(src) {
@@ -166,6 +167,7 @@
   function closeModal() {
     $("overlay").classList.remove("open");
     document.body.style.overflow = "";
+    document.documentElement.style.overflowX = "";
   }
 
   function esc(s) {
