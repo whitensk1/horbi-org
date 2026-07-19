@@ -347,7 +347,8 @@ img, video { display: block; max-width: 100%; }
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  /* grows with desktop width so type can go ~2× on large screens */
+  max-width: min(1120px, 94vw);
   width: 100%;
   margin: 0 auto;
   padding: 0 4px 8px;
@@ -360,10 +361,11 @@ img, video { display: block; max-width: 100%; }
 .hero-brand {
   display: flex;
   justify-content: center;
-  margin: 0 0 22px;
+  margin: 0 0 clamp(16px, 2.2vw, 32px);
 }
 .hero-logo {
-  width: min(72vw, 380px);
+  /* phone ~72vw; desktop scales up to ~2× previous 380px cap */
+  width: min(72vw, clamp(280px, 36vw, 760px));
   height: auto;
   max-height: none;
   opacity: 0.98;
@@ -374,24 +376,31 @@ img, video { display: block; max-width: 100%; }
 }
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  /* ~2.4rem phones → up to ~8rem on big desktops */
+  font-size: clamp(2.35rem, 1.1rem + 5.8vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.045em;
-  line-height: 0.96;
+  line-height: 0.94;
   white-space: pre-line;
 }
 .hero .sub {
-  margin: 18px auto 0;
-  max-width: 38ch;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin: clamp(14px, 1.8vw, 28px) auto 0;
+  max-width: min(42ch, 92%);
+  font-size: clamp(1rem, 0.85rem + 0.9vw, 1.75rem);
+  line-height: 1.45;
   color: rgba(255,255,255,0.86);
 }
 .actions {
-  margin-top: 28px;
+  margin-top: clamp(22px, 2.5vw, 40px);
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: clamp(10px, 1.2vw, 16px);
   justify-content: center;
+}
+.hero .btn {
+  min-height: clamp(46px, 3.2vw, 58px);
+  padding: 0 clamp(20px, 2vw, 32px);
+  font-size: clamp(14px, 0.85rem + 0.35vw, 17px);
 }
 .btn {
   display: inline-flex;
@@ -721,7 +730,13 @@ img, video { display: block; max-width: 100%; }
   place-items: center;
   padding: 12px;
   overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
 }
+.sheet-main:active { cursor: grabbing; }
 .sheet-main img {
   width: 100%;
   height: 100%;
@@ -730,7 +745,51 @@ img, video { display: block; max-width: 100%; }
   object-fit: contain;
   object-position: center;
   border-radius: 12px;
+  pointer-events: none; /* swipe hits the container */
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
+.sheet-main.is-swiping img {
+  transition: none;
+}
+/* subtle swipe hint arrows on touch/desktop */
+.sheet-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  opacity: 0.92;
+}
+.sheet-nav:hover { opacity: 1; }
+.sheet-nav.prev { left: 10px; }
+.sheet-nav.next { right: 10px; }
+.sheet-nav[hidden] { display: none !important; }
+.sheet-counter {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(18, 20, 15, 0.55);
+  color: #fff;
+  pointer-events: none;
+}
+.sheet-counter[hidden] { display: none !important; }
 .sheet-main .ph {
   color: var(--muted);
   text-align: center;
@@ -1011,6 +1070,9 @@ img, video { display: block; max-width: 100%; }
   .hero-logo { width: min(78vw, 300px); }
   .hero h1 { font-size: clamp(2.1rem, 9vw, 3.2rem); }
   .hero-fade { height: 48px; }
+  .sheet-nav { width: 36px; height: 36px; font-size: 20px; }
+  .sheet-nav.prev { left: 6px; }
+  .sheet-nav.next { right: 6px; }
   .overlay {
     padding: 0;
     width: 100%;
