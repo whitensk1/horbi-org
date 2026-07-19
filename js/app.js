@@ -105,11 +105,17 @@
       "contact-title": "contact_title",
       "contact-body": "contact_body",
       "footer-text": "footer",
+      "footer-privacy": "footer_privacy",
+      "footer-cookies": "footer_cookies",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
       if (el) el.textContent = t(key);
     });
+    const fp = $("footer-privacy");
+    if (fp) fp.href = `privacy.html?lang=${lang}`;
+    const fc = $("footer-cookies");
+    if (fc) fc.href = `cookies.html?lang=${lang}`;
     const contactLink = $("contact-link");
     if (contactLink) {
       contactLink.href = CONTACT;

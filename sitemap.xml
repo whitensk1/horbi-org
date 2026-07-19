@@ -33,7 +33,21 @@
     <loc>https://horbi.org/privacy.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horbi.org/privacy.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://horbi.org/privacy.html?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://horbi.org/privacy.html?lang=de" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://horbi.org/privacy.html?lang=it" />
+  </url>
+  <url>
+    <loc>https://horbi.org/cookies.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horbi.org/cookies.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://horbi.org/cookies.html?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://horbi.org/cookies.html?lang=de" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://horbi.org/cookies.html?lang=it" />
   </url>
   <url>
     <loc>https://horbi.org/?lang=ru</loc>

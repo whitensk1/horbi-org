@@ -25,6 +25,8 @@ window.HORBI_I18N = {
     contact_body: "For partnership and wholesale inquiries, please get in touch.",
     contact_cta: "Contact",
     footer: "HÖRBI · horbi.org",
+    footer_privacy: "Privacy",
+    footer_cookies: "Cookies",
     photo_soon: "Photo coming soon",
     seo_title: "HÖRBI — Liquid Chlorophyll & Food Supplements | Mint, Blackcurrant, Passion Fruit",
     seo_description:
@@ -58,6 +60,8 @@ window.HORBI_I18N = {
     contact_body: "Für Partnerschaft und Großhandel kontaktieren Sie uns bitte.",
     contact_cta: "Kontakt",
     footer: "HÖRBI · horbi.org",
+    footer_privacy: "Datenschutz",
+    footer_cookies: "Cookies",
     photo_soon: "Foto folgt",
     seo_title: "HÖRBI — Flüssigchlorophyll & Nahrungsergänzung | Minze, Johannisbeere, Maracuja",
     seo_description:
@@ -91,6 +95,8 @@ window.HORBI_I18N = {
     contact_body: "По вопросам партнёрства и оптовых заказов — свяжитесь с нами.",
     contact_cta: "Контакт",
     footer: "HÖRBI · horbi.org",
+    footer_privacy: "Конфиденциальность",
+    footer_cookies: "Cookie",
     photo_soon: "Фото скоро",
     seo_title: "HÖRBI — жидкий хлорофилл и БАДы | мята, смородина, маракуйя",
     seo_description:
@@ -124,6 +130,8 @@ window.HORBI_I18N = {
     contact_body: "Per partnership e ordini all’ingrosso, contattateci.",
     contact_cta: "Contatto",
     footer: "HÖRBI · horbi.org",
+    footer_privacy: "Privacy",
+    footer_cookies: "Cookie",
     photo_soon: "Foto in arrivo",
     seo_title: "HÖRBI — Clorofilla liquida e integratori | menta, ribes, maracuja",
     seo_description:
