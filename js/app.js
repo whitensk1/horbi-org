@@ -212,7 +212,7 @@
     if (!nav.contains(e.target)) closeNav();
   });
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 820) closeNav();
+    if (window.innerWidth >= 900) closeNav();
   });
 
   $("modal-close")?.addEventListener("click", closeModal);

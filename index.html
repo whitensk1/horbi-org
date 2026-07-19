@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/app.css?v=20260719b" />
 </head>
 <body>
   <nav class="nav" id="site-nav">
@@ -20,9 +20,9 @@
         <img src="media/brand/logo.svg" alt="HÖRBI" />
       </a>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
       </button>
       <div class="nav-panel" id="nav-panel">
         <div class="nav-links">
@@ -50,7 +50,8 @@
     <div class="hero-fade" aria-hidden="true"></div>
     <div class="hero-copy">
       <div class="hero-brand">
-        <img src="media/brand/logo.svg" alt="HÖRBI" class="hero-logo" width="420" height="135" />
+        <!-- real white SVG (iOS often ignores CSS filter on SVG <img>) -->
+        <img src="media/brand/logo-white.svg" alt="HÖRBI" class="hero-logo" width="420" height="135" />
       </div>
       <h1 id="hero-title">Clean formulas.
 Clear energy.</h1>
