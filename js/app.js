@@ -88,9 +88,16 @@
     const tx = productText(p);
     const cover = coverOf(p);
     const soon = p.status === "soon";
-    const media = cover
-      ? `<img class="card-img" src="${esc(cover)}" alt="${esc(tx.name)}" loading="lazy" decoding="async" width="600" height="750" />`
-      : `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
+    // Live products with photos: only <img>. Never render «фото скоро» over real images.
+    // Soon products without photos: placeholder badge only.
+    let media;
+    if (cover) {
+      media = `<img class="card-img" src="${esc(cover)}" alt="${esc(tx.name)}" loading="lazy" decoding="async" width="600" height="750" />`;
+    } else if (soon) {
+      media = `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
+    } else {
+      media = `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
+    }
     return `
       <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
         <div class="card-media">
