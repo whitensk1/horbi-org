@@ -4,6 +4,8 @@
   const I18N = window.HORBI_I18N;
   const PRODUCTS = window.HORBI_PRODUCTS || [];
   const LANGS = ["en", "de", "ru", "it"];
+  const WB_BRAND = "https://www.wildberries.ru/brands/312311510-horbi";
+  const CONTACT = "https://dluck.ru/#kontact";
   const $ = (id) => document.getElementById(id);
 
   let lang = localStorage.getItem("horbi_lang") || detectLang();
@@ -19,7 +21,11 @@
   }
 
   function productText(p) {
-    return (p.i18n && (p.i18n[lang] || p.i18n.en)) || { name: p.id, short: "", description: "" };
+    return (p.i18n && (p.i18n[lang] || p.i18n.ru || p.i18n.en)) || {
+      name: p.id,
+      short: "",
+      descriptionHtml: "",
+    };
   }
 
   function applyStatic() {
@@ -28,6 +34,7 @@
     const map = {
       "nav-products": "nav_products",
       "nav-about": "nav_about",
+      "nav-contact": "nav_contact",
       "hero-kicker": "hero_kicker",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
@@ -37,15 +44,26 @@
       "sec-soon": "section_soon",
       "about-title": "about_title",
       "about-body": "about_body",
+      "contact-title": "contact_title",
+      "contact-body": "contact_body",
+      "contact-cta": "contact_cta",
+      "contact-note": "contact_note",
       "footer-text": "footer",
-      "modal-close-label": "modal_close",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
-      if (!el) return;
-      if (key === "hero_title") el.textContent = t(key);
-      else el.textContent = t(key);
+      if (el) el.textContent = t(key);
     });
+    const wb = $("hero-cta2");
+    if (wb) wb.href = WB_BRAND;
+    const shop = $("nav-shop");
+    if (shop) {
+      shop.href = WB_BRAND;
+      shop.textContent = t("nav_shop");
+    }
+    const contactBtn = $("contact-link");
+    if (contactBtn) contactBtn.href = CONTACT;
+
     document.querySelectorAll(".lang button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
@@ -62,7 +80,6 @@
     $("grid-soon").innerHTML = soon.map(cardHTML).join("");
 
     document.querySelectorAll(".card[data-id]").forEach((card) => {
-      if (card.classList.contains("soon")) return;
       card.addEventListener("click", () => openProduct(card.dataset.id));
     });
   }
@@ -72,10 +89,10 @@
     const cover = coverOf(p);
     const soon = p.status === "soon";
     const media = cover
-      ? `<img src="${esc(cover)}" alt="" loading="lazy" onerror="this.remove();this.parentElement.querySelector('.ph').hidden=false" /><div class="ph" hidden>${esc(t("photo_soon"))}</div>`
-      : `<div class="ph">${esc(t("photo_soon"))}</div>`;
+      ? `<img src="${esc(cover)}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ph').hidden=false" /><div class="ph" hidden>${esc(t("photo_soon"))}</div>`
+      : `<div class="ph soon-ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
     return `
-      <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}" ${soon ? "disabled" : ""}>
+      <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
         <div class="card-media">
           ${soon ? `<span class="badge">${esc(t("soon_badge"))}</span>` : ""}
           ${media}
@@ -83,21 +100,22 @@
         <div class="card-body">
           <h3>${esc(tx.name)}</h3>
           <p>${esc(tx.short)}</p>
-          ${soon ? "" : `<div class="more">${esc(t("card_open"))} →</div>`}
+          <div class="more">${esc(soon ? t("soon_badge") : t("card_open"))} →</div>
         </div>
       </button>`;
   }
 
   function openProduct(id) {
     const p = PRODUCTS.find((x) => x.id === id);
-    if (!p || p.status !== "live") return;
+    if (!p) return;
     const tx = productText(p);
     $("sheet-name").textContent = tx.name;
-    $("sheet-desc").textContent = tx.description;
+    $("sheet-desc").innerHTML = tx.descriptionHtml || `<p>${esc(tx.short || "")}</p>`;
     $("sheet-sku").textContent = p.sku || "HÖRBI";
+
     const wb = $("sheet-wb");
-    if (p.wb) {
-      wb.href = p.wb;
+    if (p.status === "live" && (p.wb || WB_BRAND)) {
+      wb.href = p.wb || WB_BRAND;
       wb.hidden = false;
       wb.textContent = t("modal_wb");
     } else {
@@ -108,14 +126,16 @@
     const main = $("sheet-main");
     const thumbs = $("sheet-thumbs");
     if (!images.length) {
-      main.innerHTML = `<div class="ph">${esc(t("photo_soon"))}</div>`;
+      main.innerHTML = `<div class="ph soon-ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
       thumbs.innerHTML = "";
+      thumbs.hidden = true;
     } else {
+      thumbs.hidden = false;
       setMain(images[0]);
       thumbs.innerHTML = images
         .map(
           (src, i) =>
-            `<button type="button" class="${i === 0 ? "active" : ""}" data-src="${esc(src)}"><img src="${esc(src)}" alt="" /></button>`
+            `<button type="button" class="${i === 0 ? "active" : ""}" data-src="${esc(src)}"><img src="${esc(src)}" alt="" loading="lazy" /></button>`
         )
         .join("");
       thumbs.querySelectorAll("button").forEach((b) => {
@@ -132,7 +152,7 @@
   }
 
   function setMain(src) {
-    $("sheet-main").innerHTML = `<img src="${esc(src)}" alt="" onerror="this.parentElement.innerHTML='<div class=ph>${esc(t("photo_soon"))}</div>'" />`;
+    $("sheet-main").innerHTML = `<img src="${esc(src)}" alt="" />`;
   }
 
   function closeModal() {
@@ -148,7 +168,6 @@
       .replace(/"/g, "&quot;");
   }
 
-  // events
   document.querySelectorAll(".lang button").forEach((b) => {
     b.addEventListener("click", () => {
       lang = b.dataset.lang;

@@ -398,7 +398,99 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
   font-size: 15px;
   line-height: 1.55;
+}
+#sheet-desc {
   flex: 1;
+  overflow: auto;
+  max-height: min(52vh, 480px);
+  padding-right: 4px;
+}
+#sheet-desc .lead {
+  color: var(--fg);
+  font-size: 15.5px;
+  margin-bottom: 10px !important;
+}
+#sheet-desc .note {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 14px !important;
+}
+#sheet-desc h4 {
+  margin: 16px 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 800;
+}
+#sheet-desc ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+#sheet-desc li { margin-bottom: 4px; }
+#sheet-desc .spec {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 8px 0 12px;
+}
+#sheet-desc .spec th,
+#sheet-desc .spec td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+}
+#sheet-desc .spec th {
+  background: rgba(182, 242, 74, 0.08);
+  color: var(--fg);
+  font-weight: 700;
+}
+#sheet-desc .soon-line {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--green);
+  margin: 12px 0 !important;
+}
+.card-media .soon-ph,
+.sheet-main .soon-ph {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.soon-big {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.contact-block {
+  width: min(720px, 100%);
+  margin: 36px auto 0;
+  padding: 28px 22px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(182, 242, 74, 0.06), transparent);
+}
+.contact-block h2 { margin: 0 0 10px; letter-spacing: -0.03em; }
+.contact-block p { margin: 0 auto 14px; color: var(--muted); max-width: 42ch; }
+.contact-block .note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.contact-block .note a {
+  color: var(--green);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(182, 242, 74, 0.35);
 }
 .sheet-actions {
   display: flex;
