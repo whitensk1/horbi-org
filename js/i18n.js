@@ -26,6 +26,12 @@ window.HORBI_I18N = {
     contact_cta: "Contact",
     footer: "HÖRBI · horbi.org",
     photo_soon: "Photo coming soon",
+    seo_title: "HÖRBI — Liquid Chlorophyll & Food Supplements | Mint, Blackcurrant, Passion Fruit",
+    seo_description:
+      "HÖRBI — modern food supplements. Liquid chlorophyll concentrate in three flavors: wild mint, juicy blackcurrant, tropical passion fruit. Clean formulas on Wildberries.",
+    seo_keywords:
+      "HÖRBI, liquid chlorophyll, chlorophyll concentrate, food supplements, dietary supplements, mint chlorophyll, blackcurrant chlorophyll, passion fruit chlorophyll, Wildberries",
+    seo_og_locale: "en_US",
   },
   de: {
     nav_products: "Produkte",
@@ -53,6 +59,12 @@ window.HORBI_I18N = {
     contact_cta: "Kontakt",
     footer: "HÖRBI · horbi.org",
     photo_soon: "Foto folgt",
+    seo_title: "HÖRBI — Flüssigchlorophyll & Nahrungsergänzung | Minze, Johannisbeere, Maracuja",
+    seo_description:
+      "HÖRBI — moderne Nahrungsergänzung. Flüssiges Chlorophyll-Konzentrat in drei Geschmacksrichtungen: Minze, Johannisbeere, Maracuja. Klare Formeln auf Wildberries.",
+    seo_keywords:
+      "HÖRBI, Flüssigchlorophyll, Chlorophyll-Konzentrat, Nahrungsergänzungsmittel, Minze, Johannisbeere, Maracuja, Wildberries",
+    seo_og_locale: "de_DE",
   },
   ru: {
     nav_products: "Продукты",
@@ -80,6 +92,12 @@ window.HORBI_I18N = {
     contact_cta: "Контакт",
     footer: "HÖRBI · horbi.org",
     photo_soon: "Фото скоро",
+    seo_title: "HÖRBI — жидкий хлорофилл и БАДы | мята, смородина, маракуйя",
+    seo_description:
+      "HÖRBI — бренд БАДов. Жидкий хлорофилл-концентрат в трёх вкусах: дикая мята, сочная смородина, тропическая маракуйя. Чистые формулы на Wildberries. Официальный сайт horbi.org.",
+    seo_keywords:
+      "HÖRBI, хёрби, жидкий хлорофилл, хлорофилл концентрат, БАД, БАДы, хлорофилл мята, хлорофилл смородина, хлорофилл маракуйя, Wildberries, детокс",
+    seo_og_locale: "ru_RU",
   },
   it: {
     nav_products: "Prodotti",
@@ -107,5 +125,11 @@ window.HORBI_I18N = {
     contact_cta: "Contatto",
     footer: "HÖRBI · horbi.org",
     photo_soon: "Foto in arrivo",
+    seo_title: "HÖRBI — Clorofilla liquida e integratori | menta, ribes, maracuja",
+    seo_description:
+      "HÖRBI — brand di integratori. Concentrato di clorofilla liquida in tre gusti: menta, ribes nero, maracuja. Formule chiare su Wildberries.",
+    seo_keywords:
+      "HÖRBI, clorofilla liquida, concentrato di clorofilla, integratori, menta, ribes, maracuja, Wildberries",
+    seo_og_locale: "it_IT",
   },
 };

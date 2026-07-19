@@ -6,18 +6,76 @@
   const LANGS = ["en", "de", "ru", "it"];
   const WB_BRAND = "https://www.wildberries.ru/brands/312311510-horbi";
   const CONTACT = "https://dluck.ru/#kontact";
+  const SITE = "https://horbi.org/";
   const $ = (id) => document.getElementById(id);
 
-  let lang = localStorage.getItem("horbi_lang") || detectLang();
+  let lang = detectLang();
   if (!LANGS.includes(lang)) lang = "en";
 
   function detectLang() {
+    try {
+      const q = new URLSearchParams(location.search).get("lang");
+      if (q && LANGS.includes(q.toLowerCase())) return q.toLowerCase();
+    } catch (_) {}
+    const stored = localStorage.getItem("horbi_lang");
+    if (stored && LANGS.includes(stored)) return stored;
     const n = (navigator.language || "en").slice(0, 2).toLowerCase();
     return LANGS.includes(n) ? n : "en";
   }
 
   function t(key) {
     return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key;
+  }
+
+  function setMeta(nameOrProp, content, attr) {
+    if (!content) return;
+    const a = attr || (nameOrProp.startsWith("og:") ? "property" : "name");
+    let el = document.head.querySelector(`meta[${a}="${nameOrProp}"]`);
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(a, nameOrProp);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", content);
+  }
+
+  function applySeo() {
+    const title = t("seo_title");
+    const desc = t("seo_description");
+    const keys = t("seo_keywords");
+    const locale = t("seo_og_locale") || "en_US";
+    document.title = title;
+    document.documentElement.lang = lang;
+    setMeta("description", desc);
+    setMeta("keywords", keys);
+    setMeta("og:title", title, "property");
+    setMeta("og:description", desc, "property");
+    setMeta("og:locale", locale, "property");
+    setMeta("og:url", `${SITE}?lang=${lang}`, "property");
+    setMeta("twitter:title", title);
+    setMeta("twitter:description", desc);
+    const md = $("meta-description");
+    if (md) md.setAttribute("content", desc);
+    const mk = $("meta-keywords");
+    if (mk) mk.setAttribute("content", keys);
+    const ogt = $("og-title");
+    if (ogt) ogt.setAttribute("content", title);
+    const ogd = $("og-description");
+    if (ogd) ogd.setAttribute("content", desc);
+    const ogl = $("og-locale");
+    if (ogl) ogl.setAttribute("content", locale);
+    const twt = $("tw-title");
+    if (twt) twt.setAttribute("content", title);
+    const twd = $("tw-description");
+    if (twd) twd.setAttribute("content", desc);
+    // keep URL shareable with ?lang=
+    try {
+      const u = new URL(location.href);
+      if (u.searchParams.get("lang") !== lang) {
+        u.searchParams.set("lang", lang);
+        history.replaceState(null, "", u.pathname + "?" + u.searchParams.toString() + u.hash);
+      }
+    } catch (_) {}
   }
 
   function productText(p) {
@@ -30,7 +88,7 @@
 
   function applyStatic() {
     document.documentElement.lang = lang;
-    document.title = "HÖRBI";
+    applySeo();
     const map = {
       "nav-products": "nav_products",
       "nav-about": "nav_about",

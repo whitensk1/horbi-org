@@ -1,0 +1,27 @@
+{
+  "name": "HÖRBI — Food Supplements",
+  "short_name": "HÖRBI",
+  "description": "Liquid chlorophyll and clean food-supplement formulas from HÖRBI.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#e2e8db",
+  "theme_color": "#2f6b3a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["shopping", "health"],
+  "icons": [
+    {
+      "src": "media/brand/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "media/brand/og-cover.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

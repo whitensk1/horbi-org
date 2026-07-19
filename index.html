@@ -1,23 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HÖRBI</title>
-  <meta name="description" content="HÖRBI — food supplements. Liquid chlorophyll and more. DE / EN / RU / IT." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!-- Primary SEO -->
+  <title>HÖRBI — Liquid Chlorophyll & Food Supplements | Mint, Blackcurrant, Passion Fruit</title>
+  <meta name="description" id="meta-description" content="HÖRBI — modern food supplements. Liquid chlorophyll concentrate in three flavors: wild mint, juicy blackcurrant, tropical passion fruit. Clean formulas on Wildberries. DE / EN / RU / IT." />
+  <meta name="keywords" id="meta-keywords" content="HÖRBI, liquid chlorophyll, chlorophyll concentrate, food supplements, dietary supplements, mint chlorophyll, blackcurrant chlorophyll, passion fruit chlorophyll, Wildberries, БАД, жидкий хлорофилл, хлорофилл концентрат" />
   <meta name="author" content="HÖRBI" />
+  <meta name="creator" content="HÖRBI" />
+  <meta name="publisher" content="HÖRBI" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="yandex" content="index, follow" />
+  <meta name="theme-color" content="#2f6b3a" />
+  <meta name="color-scheme" content="light" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Canonical & hreflang (multi-language UI on one URL) -->
+  <link rel="canonical" id="canonical-link" href="https://horbi.org/" />
+  <link rel="alternate" hreflang="x-default" href="https://horbi.org/" />
+  <link rel="alternate" hreflang="en" href="https://horbi.org/?lang=en" />
+  <link rel="alternate" hreflang="ru" href="https://horbi.org/?lang=ru" />
+  <link rel="alternate" hreflang="de" href="https://horbi.org/?lang=de" />
+  <link rel="alternate" hreflang="it" href="https://horbi.org/?lang=it" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="HÖRBI" />
+  <meta property="og:locale" id="og-locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:url" id="og-url" content="https://horbi.org/" />
+  <meta property="og:title" id="og-title" content="HÖRBI — Liquid Chlorophyll & Food Supplements" />
+  <meta property="og:description" id="og-description" content="Liquid chlorophyll concentrate in three flavors — mint, blackcurrant, passion fruit. Clean formulas. Available on Wildberries." />
+  <meta property="og:image" content="https://horbi.org/media/brand/og-cover.jpg" />
+  <meta property="og:image:secure_url" content="https://horbi.org/media/brand/og-cover.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HÖRBI liquid chlorophyll food supplement" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="tw-title" content="HÖRBI — Liquid Chlorophyll & Food Supplements" />
+  <meta name="twitter:description" id="tw-description" content="Liquid chlorophyll in mint, blackcurrant and passion fruit. Clean formulas from HÖRBI." />
+  <meta name="twitter:image" content="https://horbi.org/media/brand/og-cover.jpg" />
+  <meta name="twitter:image:alt" content="HÖRBI liquid chlorophyll" />
+
+  <!-- Icons & PWA-ish -->
   <link rel="icon" href="media/brand/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="media/brand/og-cover.jpg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="application-name" content="HÖRBI" />
+  <meta name="apple-mobile-web-app-title" content="HÖRBI" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.wildberries.ru" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/app.css?v=20260719d" />
+  <link rel="stylesheet" href="css/app.css?v=20260719e" />
+  <link rel="preload" as="image" href="media/brand/logo-white.svg" />
+
+  <!-- Structured data: Organization + WebSite + Brand + Products -->
+  <script type="application/ld+json" id="ld-json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://horbi.org/#organization",
+        "name": "HÖRBI",
+        "alternateName": ["HORBI", "Хёрби", "Херби"],
+        "url": "https://horbi.org/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://horbi.org/media/brand/logo.svg",
+          "caption": "HÖRBI logo"
+        },
+        "image": "https://horbi.org/media/brand/og-cover.jpg",
+        "description": "HÖRBI is a modern food-supplement brand. Liquid chlorophyll concentrate and more clean formulas.",
+        "sameAs": [
+          "https://www.wildberries.ru/brands/312311510-horbi"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "url": "https://dluck.ru/#kontact",
+          "availableLanguage": ["Russian", "English", "German", "Italian"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://horbi.org/#website",
+        "url": "https://horbi.org/",
+        "name": "HÖRBI",
+        "description": "Official HÖRBI brand website — liquid chlorophyll and food supplements.",
+        "publisher": { "@id": "https://horbi.org/#organization" },
+        "inLanguage": ["en", "ru", "de", "it"],
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": "https://horbi.org/"
+        }
+      },
+      {
+        "@type": "Brand",
+        "@id": "https://horbi.org/#brand",
+        "name": "HÖRBI",
+        "logo": "https://horbi.org/media/brand/logo.svg",
+        "url": "https://horbi.org/"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://horbi.org/#products",
+        "name": "HÖRBI products available now",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 3,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": { "@id": "https://horbi.org/#product-myata" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": { "@id": "https://horbi.org/#product-smorodina" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": { "@id": "https://horbi.org/#product-marakuya" }
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://horbi.org/#product-myata",
+        "name": "HÖRBI Chlorophyll “Wild Mint” 500 ml",
+        "alternateName": [
+          "HÖRBI Хлорофилл «Дикая мята» 500 мл",
+          "HÖRBI Chlorophyll Wilde Minze",
+          "HÖRBI Clorofilla Menta selvatica"
+        ],
+        "description": "Liquid chlorophyll concentrate with wild-mint taste — chlorophyll source and additional copper. 500 ml, up to 100 servings.",
+        "image": [
+          "https://horbi.org/media/web/myata/00.jpg"
+        ],
+        "sku": "CHL-MINT-500",
+        "brand": { "@id": "https://horbi.org/#brand" },
+        "category": "Food supplements / Liquid chlorophyll",
+        "url": "https://horbi.org/#products",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.wildberries.ru/catalog/1094870954/detail.aspx",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Wildberries"
+          }
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://horbi.org/#product-smorodina",
+        "name": "HÖRBI Chlorophyll “Juicy Blackcurrant” 500 ml",
+        "alternateName": [
+          "HÖRBI Хлорофилл «Сочная смородина» 500 мл",
+          "HÖRBI Chlorophyll Saftige Johannisbeere",
+          "HÖRBI Clorofilla Ribes nero"
+        ],
+        "description": "Liquid chlorophyll with juicy blackcurrant taste — chlorophyll source and additional copper. 500 ml.",
+        "image": [
+          "https://horbi.org/media/web/smorodina/00.jpg"
+        ],
+        "sku": "CHL-CURRANT-500",
+        "brand": { "@id": "https://horbi.org/#brand" },
+        "category": "Food supplements / Liquid chlorophyll",
+        "url": "https://horbi.org/#products",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.wildberries.ru/catalog/1095345290/detail.aspx",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Wildberries"
+          }
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://horbi.org/#product-marakuya",
+        "name": "HÖRBI Chlorophyll “Tropical Passion Fruit” 500 ml",
+        "alternateName": [
+          "HÖRBI Хлорофилл «Тропическая маракуйя» 500 мл",
+          "HÖRBI Chlorophyll Tropische Maracuja",
+          "HÖRBI Clorofilla Maracuja tropicale"
+        ],
+        "description": "Liquid chlorophyll with tropical passion-fruit taste — chlorophyll source and additional copper. 500 ml.",
+        "image": [
+          "https://horbi.org/media/web/marakuya/00.jpg"
+        ],
+        "sku": "CHL-PASSION-500",
+        "brand": { "@id": "https://horbi.org/#brand" },
+        "category": "Food supplements / Liquid chlorophyll",
+        "url": "https://horbi.org/#products",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.wildberries.ru/catalog/1095385962/detail.aspx",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Wildberries"
+          }
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://horbi.org/#webpage",
+        "url": "https://horbi.org/",
+        "name": "HÖRBI — Liquid Chlorophyll & Food Supplements",
+        "isPartOf": { "@id": "https://horbi.org/#website" },
+        "about": { "@id": "https://horbi.org/#organization" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://horbi.org/media/brand/og-cover.jpg"
+        },
+        "inLanguage": ["en", "ru", "de", "it"],
+        "description": "Official HÖRBI website: liquid chlorophyll in three flavors and upcoming formulas."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <nav class="nav" id="site-nav">
+  <a class="skip-link" href="#products">Skip to products</a>
+
+  <nav class="nav" id="site-nav" aria-label="Main">
     <div class="nav-inner">
-      <a class="logo" href="index.html" aria-label="HÖRBI">
-        <img src="media/brand/logo.svg" alt="HÖRBI" />
+      <a class="logo" href="https://horbi.org/" aria-label="HÖRBI home">
+        <img src="media/brand/logo.svg" alt="HÖRBI — food supplements brand logo" width="120" height="38" />
       </a>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
         <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -32,65 +261,99 @@
           <a class="nav-shop" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="nav-shop">Wildberries</a>
         </div>
         <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span><span class="lang-code">DE</span></button>
-          <button type="button" data-lang="en" class="active" title="English"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></button>
-          <button type="button" data-lang="ru" title="Русский"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></button>
-          <button type="button" data-lang="it" title="Italiano"><span class="flag">🇮🇹</span><span class="lang-code">IT</span></button>
+          <button type="button" data-lang="de" title="Deutsch" hreflang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span class="lang-code">DE</span></button>
+          <button type="button" data-lang="en" class="active" title="English" hreflang="en"><span class="flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span></button>
+          <button type="button" data-lang="ru" title="Русский" hreflang="ru"><span class="flag" aria-hidden="true">🇷🇺</span><span class="lang-code">RU</span></button>
+          <button type="button" data-lang="it" title="Italiano" hreflang="it"><span class="flag" aria-hidden="true">🇮🇹</span><span class="lang-code">IT</span></button>
         </div>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-media" aria-hidden="true">
-      <video class="hero-video" id="hero-video" src="media/brand/hero.mp4" muted loop playsinline autoplay preload="metadata"></video>
-      <div class="hero-blur"></div>
-      <div class="hero-veil"></div>
-    </div>
-    <div class="hero-fade" aria-hidden="true"></div>
-    <div class="hero-copy">
-      <div class="hero-brand">
-        <!-- real white SVG (iOS often ignores CSS filter on SVG <img>) -->
-        <img src="media/brand/logo-white.svg" alt="HÖRBI" class="hero-logo" width="420" height="135" />
+  <main id="main">
+    <header class="hero" role="banner">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" id="hero-video" src="media/brand/hero.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="hero-blur"></div>
+        <div class="hero-veil"></div>
       </div>
-      <h1 id="hero-title">Clean formulas.
+      <div class="hero-fade" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="hero-brand">
+          <img src="media/brand/logo-white.svg" alt="HÖRBI" class="hero-logo" width="420" height="135" />
+        </div>
+        <h1 id="hero-title">Clean formulas.
 Clear energy.</h1>
-      <p class="sub" id="hero-sub">Liquid chlorophyll in three flavors — and more HÖRBI formulas on the way.</p>
-      <div class="actions">
-        <a class="btn btn-fill" href="#products" id="hero-cta">Explore products</a>
-        <a class="btn btn-ghost" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="hero-cta2">Brand on Wildberries</a>
+        <p class="sub" id="hero-sub">Liquid chlorophyll in three flavors — and more HÖRBI formulas on the way.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="#products" id="hero-cta">Explore products</a>
+          <a class="btn btn-ghost" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="hero-cta2">Brand on Wildberries</a>
+        </div>
       </div>
+    </header>
+
+    <div class="catalog-band" id="catalog-band">
+      <div class="catalog-media" aria-hidden="true">
+        <video class="catalog-video" id="catalog-video" src="media/brand/cards-bg.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="catalog-veil"></div>
+      </div>
+      <section class="section" id="products" aria-labelledby="sec-live">
+        <h2 id="sec-live">Available now</h2>
+        <div class="grid" id="grid-live">
+          <!-- Crawlable product teaser (replaced by app.js when JS runs) -->
+          <article class="card seo-card" itemscope itemtype="https://schema.org/Product">
+            <div class="card-media">
+              <img class="card-img" src="media/web/myata/00.jpg" alt="HÖRBI liquid chlorophyll Wild Mint 500 ml" width="600" height="750" itemprop="image" loading="eager" />
+            </div>
+            <div class="card-body">
+              <h3 itemprop="name">HÖRBI Chlorophyll “Wild Mint” 500 ml</h3>
+              <p itemprop="description">Liquid chlorophyll concentrate · mint taste · source of chlorophyll and copper</p>
+              <meta itemprop="sku" content="CHL-MINT-500" />
+              <link itemprop="url" href="https://www.wildberries.ru/catalog/1094870954/detail.aspx" />
+            </div>
+          </article>
+          <article class="card seo-card" itemscope itemtype="https://schema.org/Product">
+            <div class="card-media">
+              <img class="card-img" src="media/web/smorodina/00.jpg" alt="HÖRBI liquid chlorophyll Juicy Blackcurrant 500 ml" width="600" height="750" itemprop="image" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <h3 itemprop="name">HÖRBI Chlorophyll “Juicy Blackcurrant” 500 ml</h3>
+              <p itemprop="description">Liquid chlorophyll concentrate · blackcurrant taste</p>
+              <link itemprop="url" href="https://www.wildberries.ru/catalog/1095345290/detail.aspx" />
+            </div>
+          </article>
+          <article class="card seo-card" itemscope itemtype="https://schema.org/Product">
+            <div class="card-media">
+              <img class="card-img" src="media/web/marakuya/00.jpg" alt="HÖRBI liquid chlorophyll Tropical Passion Fruit 500 ml" width="600" height="750" itemprop="image" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <h3 itemprop="name">HÖRBI Chlorophyll “Tropical Passion Fruit” 500 ml</h3>
+              <p itemprop="description">Liquid chlorophyll concentrate · passion fruit taste</p>
+              <link itemprop="url" href="https://www.wildberries.ru/catalog/1095385962/detail.aspx" />
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section-soon" aria-labelledby="sec-soon">
+        <h2 id="sec-soon">Coming soon</h2>
+        <div class="grid" id="grid-soon"></div>
+      </section>
     </div>
-  </header>
 
-  <div class="catalog-band" id="catalog-band">
-    <div class="catalog-media" aria-hidden="true">
-      <video class="catalog-video" id="catalog-video" src="media/brand/cards-bg.mp4" muted loop playsinline autoplay preload="metadata"></video>
-      <div class="catalog-veil"></div>
-    </div>
-    <section class="section" id="products">
-      <h2 id="sec-live">Available now</h2>
-      <div class="grid" id="grid-live"></div>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About HÖRBI</h2>
+      <p id="about-body">HÖRBI is a modern food-supplement brand built around clear formulas, careful ingredients and daily usability. We start with liquid chlorophyll concentrate — a practical green ritual in three distinct tastes.</p>
+      <p id="about-body-2">Ahead: magnesium, collagen, inositol and other formulas designed with the same standard — transparent composition, honest labeling and a clean product experience.</p>
     </section>
-    <section class="section section-soon">
-      <h2 id="sec-soon">Coming soon</h2>
-      <div class="grid" id="grid-soon"></div>
+
+    <section class="contact-block" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Collaboration</h2>
+      <p id="contact-body">For partnership and wholesale inquiries, please get in touch.</p>
+      <a class="btn btn-dark" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact</a>
     </section>
-  </div>
+  </main>
 
-  <section class="about" id="about">
-    <h2 id="about-title">About HÖRBI</h2>
-    <p id="about-body"></p>
-    <p id="about-body-2"></p>
-  </section>
-
-  <section class="contact-block" id="contact">
-    <h2 id="contact-title">Collaboration</h2>
-    <p id="contact-body"></p>
-    <a class="btn btn-dark" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact</a>
-  </section>
-
-  <div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheet-name">
     <div class="sheet">
       <button type="button" class="x" id="modal-close" aria-label="Close">×</button>
       <div class="sheet-gallery">
@@ -109,19 +372,33 @@ Clear energy.</h1>
     </div>
   </div>
 
-  <footer class="foot">
+  <footer class="foot" role="contentinfo">
     <div class="foot-inner">
       <div id="footer-text">HÖRBI · horbi.org</div>
       <div>
         <a href="privacy.html">Privacy</a>
         ·
         <a href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener">Wildberries</a>
+        ·
+        <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/app.js"></script>
+  <noscript>
+    <div class="section" style="padding:24px 18px 48px">
+      <h2>HÖRBI products</h2>
+      <ul>
+        <li><strong>Wild Mint chlorophyll 500 ml</strong> — <a href="https://www.wildberries.ru/catalog/1094870954/detail.aspx">Wildberries</a></li>
+        <li><strong>Blackcurrant chlorophyll 500 ml</strong> — <a href="https://www.wildberries.ru/catalog/1095345290/detail.aspx">Wildberries</a></li>
+        <li><strong>Passion fruit chlorophyll 500 ml</strong> — <a href="https://www.wildberries.ru/catalog/1095385962/detail.aspx">Wildberries</a></li>
+      </ul>
+      <p>Official site: <a href="https://horbi.org/">horbi.org</a>. Brand: food supplements / liquid chlorophyll. Languages: DE, EN, RU, IT.</p>
+    </div>
+  </noscript>
+
+  <script src="js/i18n.js?v=seo1"></script>
+  <script src="js/products.js?v=seo1"></script>
+  <script src="js/app.js?v=seo1"></script>
 </body>
 </html>

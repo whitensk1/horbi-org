@@ -46,6 +46,22 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; }
 img, video { display: block; max-width: 100%; }
 
+/* Accessibility / SEO skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 10px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
 /* Nav */
 .nav {
   position: fixed;
