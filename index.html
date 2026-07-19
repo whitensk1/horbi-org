@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HÖRBI</title>
+  <meta name="description" content="HÖRBI — food supplements. Liquid chlorophyll and more. DE / EN / RU / IT." />
+  <meta name="author" content="HÖRBI" />
+  <meta property="og:site_name" content="HÖRBI" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">HÖR<span>BI</span></a>
+      <div class="nav-links">
+        <a href="#products" id="nav-products">Products</a>
+        <a href="#about" id="nav-about">About</a>
+        <a class="keep" href="https://www.wildberries.ru/" target="_blank" rel="noopener" id="nav-shop">Shop</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="de">DE</button>
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="it">IT</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="kicker" id="hero-kicker">Food supplements</p>
+      <h1 id="hero-title">Clean formulas.
+Clear energy.</h1>
+      <p id="hero-sub">HÖRBI liquid chlorophyll and the next generation of daily support.</p>
+      <div class="actions">
+        <a class="btn btn-fill" href="#products" id="hero-cta">Explore products</a>
+        <a class="btn btn-ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener" id="hero-cta2">Wildberries</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="products">
+    <h2 id="sec-live">Available now</h2>
+    <div class="grid" id="grid-live"></div>
+  </section>
+
+  <section class="section">
+    <h2 id="sec-soon">Coming soon</h2>
+    <div class="grid" id="grid-soon"></div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 id="about-title">About HÖRBI</h2>
+    <p id="about-body">HÖRBI is a food-supplement brand focused on pure, practical formulas.</p>
+  </section>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <button type="button" class="x" id="modal-close" aria-label="Close">×</button>
+      <div class="sheet-gallery">
+        <div class="sheet-main" id="sheet-main"></div>
+        <div class="thumbs" id="sheet-thumbs"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sku" id="sheet-sku">HÖRBI</div>
+        <h2 id="sheet-name"></h2>
+        <p id="sheet-desc"></p>
+        <div class="sheet-actions">
+          <a class="btn btn-fill" id="sheet-wb" href="#" target="_blank" rel="noopener">Buy on Wildberries</a>
+          <button type="button" class="btn btn-ghost" id="modal-close-2">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div id="footer-text">HÖRBI · horbi.org</div>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="mailto:nicedudin@gmail.com">nicedudin@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
