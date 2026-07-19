@@ -227,13 +227,20 @@
     }
   });
 
-  // hero video
-  const hv = $("hero-video");
-  if (hv) {
-    hv.muted = true;
-    hv.playsInline = true;
-    hv.play().catch(() => {});
-  }
+  // hero + catalog background videos
+  ["hero-video", "catalog-video"].forEach((id) => {
+    const v = $(id);
+    if (!v) return;
+    v.muted = true;
+    v.playsInline = true;
+    v.setAttribute("playsinline", "");
+    v.setAttribute("muted", "");
+    const tryPlay = () => v.play().catch(() => {});
+    tryPlay();
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlay();
+    });
+  });
 
   applyStatic();
   renderCards();

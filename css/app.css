@@ -398,7 +398,51 @@ img, video { display: block; max-width: 100%; }
   color: var(--ink);
 }
 
-/* Sections — float over the side-gradient page */
+/* Living catalog band — video loop under product cards (clip 3–11s) */
+.catalog-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 12px 0 36px;
+}
+.catalog-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.catalog-video {
+  position: absolute;
+  inset: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  object-fit: cover;
+  object-position: center;
+  filter: blur(1px) saturate(1.05) brightness(0.92);
+  transform: scale(1.03);
+  opacity: 0.55;
+}
+.catalog-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(226, 232, 219, 0.72) 0%,
+      rgba(226, 232, 219, 0.45) 18%,
+      rgba(226, 232, 219, 0.38) 55%,
+      rgba(226, 232, 219, 0.7) 100%),
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255, 255, 255, 0.12), transparent 70%);
+}
+/* Prefer reduced motion / save data: hide video */
+@media (prefers-reduced-motion: reduce) {
+  .catalog-video { display: none; }
+  .catalog-veil {
+    background: transparent;
+  }
+}
+
+/* Sections — float over catalog video / page gradients */
 .section {
   width: min(var(--max), 100%);
   margin: 0 auto;
@@ -411,6 +455,9 @@ img, video { display: block; max-width: 100%; }
   font-size: clamp(1.45rem, 3vw, 1.9rem);
   letter-spacing: -0.03em;
   font-weight: 800;
+}
+.catalog-band .section h2 {
+  text-shadow: 0 1px 12px rgba(226, 232, 219, 0.8);
 }
 .grid {
   display: grid;

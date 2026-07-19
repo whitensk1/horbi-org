@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/app.css?v=20260719c" />
+  <link rel="stylesheet" href="css/app.css?v=20260719d" />
 </head>
 <body>
   <nav class="nav" id="site-nav">
@@ -63,15 +63,20 @@ Clear energy.</h1>
     </div>
   </header>
 
-  <section class="section" id="products">
-    <h2 id="sec-live">Available now</h2>
-    <div class="grid" id="grid-live"></div>
-  </section>
-
-  <section class="section">
-    <h2 id="sec-soon">Coming soon</h2>
-    <div class="grid" id="grid-soon"></div>
-  </section>
+  <div class="catalog-band" id="catalog-band">
+    <div class="catalog-media" aria-hidden="true">
+      <video class="catalog-video" id="catalog-video" src="media/brand/cards-bg.mp4" muted loop playsinline autoplay preload="metadata"></video>
+      <div class="catalog-veil"></div>
+    </div>
+    <section class="section" id="products">
+      <h2 id="sec-live">Available now</h2>
+      <div class="grid" id="grid-live"></div>
+    </section>
+    <section class="section section-soon">
+      <h2 id="sec-soon">Coming soon</h2>
+      <div class="grid" id="grid-soon"></div>
+    </section>
+  </div>
 
   <section class="about" id="about">
     <h2 id="about-title">About HÖRBI</h2>
