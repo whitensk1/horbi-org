@@ -89,7 +89,7 @@
     const cover = coverOf(p);
     const soon = p.status === "soon";
     const media = cover
-      ? `<img src="${esc(cover)}" alt="" loading="lazy" decoding="async" width="600" height="750" onerror="this.style.display='none';const ph=this.parentElement.querySelector('.ph');if(ph)ph.hidden=false" /><div class="ph" hidden>${esc(t("photo_soon"))}</div>`
+      ? `<img class="card-img" src="${esc(cover)}" alt="${esc(tx.name)}" loading="lazy" decoding="async" width="600" height="750" />`
       : `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
     return `
       <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}">

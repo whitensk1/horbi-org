@@ -16,9 +16,8 @@
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <a class="logo" href="index.html">
+      <a class="logo" href="index.html" aria-label="HÖRBI">
         <img src="media/brand/logo.svg" alt="HÖRBI" />
-        <span>HÖRBI</span>
       </a>
       <div class="nav-links">
         <a href="#products" id="nav-products">Products</a>
@@ -36,8 +35,12 @@
   </nav>
 
   <header class="hero">
-    <video class="hero-video" id="hero-video" src="media/brand/hero.mp4" muted loop playsinline autoplay preload="metadata"></video>
-    <div class="hero-veil"></div>
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" id="hero-video" src="media/brand/hero.mp4" muted loop playsinline autoplay preload="metadata"></video>
+      <div class="hero-blur"></div>
+      <div class="hero-veil"></div>
+    </div>
+    <div class="hero-fade" aria-hidden="true"></div>
     <div class="hero-copy">
       <p class="kicker" id="hero-kicker">Food supplements</p>
       <h1 id="hero-title">Clean formulas.
