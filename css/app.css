@@ -282,7 +282,7 @@ img, video { display: block; max-width: 100%; }
   height: calc(100% + 32px);
   object-fit: cover;
   /* subtle soft focus — readable image, not milky fog */
-  filter: blur(3.5px) saturate(1.06) brightness(0.88);
+  filter: blur(1.5px) saturate(1.06) brightness(0.9);
   transform: scale(1.04);
   opacity: 1;
 }
