@@ -30,12 +30,11 @@
 
   function applyStatic() {
     document.documentElement.lang = lang;
-    document.title = `HÖRBI — ${t("hero_kicker")}`;
+    document.title = "HÖRBI";
     const map = {
       "nav-products": "nav_products",
       "nav-about": "nav_about",
       "nav-contact": "nav_contact",
-      "hero-kicker": "hero_kicker",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
@@ -68,6 +67,18 @@
     document.querySelectorAll(".lang button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
+  }
+
+  function setNavOpen(open) {
+    const nav = $("site-nav");
+    const toggle = $("nav-toggle");
+    if (!nav || !toggle) return;
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function closeNav() {
+    setNavOpen(false);
   }
 
   function coverOf(p) {
@@ -186,13 +197,34 @@
       renderCards();
     });
   });
+
+  // mobile hamburger menu
+  $("nav-toggle")?.addEventListener("click", () => {
+    const nav = $("site-nav");
+    setNavOpen(!nav?.classList.contains("is-open"));
+  });
+  document.querySelectorAll("#nav-panel a").forEach((a) => {
+    a.addEventListener("click", () => closeNav());
+  });
+  document.addEventListener("click", (e) => {
+    const nav = $("site-nav");
+    if (!nav?.classList.contains("is-open")) return;
+    if (!nav.contains(e.target)) closeNav();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) closeNav();
+  });
+
   $("modal-close")?.addEventListener("click", closeModal);
   $("modal-close-2")?.addEventListener("click", closeModal);
   $("overlay")?.addEventListener("click", (e) => {
     if (e.target === $("overlay")) closeModal();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") {
+      closeModal();
+      closeNav();
+    }
   });
 
   // hero video

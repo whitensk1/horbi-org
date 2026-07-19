@@ -41,7 +41,7 @@ window.HORBI_PRODUCTS = [
       "media/web/myata/29.jpg",
       "media/web/myata/30.jpg"
     ],
-    wb: "https://www.wildberries.ru/brands/312311510-horbi",
+    wb: "https://www.wildberries.ru/catalog/1094870954/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Дикая мята» 500 мл",
@@ -213,7 +213,7 @@ window.HORBI_PRODUCTS = [
       "media/web/smorodina/27.jpg",
       "media/web/smorodina/28.jpg"
     ],
-    wb: "https://www.wildberries.ru/brands/312311510-horbi",
+    wb: "https://www.wildberries.ru/catalog/1095345290/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Сочная смородина» 500 мл",
@@ -371,7 +371,7 @@ window.HORBI_PRODUCTS = [
       "media/web/marakuya/31.jpg",
       "media/web/marakuya/32.jpg"
     ],
-    wb: "https://www.wildberries.ru/brands/312311510-horbi",
+    wb: "https://www.wildberries.ru/catalog/1095385962/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Тропическая маракуйя» 500 мл",

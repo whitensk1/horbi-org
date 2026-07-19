@@ -14,16 +14,23 @@
   <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="site-nav">
     <div class="nav-inner">
       <a class="logo" href="index.html" aria-label="HÖRBI">
         <img src="media/brand/logo.svg" alt="HÖRBI" />
       </a>
-      <div class="nav-links">
-        <a href="#products" id="nav-products">Products</a>
-        <a href="#about" id="nav-about">About</a>
-        <a href="#contact" id="nav-contact">Contact</a>
-        <a class="keep" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="nav-shop">Wildberries</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-panel" id="nav-panel">
+        <div class="nav-links">
+          <a href="#products" id="nav-products">Products</a>
+          <a href="#about" id="nav-about">About</a>
+          <a href="#contact" id="nav-contact">Contact</a>
+          <a class="nav-shop" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="nav-shop">Wildberries</a>
+        </div>
         <div class="lang" role="group" aria-label="Language">
           <button type="button" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span><span class="lang-code">DE</span></button>
           <button type="button" data-lang="en" class="active" title="English"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></button>
@@ -42,7 +49,9 @@
     </div>
     <div class="hero-fade" aria-hidden="true"></div>
     <div class="hero-copy">
-      <p class="kicker" id="hero-kicker">Food supplements</p>
+      <div class="hero-brand">
+        <img src="media/brand/logo.svg" alt="HÖRBI" class="hero-logo" width="420" height="135" />
+      </div>
       <h1 id="hero-title">Clean formulas.
 Clear energy.</h1>
       <p class="sub" id="hero-sub">Liquid chlorophyll in three flavors — and more HÖRBI formulas on the way.</p>
