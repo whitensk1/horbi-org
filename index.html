@@ -7,7 +7,7 @@
   <meta name="description" content="HÖRBI — food supplements. Liquid chlorophyll and more. DE / EN / RU / IT." />
   <meta name="author" content="HÖRBI" />
   <meta property="og:site_name" content="HÖRBI" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="media/brand/logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,28 +16,33 @@
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <a class="logo" href="index.html">HÖR<span>BI</span></a>
+      <a class="logo" href="index.html">
+        <img src="media/brand/logo.svg" alt="HÖRBI" />
+        <span>HÖRBI</span>
+      </a>
       <div class="nav-links">
         <a href="#products" id="nav-products">Products</a>
         <a href="#about" id="nav-about">About</a>
         <a href="#contact" id="nav-contact">Contact</a>
         <a class="keep" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="nav-shop">Wildberries</a>
         <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="de">DE</button>
-          <button type="button" data-lang="en" class="active">EN</button>
-          <button type="button" data-lang="ru">RU</button>
-          <button type="button" data-lang="it">IT</button>
+          <button type="button" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span><span class="lang-code">DE</span></button>
+          <button type="button" data-lang="en" class="active" title="English"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></button>
+          <button type="button" data-lang="ru" title="Русский"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></button>
+          <button type="button" data-lang="it" title="Italiano"><span class="flag">🇮🇹</span><span class="lang-code">IT</span></button>
         </div>
       </div>
     </div>
   </nav>
 
   <header class="hero">
+    <video class="hero-video" id="hero-video" src="media/brand/hero.mp4" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="hero-veil"></div>
     <div class="hero-copy">
       <p class="kicker" id="hero-kicker">Food supplements</p>
       <h1 id="hero-title">Clean formulas.
 Clear energy.</h1>
-      <p id="hero-sub">HÖRBI liquid chlorophyll and the next generation of daily support.</p>
+      <p class="sub" id="hero-sub">Liquid chlorophyll in three flavors — and more HÖRBI formulas on the way.</p>
       <div class="actions">
         <a class="btn btn-fill" href="#products" id="hero-cta">Explore products</a>
         <a class="btn btn-ghost" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener" id="hero-cta2">Brand on Wildberries</a>
@@ -57,14 +62,14 @@ Clear energy.</h1>
 
   <section class="about" id="about">
     <h2 id="about-title">About HÖRBI</h2>
-    <p id="about-body">HÖRBI is a food-supplement brand focused on pure, practical formulas.</p>
+    <p id="about-body"></p>
+    <p id="about-body-2"></p>
   </section>
 
   <section class="contact-block" id="contact">
-    <h2 id="contact-title">Partnership & wholesale</h2>
-    <p id="contact-body">For subscribers, collaborations, wholesale orders and bulk purchases — reach our team via the contact form.</p>
-    <a class="btn btn-fill" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact us</a>
-    <p class="note" id="contact-note">For wholesale inquiries and partnerships, please write here →</p>
+    <h2 id="contact-title">Collaboration</h2>
+    <p id="contact-body"></p>
+    <a class="btn btn-dark" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact</a>
   </section>
 
   <div class="overlay" id="overlay" role="dialog" aria-modal="true">
@@ -77,10 +82,10 @@ Clear energy.</h1>
       <div class="sheet-body">
         <div class="sku" id="sheet-sku">HÖRBI</div>
         <h2 id="sheet-name"></h2>
-        <div id="sheet-desc" class="sheet-desc"></div>
+        <div id="sheet-desc"></div>
         <div class="sheet-actions">
-          <a class="btn btn-fill" id="sheet-wb" href="#" target="_blank" rel="noopener">Buy on Wildberries</a>
-          <button type="button" class="btn btn-ghost" id="modal-close-2">Close</button>
+          <a class="btn btn-dark" id="sheet-wb" href="#" target="_blank" rel="noopener">Buy on Wildberries</a>
+          <button type="button" class="btn btn-line" id="modal-close-2">Close</button>
         </div>
       </div>
     </div>
@@ -92,7 +97,7 @@ Clear energy.</h1>
       <div>
         <a href="privacy.html">Privacy</a>
         ·
-        <a href="mailto:nicedudin@gmail.com">nicedudin@gmail.com</a>
+        <a href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener">Wildberries</a>
       </div>
     </div>
   </footer>

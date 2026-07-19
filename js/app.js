@@ -44,26 +44,27 @@
       "sec-soon": "section_soon",
       "about-title": "about_title",
       "about-body": "about_body",
+      "about-body-2": "about_body_2",
       "contact-title": "contact_title",
       "contact-body": "contact_body",
-      "contact-cta": "contact_cta",
-      "contact-note": "contact_note",
       "footer-text": "footer",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
       if (el) el.textContent = t(key);
     });
-    const wb = $("hero-cta2");
-    if (wb) wb.href = WB_BRAND;
+    const contactLink = $("contact-link");
+    if (contactLink) {
+      contactLink.href = CONTACT;
+      contactLink.textContent = t("contact_cta");
+    }
+    const wbHero = $("hero-cta2");
+    if (wbHero) wbHero.href = WB_BRAND;
     const shop = $("nav-shop");
     if (shop) {
       shop.href = WB_BRAND;
       shop.textContent = t("nav_shop");
     }
-    const contactBtn = $("contact-link");
-    if (contactBtn) contactBtn.href = CONTACT;
-
     document.querySelectorAll(".lang button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
@@ -78,7 +79,6 @@
     const soon = PRODUCTS.filter((p) => p.status === "soon");
     $("grid-live").innerHTML = live.map(cardHTML).join("");
     $("grid-soon").innerHTML = soon.map(cardHTML).join("");
-
     document.querySelectorAll(".card[data-id]").forEach((card) => {
       card.addEventListener("click", () => openProduct(card.dataset.id));
     });
@@ -89,8 +89,8 @@
     const cover = coverOf(p);
     const soon = p.status === "soon";
     const media = cover
-      ? `<img src="${esc(cover)}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.ph').hidden=false" /><div class="ph" hidden>${esc(t("photo_soon"))}</div>`
-      : `<div class="ph soon-ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
+      ? `<img src="${esc(cover)}" alt="" loading="lazy" decoding="async" width="600" height="750" onerror="this.style.display='none';const ph=this.parentElement.querySelector('.ph');if(ph)ph.hidden=false" /><div class="ph" hidden>${esc(t("photo_soon"))}</div>`
+      : `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span><span>${esc(tx.name)}</span></div>`;
     return `
       <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
         <div class="card-media">
@@ -110,11 +110,12 @@
     if (!p) return;
     const tx = productText(p);
     $("sheet-name").textContent = tx.name;
-    $("sheet-desc").innerHTML = tx.descriptionHtml || `<p>${esc(tx.short || "")}</p>`;
+    $("sheet-desc").innerHTML =
+      tx.descriptionHtml || `<p class="lead">${esc(tx.short || "")}</p>`;
     $("sheet-sku").textContent = p.sku || "HÖRBI";
 
     const wb = $("sheet-wb");
-    if (p.status === "live" && (p.wb || WB_BRAND)) {
+    if (p.status === "live") {
       wb.href = p.wb || WB_BRAND;
       wb.hidden = false;
       wb.textContent = t("modal_wb");
@@ -126,16 +127,16 @@
     const main = $("sheet-main");
     const thumbs = $("sheet-thumbs");
     if (!images.length) {
-      main.innerHTML = `<div class="ph soon-ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
+      main.innerHTML = `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
       thumbs.innerHTML = "";
       thumbs.hidden = true;
     } else {
-      thumbs.hidden = false;
+      thumbs.hidden = images.length < 2;
       setMain(images[0]);
       thumbs.innerHTML = images
         .map(
           (src, i) =>
-            `<button type="button" class="${i === 0 ? "active" : ""}" data-src="${esc(src)}"><img src="${esc(src)}" alt="" loading="lazy" /></button>`
+            `<button type="button" class="${i === 0 ? "active" : ""}" data-src="${esc(src)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async" width="112" height="112" /></button>`
         )
         .join("");
       thumbs.querySelectorAll("button").forEach((b) => {
@@ -152,7 +153,7 @@
   }
 
   function setMain(src) {
-    $("sheet-main").innerHTML = `<img src="${esc(src)}" alt="" />`;
+    $("sheet-main").innerHTML = `<img src="${esc(src)}" alt="" decoding="async" />`;
   }
 
   function closeModal() {
@@ -184,6 +185,14 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
+
+  // hero video
+  const hv = $("hero-video");
+  if (hv) {
+    hv.muted = true;
+    hv.playsInline = true;
+    hv.play().catch(() => {});
+  }
 
   applyStatic();
   renderCards();

@@ -1,1 +1,4 @@
 .DS_Store
+media/catalog/
+media/products/
+!media/brand/
