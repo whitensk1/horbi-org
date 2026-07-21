@@ -93,6 +93,7 @@
       "nav-products": "nav_products",
       "nav-about": "nav_about",
       "nav-contact": "nav_contact",
+      "nav-articles": "nav_articles",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
