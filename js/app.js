@@ -109,11 +109,14 @@
       "footer-privacy": "footer_privacy",
       "footer-cookies": "footer_cookies",
       "footer-disclaimer": "footer_disclaimer",
+      "footer-articles": "nav_articles",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
       if (el) el.textContent = t(key);
     });
+    const fa = $("footer-articles");
+    if (fa) fa.href = `articles.html?lang=${lang}`;
     const fp = $("footer-privacy");
     if (fp) fp.href = `privacy.html?lang=${lang}`;
     const fc = $("footer-cookies");
