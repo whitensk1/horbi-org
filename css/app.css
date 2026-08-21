@@ -662,15 +662,93 @@ img, video { display: block; max-width: 100%; }
   max-width: 40ch;
   font-size: 15px;
 }
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+/* Telegram channel strip — separate from Collaboration contact */
+.tg-channel {
+  width: min(640px, 100%);
+  margin: 22px auto 0;
+  padding: 0 18px;
 }
-.contact-actions .btn {
-  min-width: 148px;
+.tg-channel__card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(34, 158, 217, 0.22);
+  background:
+    linear-gradient(135deg, rgba(34, 158, 217, 0.1), rgba(47, 107, 58, 0.06) 60%, #fff);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color 0.2s;
+}
+.tg-channel__card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 158, 217, 0.4);
+  box-shadow: 0 14px 36px rgba(34, 158, 217, 0.14);
+  color: var(--ink);
+}
+.tg-channel__icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(145deg, #37aee2 0%, #1e96c8 55%, #1682b0 100%);
+  box-shadow: 0 8px 18px rgba(30, 150, 200, 0.35);
+}
+.tg-channel__icon svg { display: block; }
+.tg-channel__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.tg-channel__kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a7aab;
+}
+.tg-channel__title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.tg-channel__sub {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.tg-channel__cta {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a7aab;
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .tg-channel__cta { display: none; }
+  .tg-channel__card { padding: 14px 14px; gap: 12px; }
+  .tg-channel__icon { flex-basis: 44px; width: 44px; height: 44px; }
+}
+
+.foot-tg {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1a7aab;
+  font-weight: 700;
+}
+.foot-tg__ico {
+  display: block;
+  flex: 0 0 auto;
 }
 
 .foot {

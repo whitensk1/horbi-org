@@ -96,8 +96,11 @@
       "nav-contact": "nav_contact",
       "nav-telegram": "nav_telegram",
       "nav-articles": "nav_articles",
-      "footer-telegram": "footer_telegram",
-      "contact-tg": "contact_tg",
+      "footer-telegram-label": "footer_telegram",
+      "tg-channel-kicker": "tg_kicker",
+      "tg-channel-title": "tg_title",
+      "tg-channel-sub": "tg_sub",
+      "tg-channel-cta": "tg_cta",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
@@ -130,21 +133,15 @@
       contactLink.href = CONTACT;
       contactLink.textContent = t("contact_cta");
     }
-    const contactTg = $("contact-tg");
-    if (contactTg) {
-      contactTg.href = TELEGRAM;
-      contactTg.textContent = t("contact_tg");
-    }
     const footerTg = $("footer-telegram");
-    if (footerTg) {
-      footerTg.href = TELEGRAM;
-      footerTg.textContent = t("footer_telegram");
-    }
+    if (footerTg) footerTg.href = TELEGRAM;
     const navTg = $("nav-telegram");
     if (navTg) {
       navTg.href = TELEGRAM;
       navTg.textContent = t("nav_telegram");
     }
+    const tgCard = $("tg-channel-link");
+    if (tgCard) tgCard.href = TELEGRAM;
     const wbHero = $("hero-cta2");
     if (wbHero) wbHero.href = WB_BRAND;
     const shop = $("nav-shop");

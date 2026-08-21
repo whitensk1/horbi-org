@@ -66,7 +66,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.wildberries.ru" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/app.css?v=20260821tg" />
+  <link rel="stylesheet" href="css/app.css?v=20260821tg2" />
   <link rel="preload" as="image" href="media/brand/logo-white.svg" />
 
   <!-- Structured data: Organization + WebSite + Brand + Products -->
@@ -352,10 +352,24 @@ Clear energy.</h1>
     <section class="contact-block" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Collaboration</h2>
       <p id="contact-body">For partnership and wholesale inquiries, please get in touch.</p>
-      <div class="contact-actions">
-        <a class="btn btn-dark" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact</a>
-        <a class="btn btn-line" id="contact-tg" href="https://t.me/horbiorg" target="_blank" rel="noopener">Telegram</a>
-      </div>
+      <a class="btn btn-dark" id="contact-link" href="https://dluck.ru/#kontact" target="_blank" rel="noopener">Contact</a>
+    </section>
+
+    <!-- Brand Telegram channel (not a support contact) -->
+    <section class="tg-channel" id="telegram" aria-labelledby="tg-channel-title">
+      <a class="tg-channel__card" href="https://t.me/horbiorg" target="_blank" rel="noopener" id="tg-channel-link">
+        <span class="tg-channel__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
+            <path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.282.328-.4.582-.35.254.05.42.26.37.55l-1.7 8.04c-.12.56-.45.7-.91.43l-2.52-1.86-1.22 1.17c-.13.13-.25.25-.51.25l.18-2.56 4.66-4.21c.2-.18.0-.26-.1-.08l-5.76 3.63-2.48-.78c-.54-.17-.55-.54.11-.8l9.69-3.74z"/>
+          </svg>
+        </span>
+        <span class="tg-channel__text">
+          <span class="tg-channel__kicker" id="tg-channel-kicker">Channel</span>
+          <span class="tg-channel__title" id="tg-channel-title">HÖRBI on Telegram</span>
+          <span class="tg-channel__sub" id="tg-channel-sub">News, formulas and brand updates — @horbiorg</span>
+        </span>
+        <span class="tg-channel__cta" id="tg-channel-cta" aria-hidden="true">Open →</span>
+      </a>
     </section>
   </main>
 
@@ -401,7 +415,12 @@ Clear energy.</h1>
         ·
         <a href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener">Wildberries</a>
         ·
-        <a href="https://t.me/horbiorg" target="_blank" rel="noopener" id="footer-telegram">Telegram</a>
+        <a class="foot-tg" href="https://t.me/horbiorg" target="_blank" rel="noopener" id="footer-telegram">
+          <svg class="foot-tg__ico" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.282.328-.4.582-.35.254.05.42.26.37.55l-1.7 8.04c-.12.56-.45.7-.91.43l-2.52-1.86-1.22 1.17c-.13.13-.25.25-.51.25l.18-2.56 4.66-4.21c.2-.18.0-.26-.1-.08l-5.76 3.63-2.48-.78c-.54-.17-.55-.54.11-.8l9.69-3.74z"/>
+          </svg>
+          <span id="footer-telegram-label">Telegram</span>
+        </a>
         ·
         <a href="sitemap.xml">Sitemap</a>
       </div>
@@ -423,8 +442,8 @@ Clear energy.</h1>
     </div>
   </noscript>
 
-  <script src="js/i18n.js?v=tg1"></script>
+  <script src="js/i18n.js?v=tg2"></script>
   <script src="js/products.js?v=seo1"></script>
-  <script src="js/app.js?v=tg1"></script>
+  <script src="js/app.js?v=tg2"></script>
 </body>
 </html>
