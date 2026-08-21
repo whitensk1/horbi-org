@@ -283,6 +283,7 @@
       "nav-contact": "nav_contact",
       "nav-articles": "nav_articles",
       "nav-shop": "nav_shop",
+      "nav-telegram": "nav_telegram",
     };
     Object.entries(map).forEach(([id, key]) => {
       const el = $(id);
@@ -290,6 +291,8 @@
     });
     const shop = $("nav-shop");
     if (shop) shop.href = "https://www.wildberries.ru/brands/312311510-horbi";
+    const tg = $("nav-telegram");
+    if (tg) tg.href = "https://t.me/horbiorg";
 
     if ($("journal-root")) renderHub();
     if ($("article-root")) renderArticle();

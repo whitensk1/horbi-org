@@ -6,6 +6,7 @@
   const LANGS = ["en", "de", "ru", "it"];
   const WB_BRAND = "https://www.wildberries.ru/brands/312311510-horbi";
   const CONTACT = "https://dluck.ru/#kontact";
+  const TELEGRAM = "https://t.me/horbiorg";
   const SITE = "https://horbi.org/";
   const $ = (id) => document.getElementById(id);
 
@@ -93,7 +94,10 @@
       "nav-products": "nav_products",
       "nav-about": "nav_about",
       "nav-contact": "nav_contact",
+      "nav-telegram": "nav_telegram",
       "nav-articles": "nav_articles",
+      "footer-telegram": "footer_telegram",
+      "contact-tg": "contact_tg",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
@@ -125,6 +129,21 @@
     if (contactLink) {
       contactLink.href = CONTACT;
       contactLink.textContent = t("contact_cta");
+    }
+    const contactTg = $("contact-tg");
+    if (contactTg) {
+      contactTg.href = TELEGRAM;
+      contactTg.textContent = t("contact_tg");
+    }
+    const footerTg = $("footer-telegram");
+    if (footerTg) {
+      footerTg.href = TELEGRAM;
+      footerTg.textContent = t("footer_telegram");
+    }
+    const navTg = $("nav-telegram");
+    if (navTg) {
+      navTg.href = TELEGRAM;
+      navTg.textContent = t("nav_telegram");
     }
     const wbHero = $("hero-cta2");
     if (wbHero) wbHero.href = WB_BRAND;

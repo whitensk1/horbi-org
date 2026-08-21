@@ -184,6 +184,12 @@ img, video { display: block; max-width: 100%; }
   text-align: center;
   margin-top: 4px;
 }
+.nav-links > a.nav-tg {
+  color: #1a7aab;
+  font-weight: 700;
+  background: rgba(34, 158, 217, 0.1);
+  text-align: center;
+}
 
 .lang {
   display: flex;
@@ -253,7 +259,8 @@ img, video { display: block; max-width: 100%; }
     background: transparent;
     color: var(--ink);
   }
-  .nav-links > a.nav-shop {
+  .nav-links > a.nav-shop,
+  .nav-links > a.nav-tg {
     background: transparent;
     margin-top: 0;
     text-align: left;
@@ -654,6 +661,16 @@ img, video { display: block; max-width: 100%; }
   color: var(--muted);
   max-width: 40ch;
   font-size: 15px;
+}
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contact-actions .btn {
+  min-width: 148px;
 }
 
 .foot {
