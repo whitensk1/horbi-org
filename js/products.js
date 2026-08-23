@@ -487,7 +487,10 @@ window.HORBI_PRODUCTS = [
   {
     id: "soon-testobooster",
     status: "soon",
-    images: [],
+    images: [
+      "media/web/soon-testobooster/00.jpg",
+      "media/web/soon-testobooster/01.jpg",
+    ],
     wb: "",
     i18n: {
       ru: {
@@ -515,7 +518,10 @@ window.HORBI_PRODUCTS = [
   {
     id: "soon-magnesium-citrate",
     status: "soon",
-    images: [],
+    images: [
+      "media/web/soon-magnesium-citrate/00.jpg",
+      "media/web/soon-magnesium-citrate/01.jpg",
+    ],
     wb: "",
     i18n: {
       ru: {
@@ -543,7 +549,10 @@ window.HORBI_PRODUCTS = [
   {
     id: "soon-inositol",
     status: "soon",
-    images: [],
+    images: [
+      "media/web/soon-inositol/00.jpg",
+      "media/web/soon-inositol/01.jpg",
+    ],
     wb: "",
     i18n: {
       ru: {
@@ -571,7 +580,10 @@ window.HORBI_PRODUCTS = [
   {
     id: "soon-magnesium-chelate",
     status: "soon",
-    images: [],
+    images: [
+      "media/web/soon-magnesium-chelate/00.jpg",
+      "media/web/soon-magnesium-chelate/01.jpg",
+    ],
     wb: "",
     i18n: {
       ru: {
@@ -599,7 +611,10 @@ window.HORBI_PRODUCTS = [
   {
     id: "soon-collagen",
     status: "soon",
-    images: [],
+    images: [
+      "media/web/soon-collagen/00.jpg",
+      "media/web/soon-collagen/01.jpg",
+    ],
     wb: "",
     i18n: {
       ru: {
