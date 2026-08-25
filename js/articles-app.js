@@ -60,8 +60,16 @@
     return (DATA.categories || []).find((c) => c.id === id);
   }
 
+  function sortArticles(list) {
+    return [...list].sort((a, b) => {
+      const feat = (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+      if (feat) return feat;
+      return String(b.published || "").localeCompare(String(a.published || ""));
+    });
+  }
+
   function articlesForCat(catId) {
-    return (DATA.articles || []).filter((a) => a.categoryId === catId);
+    return sortArticles((DATA.articles || []).filter((a) => a.categoryId === catId));
   }
 
   function articleById(id) {
@@ -119,7 +127,7 @@
     }
 
     const list = showCats
-      ? DATA.articles || []
+      ? sortArticles(DATA.articles || [])
       : articlesForCat(activeCat);
 
     body += `<h2 class="journal-section-label" style="margin:8px 0 16px;font-size:1.1rem;font-weight:800;letter-spacing:-0.02em">${esc(
@@ -136,8 +144,9 @@
           const cat = catById(a.categoryId);
           const cname = tx(cat?.i18n).name || a.categoryId;
           return `
-          <a class="article-card" href="article.html?id=${encodeURIComponent(a.id)}&lang=${lang}">
+          <a class="article-card ${a.featured ? "is-featured" : ""}" href="article.html?id=${encodeURIComponent(a.id)}&lang=${lang}">
             <div class="article-card-media">
+              ${a.featured ? `<span class="article-badge">${esc(t("journal_featured") || "Featured")}</span>` : ""}
               <img src="${esc(mediaPath(a.cover))}" alt="" loading="lazy" width="640" height="400" />
             </div>
             <div class="article-card-body">
@@ -182,7 +191,7 @@
     const root = $("article-root");
     if (!root) return;
 
-    const id = new URLSearchParams(location.search).get("id") || "chlorophyll-guide";
+    const id = new URLSearchParams(location.search).get("id") || "chlorophyll-green-ritual";
     const a = articleById(id);
     if (!a) {
       root.innerHTML = `<p class="journal-empty">${esc(t("journal_empty"))}</p>`;
@@ -211,14 +220,17 @@
     const sections = (atx.sections || [])
       .map((s, idx) => {
         let extra = "";
-        if (idx === 0 && a.images?.leaves) {
+        // Auto-inject legacy stock figures only for articles that still use them
+        // and don't already embed custom figures in HTML.
+        const hasCustomFigures = /article-figure/.test(s.html || "");
+        if (!hasCustomFigures && idx === 0 && a.images?.leaves) {
           extra = `
           <figure class="article-figure">
             <img src="${esc(mediaPath(a.images.leaves))}" alt="" loading="lazy" width="900" height="600" />
             <figcaption>${esc(t("journal_fig_leaves"))}</figcaption>
           </figure>`;
         }
-        if (idx === 1 && a.images?.glass) {
+        if (!hasCustomFigures && idx === 1 && a.images?.glass) {
           extra = `
           <figure class="article-figure">
             <img src="${esc(mediaPath(a.images.glass))}" alt="" loading="lazy" width="900" height="500" />

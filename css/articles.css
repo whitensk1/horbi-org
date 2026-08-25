@@ -145,7 +145,26 @@
   transition: transform 0.3s var(--ease);
 }
 .article-card:hover { transform: translateY(-3px); }
+.article-card.is-featured {
+  box-shadow: 0 16px 40px rgba(15, 61, 50, 0.12);
+  border-color: rgba(15, 61, 50, 0.18);
+}
+.article-badge {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 61, 50, 0.92);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 .article-card-media {
+  position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #e5efe0;
@@ -203,6 +222,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 .article-shell .kicker {
   margin: 0 0 10px;

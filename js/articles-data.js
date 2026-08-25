@@ -30,6 +30,230 @@ window.HORBI_ARTICLES = {
   ],
   articles: [
     {
+      id: "chlorophyll-green-ritual",
+      categoryId: "chlorophyll",
+      featured: true,
+      cover: "media/articles/alina-chlorophyll-cover.jpg",
+      images: {
+        hero: "media/articles/alina-chlorophyll-hero.jpg",
+        ritual: "media/articles/alina-chlorophyll-ritual.jpg",
+        glass: "media/articles/chlorophyll-glass.jpg",
+      },
+      published: "2026-08-25",
+      sources: [
+        {
+          id: "efsa2015",
+          label: "EFSA",
+          title: "EFSA Scientific Opinion on E140 / E141 (2015)",
+          url: "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4089",
+          note: {
+            en: "EU safety assessment of chlorophylls and copper chlorophyllins as food colours.",
+            ru: "Оценка безопасности хлорофиллов и медных хлорофиллинов как пищевых красителей в ЕС.",
+            de: "EU-Sicherheitsbewertung von Chlorophyllen und Kupferchlorophyllinen.",
+            it: "Valutazione di sicurezza UE di clorofille e clorofilline di rame.",
+          },
+        },
+        {
+          id: "mdpi2025",
+          label: "MDPI Nutrients",
+          title: "Therapeutic overview of chlorophyll (Nutrients, 2025)",
+          url: "https://www.mdpi.com/2072-6643/17/16/2653",
+          note: {
+            en: "Open-access narrative review of chlorophyll-related research.",
+            ru: "Открытый обзор исследований по хлорофиллу.",
+            de: "Open-Access-Übersicht zur Chlorophyll-Forschung.",
+            it: "Review open access sulla ricerca sulla clorofilla.",
+          },
+        },
+        {
+          id: "pmc64728",
+          label: "PMC / NCBI",
+          title: "Chlorophyllin research (PMC64728)",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC64728/",
+          note: {
+            en: "Peer-reviewed chlorophyllin literature via PMC.",
+            ru: "Рецензируемая литература по хлорофиллину (PMC).",
+            de: "Begutachtete Chlorophyllin-Literatur (PMC).",
+            it: "Letteratura peer-reviewed sulla clorofillina (PMC).",
+          },
+        },
+      ],
+      i18n: {
+        ru: {
+          title: "Зачем пить жидкий хлорофилл: зелёный ритуал без мифов",
+          kicker: "Журнал · Хлорофилл · Первая статья",
+          lead:
+            "Жидкий хлорофилл стал привычным утренним ритуалом: стакан воды, несколько миллилитров концентрата, спокойный старт дня. Разбираем, что стоит за «пользой» пигмента растений — спокойно, с опорой на источники и без обещаний чуда.",
+          readMin: "5 мин",
+          sections: [
+            {
+              h: "Почему тема «пользы» так популярна",
+              html: `
+                <p>Хлорофилл — зелёный пигмент растений, без которого не было бы фотосинтеза. В добавках чаще используют его более стабильные водорастворимые формы (хлорофиллин). Отсюда интерес к ежедневному «зелёному» стакану: простой жест, который легко встроить в утро.</p>
+                <figure class="article-figure">
+                  <img src="media/articles/alina-chlorophyll-hero.jpg" alt="Утренний ритуал с зелёным напитком HÖRBI" width="900" height="1600" loading="lazy" />
+                  <figcaption>Утренний кадр для канала HÖRBI — ритуал со стаканом зелёного напитка.</figcaption>
+                </figure>
+                <p>Важно разделять три уровня: <strong>что такое вещество</strong>, <strong>что изучают в науке</strong> и <strong>что написано на этикетке конкретного БАДа</strong>. Путать их — путь к мифам.</p>
+              `,
+            },
+            {
+              h: "Что обычно имеют в виду под «пользой»",
+              html: `
+                <p>В образовательных и обзорных материалах вокруг хлорофилла / хлорофиллина чаще обсуждают:</p>
+                <ul>
+                  <li><strong>Удобный формат</strong> — жидкий концентрат легко развести в воде или соке и сделать частью привычки.</li>
+                  <li><strong>Пигмент и «зелёный» профиль</strong> — визуально и сенсорно это яркий ритуал, а не «невидимая» капсула.</li>
+                  <li><strong>Исследовательский интерес к хлорофиллину</strong> — в рецензируемой литературе изучают вещество в лабораторных и прикладных контекстах; обзоры (в т.ч. <em>Nutrients</em>, 2025) картируют механизмы и ограничения.</li>
+                  <li><strong>Медь в составе некоторых форм</strong> — медные комплексы хлорофиллина могут выступать дополнительным источником меди; конкретные цифры — только с этикетки вашей банки.</li>
+                </ul>
+                <p class="article-note">Продукты HÖRBI — биологически активные добавки к пище, не лекарства. Материал не для диагностики, лечения или профилактики заболеваний.</p>
+              `,
+            },
+            {
+              h: "Что говорит наука и регуляторы (коротко)",
+              html: `
+                <p><strong>EFSA</strong> оценивала хлорофиллы (E140) и медные комплексы хлорофиллов/хлорофиллинов (E141) как <em>пищевые красители</em> в ЕС: это формальная оценка безопасности для цветовых применений, а не «разрешённый health claim» про детокс или иммунитет.</p>
+                <p>Обзор в <em>Nutrients</em> (2025) суммирует исследования хлорофилла и хлорофиллина. Обзор — карта литературы, а не клиническая рекомендация «пейте и будет X%».</p>
+                <p>Точка входа в первичную литературу: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC64728/" target="_blank" rel="noopener">PMC64728</a>. Проценты из чужих пересказов всегда относятся к конкретной работе.</p>
+                <figure class="article-figure">
+                  <img src="media/articles/alina-chlorophyll-ritual.jpg" alt="Ритуал со стаканом зелёного напитка" width="933" height="1400" loading="lazy" />
+                  <figcaption>Тот же ритуал в кадре «на ногах» — спокойно, без крика «БАД» в каждом предложении.</figcaption>
+                </figure>
+              `,
+            },
+            {
+              h: "Как это выглядит в жизни с HÖRBI",
+              html: `
+                <p>У HÖRBI жидкий хлорофилл-концентрат в трёх вкусах — дикая мята, сочная смородина, тропическая маракуйя. Порция, состав и противопоказания — только по этикетке и карточке на Wildberries.</p>
+                <ul>
+                  <li>Взболтать перед употреблением</li>
+                  <li>Развести в воде или соке (как указано на упаковке вашего вкуса)</li>
+                  <li>Курс и кратность — по этикетке; при необходимости — консультация врача</li>
+                </ul>
+                <p><a class="btn btn-dark" href="index.html#products">Смотреть продукты HÖRBI</a>
+                &nbsp; <a class="btn btn-ghost" href="https://www.wildberries.ru/brands/312311510-horbi" target="_blank" rel="noopener">Бренд на Wildberries</a></p>
+              `,
+            },
+          ],
+          callouts: [
+            { title: "Ритуал", text: "Простой ежедневный жест со стаканом воды." },
+            { title: "Без мифов", text: "Отделяем пигмент, науку и этикетку." },
+            { title: "EFSA", text: "E140/E141 — оценка как красителей, не health claims." },
+            { title: "HÖRBI", text: "Три вкуса жидкого концентрата на WB." },
+          ],
+        },
+        en: {
+          title: "Why people drink liquid chlorophyll: a green ritual without the myths",
+          kicker: "Journal · Chlorophyll · Featured",
+          lead:
+            "Liquid chlorophyll became a simple morning habit: water, a few millilitres of concentrate, a calm start. Here is what “benefits” can mean for a plant pigment — calmly, with sources, and without miracle claims.",
+          readMin: "5 min read",
+          sections: [
+            {
+              h: "Why the “benefits” conversation is so popular",
+              html: `
+                <p>Chlorophyll is the green pigment of plants. In supplements it usually appears as more stable, water-soluble forms (chlorophyllin). That is why a daily green glass feels like an easy ritual rather than a complicated stack of pills.</p>
+                <figure class="article-figure">
+                  <img src="media/articles/alina-chlorophyll-hero.jpg" alt="Morning ritual with a green HÖRBI drink" width="900" height="1600" loading="lazy" />
+                  <figcaption>A morning frame for the HÖRBI channel — ritual with a green glass.</figcaption>
+                </figure>
+                <p>Keep three layers separate: <strong>what the substance is</strong>, <strong>what research discusses</strong>, and <strong>what your product label says</strong>.</p>
+              `,
+            },
+            {
+              h: "What “benefit” usually refers to",
+              html: `
+                <ul>
+                  <li><strong>Habit-friendly format</strong> — easy to dilute in water or juice.</li>
+                  <li><strong>Green sensory ritual</strong> — visible colour, simple cue for consistency.</li>
+                  <li><strong>Research interest in chlorophyllin</strong> — peer-reviewed work and reviews (including <em>Nutrients</em>, 2025) map mechanisms and limits.</li>
+                  <li><strong>Copper in some forms</strong> — copper chlorophyllin complexes may contribute copper; exact amounts belong on the label.</li>
+                </ul>
+                <p class="article-note">HÖRBI products are food supplements, not medicines.</p>
+              `,
+            },
+            {
+              h: "Science & regulators in one paragraph each",
+              html: `
+                <p><strong>EFSA</strong> assessed chlorophylls (E140) and copper complexes (E141) as <em>food colours</em> in the EU — a safety trail for colour uses, not an authorised detox/immunity health claim.</p>
+                <p>The 2025 <em>Nutrients</em> review surveys chlorophyll/chlorophyllin research. Primary literature entry: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC64728/" target="_blank" rel="noopener">PMC64728</a>.</p>
+                <figure class="article-figure">
+                  <img src="media/articles/alina-chlorophyll-ritual.jpg" alt="Standing ritual with a green drink" width="933" height="1400" loading="lazy" />
+                  <figcaption>Same ritual, standing frame — calm storytelling for the brand.</figcaption>
+                </figure>
+              `,
+            },
+            {
+              h: "How it looks with HÖRBI",
+              html: `
+                <p>HÖRBI liquid chlorophyll concentrates come in wild mint, blackcurrant and passion fruit. Serving size and precautions: follow the label and the Wildberries listing.</p>
+                <p><a class="btn btn-dark" href="index.html#products">View HÖRBI products</a></p>
+              `,
+            },
+          ],
+          callouts: [
+            { title: "Ritual", text: "A simple daily green glass." },
+            { title: "No myths", text: "Separate pigment, science and label." },
+            { title: "EFSA", text: "E140/E141 as colours, not health claims." },
+            { title: "HÖRBI", text: "Three liquid flavours on Wildberries." },
+          ],
+        },
+        de: {
+          title: "Warum flüssiges Chlorophyll? Grünes Ritual ohne Mythen",
+          kicker: "Journal · Chlorophyll · Featured",
+          lead:
+            "Flüssiges Chlorophyll ist ein einfaches Morgenritual geworden. Was „Nutzen“ für ein Pflanzenpigment bedeuten kann — mit Quellen, ohne Wunderversprechen.",
+          readMin: "5 Min.",
+          sections: [
+            {
+              h: "Ritual statt Mythos",
+              html: `<p>In Supplements oft als wasserlösliches Chlorophyllin. Trennen Sie Substanz, Forschung und Etikett.</p>
+                <figure class="article-figure"><img src="media/articles/alina-chlorophyll-hero.jpg" alt="Morgenritual mit grünem Getränk" width="900" height="1600" loading="lazy" /></figure>
+                <p class="article-note">Nahrungsergänzung, kein Arzneimittel.</p>`,
+            },
+            {
+              h: "Wissenschaft kurz",
+              html: `<p>EFSA: E140/E141 als Lebensmittelfarbstoffe. Review: <a href="https://www.mdpi.com/2072-6643/17/16/2653" target="_blank" rel="noopener">Nutrients 2025</a>. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC64728/" target="_blank" rel="noopener">PMC64728</a>.</p>
+                <p><a class="btn btn-dark" href="index.html#products">Zu HÖRBI</a></p>`,
+            },
+          ],
+          callouts: [
+            { title: "Ritual", text: "Einfaches grünes Glas am Morgen." },
+            { title: "Quellen", text: "EFSA, MDPI, PMC." },
+            { title: "Label", text: "Dosis nur vom Etikett." },
+            { title: "HÖRBI", text: "Drei Geschmacksrichtungen." },
+          ],
+        },
+        it: {
+          title: "Perché la clorofilla liquida: rituale verde senza miti",
+          kicker: "Journal · Clorofilla · In evidenza",
+          lead:
+            "La clorofilla liquida è diventata un semplice rituale del mattino. Cosa può significare «beneficio» per un pigmento vegetale — con fonti, senza promesse miracolose.",
+          readMin: "5 min",
+          sections: [
+            {
+              h: "Rituale, non mito",
+              html: `<p>Negli integratori spesso come clorofillina idrosolubile. Separate sostanza, ricerca ed etichetta.</p>
+                <figure class="article-figure"><img src="media/articles/alina-chlorophyll-hero.jpg" alt="Rituale mattutino con bevanda verde" width="900" height="1600" loading="lazy" /></figure>
+                <p class="article-note">Integratore, non medicinale.</p>`,
+            },
+            {
+              h: "Scienza in breve",
+              html: `<p>EFSA: E140/E141 come coloranti. Review: <a href="https://www.mdpi.com/2072-6643/17/16/2653" target="_blank" rel="noopener">Nutrients 2025</a>. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC64728/" target="_blank" rel="noopener">PMC64728</a>.</p>
+                <p><a class="btn btn-dark" href="index.html#products">Vedi HÖRBI</a></p>`,
+            },
+          ],
+          callouts: [
+            { title: "Rituale", text: "Un bicchiere verde al mattino." },
+            { title: "Fonti", text: "EFSA, MDPI, PMC." },
+            { title: "Etichetta", text: "Dosi solo dall’etichetta." },
+            { title: "HÖRBI", text: "Tre gusti liquidi." },
+          ],
+        },
+      },
+    },
+    {
       id: "chlorophyll-guide",
       categoryId: "chlorophyll",
       cover: "media/articles/chlorophyll-glass.jpg",
