@@ -483,159 +483,607 @@ window.HORBI_PRODUCTS = [
       },
     },
   },
-  // Coming soon
+  // Capsule BADs — live on Wildberries (labels from manufacturer docs)
   {
-    id: "soon-testobooster",
-    status: "soon",
+    id: "soon-magnesium-chelate",
+    status: "live",
+    sku: "MG-CHELATE-B6",
     images: [
-      "media/web/soon-testobooster/00.jpg",
-      "media/web/soon-testobooster/01.jpg",
+      "media/web/soon-magnesium-chelate/00.jpg",
+      "media/web/soon-magnesium-chelate/01.jpg",
     ],
-    wb: "",
+    wb: "https://www.wildberries.ru/catalog/1442970838/detail.aspx",
     i18n: {
       ru: {
-        name: "Тестобустер",
-        short: "Капсулы · скоро в линейке HÖRBI",
-        descriptionHtml: `<p class="lead">БАД «Тестобустер» — в подготовке к запуску.</p><p class="soon-line">Скоро</p><p>Форма: капсулы. Комплекс на основе D-аспарагиновой кислоты, экстрактов маки и пажитника, цинка.</p>`,
+        name: "HÖRBI Хелат магния + B6",
+        short: "Магний 402 мг · витамин B6 · капсулы",
+        descriptionHtml: `
+          <p class="lead">Биологически активная добавка к пище «Хелат магния + B6» — дополнительный источник магния и витамина B6 в удобных капсулах.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Хелатная форма магния</li>
+            <li>Дополнительный источник магния и витамина B6</li>
+            <li>Капсулы массой 800 мг</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная доза — 3 капсулы:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%РСП</th></tr></thead>
+            <tbody>
+              <tr><td>Магний</td><td>402 мг</td><td>102%*</td></tr>
+              <tr><td>Витамин B6 (пиридоксина гидрохлорид)</td><td>6 мг</td><td>300%*</td></tr>
+            </tbody>
+          </table>
+          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
+            <li>Курс — 1 месяц; при необходимости повторить</li>
+            <li>Перед применением рекомендуется консультация врача</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Магния хелат, желатин (оболочка), диоксид кремния (Е551), магниевая или кальциевая соль стеариновой кислоты, витамин B6 (пиридоксина гидрохлорид).</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>Срок годности: 2 года</li>
+            <li>Хранить до +25 °C, без прямого солнца, в недоступном для детей месте</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
+            <li>СГР: AM.01.11.01.003.R.000577.10.24 от 24.10.2024 · ТУ 10.89.19-031-26264713-2024</li>
+          </ul>
+        `,
       },
       en: {
-        name: "Testobooster",
-        short: "Capsules · coming to HÖRBI",
-        descriptionHtml: `<p class="lead">“Testobooster” food supplement is in preparation.</p><p class="soon-line">Coming soon</p>`,
+        name: "HÖRBI Magnesium chelate + B6",
+        short: "Magnesium 402 mg · vitamin B6 · capsules",
+        descriptionHtml: `
+          <p class="lead">Food supplement “Magnesium chelate + B6” — an additional source of magnesium and vitamin B6 in capsules.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Key benefits</h4>
+          <ul>
+            <li>Chelated magnesium form</li>
+            <li>Additional magnesium and vitamin B6</li>
+            <li>800 mg capsules</li>
+          </ul>
+          <h4>Actives (3 capsules / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesium</td><td>402 mg</td></tr>
+              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Adults: 1 capsule 3 times daily with meals</li>
+            <li>Course: 1 month</li>
+          </ul>
+        `,
       },
       de: {
-        name: "Testobooster",
-        short: "Kapseln · bald bei HÖRBI",
-        descriptionHtml: `<p class="lead">Nahrungsergänzung „Testobooster“ in Vorbereitung.</p><p class="soon-line">Demnächst</p>`,
+        name: "HÖRBI Magnesium-Chelat + B6",
+        short: "Magnesium 402 mg · Vitamin B6 · Kapseln",
+        descriptionHtml: `
+          <p class="lead">Nahrungsergänzung „Magnesium-Chelat + B6“ — zusätzliche Quelle von Magnesium und Vitamin B6.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Chelatiertes Magnesium</li>
+            <li>Zusätzliches Magnesium und Vitamin B6</li>
+            <li>Kapseln à 800 mg</li>
+          </ul>
+          <h4>Wirkstoffe (3 Kapseln / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesium</td><td>402 mg</td></tr>
+              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+        `,
       },
       it: {
-        name: "Testobooster",
-        short: "Capsule · in arrivo",
-        descriptionHtml: `<p class="lead">Integratore “Testobooster” in preparazione.</p><p class="soon-line">Presto</p>`,
-      },
-    },
-  },
-  {
-    id: "soon-magnesium-citrate",
-    status: "soon",
-    images: [
-      "media/web/soon-magnesium-citrate/00.jpg",
-      "media/web/soon-magnesium-citrate/01.jpg",
-    ],
-    wb: "",
-    i18n: {
-      ru: {
-        name: "Цитрат магния + B6",
-        short: "Магний 480 мг · витамин B6",
-        descriptionHtml: `<p class="lead">БАД «Цитрат магния 800 мг + B6» — скоро в каталоге.</p><p class="soon-line">Скоро</p><p>Дополнительный источник магния и витамина B6 в капсулах.</p>`,
-      },
-      en: {
-        name: "Magnesium citrate + B6",
-        short: "Magnesium · vitamin B6",
-        descriptionHtml: `<p class="lead">Magnesium citrate + B6 — coming soon.</p><p class="soon-line">Coming soon</p>`,
-      },
-      de: {
-        name: "Magnesiumcitrat + B6",
-        short: "Magnesium · Vitamin B6",
-        descriptionHtml: `<p class="lead">Magnesiumcitrat + B6 — demnächst.</p><p class="soon-line">Demnächst</p>`,
-      },
-      it: {
-        name: "Citrato di magnesio + B6",
-        short: "Magnesio · vitamina B6",
-        descriptionHtml: `<p class="lead">Citrato di magnesio + B6 — in arrivo.</p><p class="soon-line">Presto</p>`,
+        name: "HÖRBI Chelato di magnesio + B6",
+        short: "Magnesio 402 mg · vitamina B6 · capsule",
+        descriptionHtml: `
+          <p class="lead">Integratore “Chelato di magnesio + B6” — fonte aggiuntiva di magnesio e vitamina B6 in capsule.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Forma chelata di magnesio</li>
+            <li>Magnesio e vitamina B6</li>
+            <li>Capsule da 800 mg</li>
+          </ul>
+          <h4>Componenti attivi (3 capsule / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesio</td><td>402 mg</td></tr>
+              <tr><td>Vitamina B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Modalità d’uso</h4>
+          <ul>
+            <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+        `,
       },
     },
   },
   {
     id: "soon-inositol",
-    status: "soon",
+    status: "live",
+    sku: "INOSITOL-B9",
     images: [
       "media/web/soon-inositol/00.jpg",
       "media/web/soon-inositol/01.jpg",
     ],
-    wb: "",
+    wb: "https://www.wildberries.ru/catalog/1443066606/detail.aspx",
     i18n: {
       ru: {
-        name: "Инозитол + фолиевая кислота",
-        short: "Инозитол 1000 мг · B9",
-        descriptionHtml: `<p class="lead">Комплекс инозитол + фолиевая кислота — в подготовке.</p><p class="soon-line">Скоро</p>`,
+        name: "HÖRBI Комплекс инозитол + фолиевая кислота",
+        short: "Инозитол 1000 мг · витамин B9 · капсулы",
+        descriptionHtml: `
+          <p class="lead">Биологически активная добавка к пище «Комплекс инозитол + фолиевая кислота» — источник инозита (витамин B8) и фолиевой кислоты (витамин B9).</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Инозитол 1000 мг в суточной дозе</li>
+            <li>Фолиевая кислота 400 мкг</li>
+            <li>Капсулы массой 620 мг</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная доза — 2 капсулы:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%АУП</th></tr></thead>
+            <tbody>
+              <tr><td>Инозитол (витамин B8)</td><td>1000 мг</td><td>200%*</td></tr>
+              <tr><td>Фолиевая кислота (витамин B9)</td><td>400 мкг</td><td>200%*</td></tr>
+            </tbody>
+          </table>
+          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Взрослым по 2 капсулы в день во время еды</li>
+            <li>Курс — 1 месяц; при необходимости повторить</li>
+            <li>Перед применением рекомендуется консультация врача</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Мио-инозит, желатин (оболочка), диоксид кремния, магниевая соль стеариновой кислоты, фолиевая кислота.</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>Срок годности: 3 года</li>
+            <li>Хранить до +25 °C, без прямого солнца, в недоступном для детей месте</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
+            <li>СГР: AM.01.11.01.003.R.000073.02.24 от 07.02.2024 · ТУ 10.89.19-001-26264713-2023</li>
+          </ul>
+        `,
       },
       en: {
-        name: "Inositol + folic acid",
-        short: "Inositol · vitamin B9",
-        descriptionHtml: `<p class="lead">Inositol + folic acid complex — coming soon.</p><p class="soon-line">Coming soon</p>`,
+        name: "HÖRBI Inositol + folic acid complex",
+        short: "Inositol 1000 mg · vitamin B9 · capsules",
+        descriptionHtml: `
+          <p class="lead">Food supplement “Inositol + folic acid complex” — a source of inositol (vitamin B8) and folic acid (vitamin B9).</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Actives (2 capsules / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Inositol (vitamin B8)</td><td>1000 mg</td></tr>
+              <tr><td>Folic acid (vitamin B9)</td><td>400 µg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Adults: 2 capsules daily with meals</li>
+            <li>Course: 1 month</li>
+          </ul>
+        `,
       },
       de: {
-        name: "Inositol + Folsäure",
-        short: "Inositol · Vitamin B9",
-        descriptionHtml: `<p class="lead">Inositol + Folsäure — demnächst.</p><p class="soon-line">Demnächst</p>`,
+        name: "HÖRBI Inositol + Folsäure-Komplex",
+        short: "Inositol 1000 mg · Vitamin B9 · Kapseln",
+        descriptionHtml: `
+          <p class="lead">Nahrungsergänzung „Inositol + Folsäure“ — Quelle von Inositol (Vitamin B8) und Folsäure (Vitamin B9).</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Wirkstoffe (2 Kapseln / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Inositol (Vitamin B8)</td><td>1000 mg</td></tr>
+              <tr><td>Folsäure (Vitamin B9)</td><td>400 µg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Erwachsene: 2 Kapseln täglich zu den Mahlzeiten</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+        `,
       },
       it: {
-        name: "Inositolo + acido folico",
-        short: "Inositolo · vitamina B9",
-        descriptionHtml: `<p class="lead">Inositolo + acido folico — in arrivo.</p><p class="soon-line">Presto</p>`,
-      },
-    },
-  },
-  {
-    id: "soon-magnesium-chelate",
-    status: "soon",
-    images: [
-      "media/web/soon-magnesium-chelate/00.jpg",
-      "media/web/soon-magnesium-chelate/01.jpg",
-    ],
-    wb: "",
-    i18n: {
-      ru: {
-        name: "Хелат магния + B6",
-        short: "Магний 402 мг · B6",
-        descriptionHtml: `<p class="lead">БАД «Хелат магния + B6» — скоро.</p><p class="soon-line">Скоро</p>`,
-      },
-      en: {
-        name: "Magnesium chelate + B6",
-        short: "Chelated magnesium · B6",
-        descriptionHtml: `<p class="lead">Magnesium chelate + B6 — coming soon.</p><p class="soon-line">Coming soon</p>`,
-      },
-      de: {
-        name: "Magnesium-Chelat + B6",
-        short: "Chelatiertes Magnesium · B6",
-        descriptionHtml: `<p class="lead">Magnesium-Chelat + B6 — demnächst.</p><p class="soon-line">Demnächst</p>`,
-      },
-      it: {
-        name: "Chelato di magnesio + B6",
-        short: "Magnesio chelato · B6",
-        descriptionHtml: `<p class="lead">Chelato di magnesio + B6 — in arrivo.</p><p class="soon-line">Presto</p>`,
+        name: "HÖRBI Complesso inositolo + acido folico",
+        short: "Inositolo 1000 mg · vitamina B9 · capsule",
+        descriptionHtml: `
+          <p class="lead">Integratore “Inositolo + acido folico” — fonte di inositolo (vitamina B8) e acido folico (vitamina B9).</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Componenti attivi (2 capsule / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Inositolo (vitamina B8)</td><td>1000 mg</td></tr>
+              <tr><td>Acido folico (vitamina B9)</td><td>400 µg</td></tr>
+            </tbody>
+          </table>
+          <h4>Modalità d’uso</h4>
+          <ul>
+            <li>Adulti: 2 capsule al giorno con i pasti</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+        `,
       },
     },
   },
   {
     id: "soon-collagen",
-    status: "soon",
+    status: "live",
+    sku: "COLLAGEN-HA-C",
     images: [
       "media/web/soon-collagen/00.jpg",
       "media/web/soon-collagen/01.jpg",
     ],
-    wb: "",
+    wb: "https://www.wildberries.ru/catalog/1443093674/detail.aspx",
     i18n: {
       ru: {
-        name: "Морской коллаген + витамин C",
-        short: "Коллаген · гиалуроновая кислота · C",
-        descriptionHtml: `<p class="lead">Морской коллаген с гиалуроновой кислотой и витамином C — в подготовке.</p><p class="soon-line">Скоро</p>`,
+        name: "HÖRBI Морской коллаген с гиалуроновой кислотой и витамином C",
+        short: "Коллаген 1050 мг · гиалурон · витамин C",
+        descriptionHtml: `
+          <p class="lead">Биологически активная добавка к пище «Морской коллаген с гиалуроновой кислотой и витамином C» — дополнительный источник витамина C и источник гиалуроновой кислоты на основе гидролизованного рыбного коллагена.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Гидролизованный рыбный коллаген (пептиды)</li>
+            <li>Гиалуроновая кислота</li>
+            <li>Витамин C</li>
+            <li>Капсулы массой 530 мг</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная доза — 3 капсулы:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%РСП / %АУП</th></tr></thead>
+            <tbody>
+              <tr><td>Коллаген</td><td>1050 мг</td><td>—</td></tr>
+              <tr><td>Витамин C</td><td>100,5 мг</td><td>168%*</td></tr>
+              <tr><td>Гиалуроновая кислота</td><td>45 мг</td><td>90%</td></tr>
+            </tbody>
+          </table>
+          <p class="note">* не превышает верхний допустимый уровень потребления.</p>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
+            <li>Курс — 3 месяца; при необходимости повторить</li>
+            <li>Перед применением рекомендуется консультация врача</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Коллаген гидролизованный рыбный (пептиды коллагена), желатин (оболочка), витамин C (аскорбиновая кислота), гиалуроновая кислота, диоксид кремния, стеарат магния или кальция.</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>Срок годности: 3 года</li>
+            <li>Хранить до +25 °C, без прямого солнца, в недоступном для детей месте</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
+            <li>СГР: AM.01.11.01.003.R.000042.01.24 от 26.01.2024 · ТУ 10.89.19-004-26264713-2023</li>
+          </ul>
+        `,
       },
       en: {
-        name: "Marine collagen + vitamin C",
-        short: "Collagen · hyaluronic acid · C",
-        descriptionHtml: `<p class="lead">Marine collagen with hyaluronic acid & vitamin C — coming soon.</p><p class="soon-line">Coming soon</p>`,
+        name: "HÖRBI Marine collagen with hyaluronic acid & vitamin C",
+        short: "Collagen 1050 mg · hyaluronic acid · vitamin C",
+        descriptionHtml: `
+          <p class="lead">Food supplement with hydrolyzed fish collagen peptides, hyaluronic acid and vitamin C.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Actives (3 capsules / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Collagen</td><td>1050 mg</td></tr>
+              <tr><td>Vitamin C</td><td>100.5 mg</td></tr>
+              <tr><td>Hyaluronic acid</td><td>45 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Adults: 1 capsule 3 times daily with meals</li>
+            <li>Course: 3 months</li>
+          </ul>
+        `,
       },
       de: {
-        name: "Meereskollagen + Vitamin C",
-        short: "Kollagen · Hyaluron · C",
-        descriptionHtml: `<p class="lead">Meereskollagen mit Hyaluronsäure & Vitamin C — demnächst.</p><p class="soon-line">Demnächst</p>`,
+        name: "HÖRBI Meereskollagen mit Hyaluron & Vitamin C",
+        short: "Kollagen 1050 mg · Hyaluron · Vitamin C",
+        descriptionHtml: `
+          <p class="lead">Nahrungsergänzung mit hydrolysiertem Fischkollagen, Hyaluronsäure und Vitamin C.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Wirkstoffe (3 Kapseln / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Kollagen</td><td>1050 mg</td></tr>
+              <tr><td>Vitamin C</td><td>100,5 mg</td></tr>
+              <tr><td>Hyaluronsäure</td><td>45 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
+            <li>Kur: 3 Monate</li>
+          </ul>
+        `,
       },
       it: {
-        name: "Collagene marino + vitamina C",
-        short: "Collagene · acido ialuronico · C",
-        descriptionHtml: `<p class="lead">Collagene marino con acido ialuronico e vitamina C — in arrivo.</p><p class="soon-line">Presto</p>`,
+        name: "HÖRBI Collagene marino con acido ialuronico e vitamina C",
+        short: "Collagene 1050 mg · acido ialuronico · vitamina C",
+        descriptionHtml: `
+          <p class="lead">Integratore con collagene idrolizzato di pesce, acido ialuronico e vitamina C.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Componenti attivi (3 capsule / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Collagene</td><td>1050 mg</td></tr>
+              <tr><td>Vitamina C</td><td>100,5 mg</td></tr>
+              <tr><td>Acido ialuronico</td><td>45 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Modalità d’uso</h4>
+          <ul>
+            <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
+            <li>Ciclo: 3 mesi</li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
+    id: "soon-magnesium-citrate",
+    status: "live",
+    sku: "MG-CITRATE-B6",
+    images: [
+      "media/web/soon-magnesium-citrate/00.jpg",
+      "media/web/soon-magnesium-citrate/01.jpg",
+    ],
+    wb: "https://www.wildberries.ru/catalog/1443005218/detail.aspx",
+    i18n: {
+      ru: {
+        name: "HÖRBI Цитрат магния 800 мг + B6",
+        short: "Магний 480 мг · витамин B6 · капсулы",
+        descriptionHtml: `
+          <p class="lead">Биологически активная добавка к пище «Цитрат магния 800 мг + B6» — дополнительный источник магния и витамина B6.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Цитрат магния</li>
+            <li>Витамин B6</li>
+            <li>Капсулы массой 1120 мг</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная доза — 4 капсулы:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%РСП</th></tr></thead>
+            <tbody>
+              <tr><td>Магний</td><td>480 мг</td><td>120%*</td></tr>
+              <tr><td>Витамин B6 (пиридоксина гидрохлорид)</td><td>6 мг</td><td>300%*</td></tr>
+            </tbody>
+          </table>
+          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Взрослым по 2 капсулы 2 раза в день во время еды</li>
+            <li>Курс — 1 месяц; при необходимости повторить</li>
+            <li>Перед применением рекомендуется консультация врача</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Магния цитрат, микрокристаллическая целлюлоза (Е460), желатин (оболочка), диоксид кремния (Е551), магниевая или кальциевая соль стеариновой кислоты, витамин B6 (пиридоксина гидрохлорид).</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>Срок годности: 3 года</li>
+            <li>Хранить до +25 °C, без прямого солнца, в недоступном для детей месте</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
+            <li>СГР: AM.01.11.01.003.R.000155.03.24 от 04.03.2024 · ТУ 10.89.19-009-26264713-2023</li>
+          </ul>
+        `,
+      },
+      en: {
+        name: "HÖRBI Magnesium citrate 800 mg + B6",
+        short: "Magnesium 480 mg · vitamin B6 · capsules",
+        descriptionHtml: `
+          <p class="lead">Food supplement “Magnesium citrate 800 mg + B6” — an additional source of magnesium and vitamin B6.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Actives (4 capsules / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesium</td><td>480 mg</td></tr>
+              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Adults: 2 capsules twice daily with meals</li>
+            <li>Course: 1 month</li>
+          </ul>
+        `,
+      },
+      de: {
+        name: "HÖRBI Magnesiumcitrat 800 mg + B6",
+        short: "Magnesium 480 mg · Vitamin B6 · Kapseln",
+        descriptionHtml: `
+          <p class="lead">Nahrungsergänzung „Magnesiumcitrat 800 mg + B6“ — zusätzliche Quelle von Magnesium und Vitamin B6.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Wirkstoffe (4 Kapseln / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesium</td><td>480 mg</td></tr>
+              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Erwachsene: 2 Kapseln 2× täglich zu den Mahlzeiten</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+        `,
+      },
+      it: {
+        name: "HÖRBI Citrato di magnesio 800 mg + B6",
+        short: "Magnesio 480 mg · vitamina B6 · capsule",
+        descriptionHtml: `
+          <p class="lead">Integratore “Citrato di magnesio 800 mg + B6” — fonte aggiuntiva di magnesio e vitamina B6.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Componenti attivi (4 capsule / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Magnesio</td><td>480 mg</td></tr>
+              <tr><td>Vitamina B6</td><td>6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Modalità d’uso</h4>
+          <ul>
+            <li>Adulti: 2 capsule 2 volte al giorno con i pasti</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
+    id: "soon-testobooster",
+    status: "live",
+    sku: "TESTOBOOSTER",
+    images: [
+      "media/web/soon-testobooster/00.jpg",
+      "media/web/soon-testobooster/01.jpg",
+    ],
+    wb: "https://www.wildberries.ru/catalog/1443168147/detail.aspx",
+    i18n: {
+      ru: {
+        name: "HÖRBI Тестобустер",
+        short: "D-аспарагиновая кислота · мака · пажитник · цинк",
+        descriptionHtml: `
+          <p class="lead">Биологически активная добавка к пище «Тестобустер» — дополнительный источник аспарагиновой кислоты и цинка на основе D-аспарагиновой кислоты, экстрактов маки и пажитника.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>D-аспарагиновая кислота</li>
+            <li>Экстракт корня маки перуанской</li>
+            <li>Экстракт пажитника</li>
+            <li>Цинк</li>
+            <li>Капсулы массой 820 мг</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Порция — 3 капсулы:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%РСП / АУП</th></tr></thead>
+            <tbody>
+              <tr><td>Аспарагиновая кислота</td><td>1000 мг</td><td>8,2%</td></tr>
+              <tr><td>Экстракт корня маки перуанской</td><td>500 мг</td><td>—</td></tr>
+              <tr><td>Экстракт пажитника</td><td>500 мг</td><td>—</td></tr>
+              <tr><td>Цинк</td><td>25 мг</td><td>166,6%*</td></tr>
+            </tbody>
+          </table>
+          <p class="note">* не превышает верхнего допустимого уровня. В составе также экстракт чёрного перца.</p>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
+            <li>Курс — 1 месяц; при необходимости повторить</li>
+            <li>Перед применением рекомендуется консультация врача</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>D-аспарагиновая кислота, экстракт корня маки перуанской, экстракт пажитника, желатин (оболочка), цитрат цинка, экстракт чёрного перца.</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>Срок годности: 2 года</li>
+            <li>Хранить при +5…+25 °C, без прямого солнца, в недоступном для детей месте</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
+            <li>СГР: AM.01.11.01.003.R.000355.06.24 от 03.06.2024 · ТУ 10.89.19-026-26264713-2024</li>
+          </ul>
+        `,
+      },
+      en: {
+        name: "HÖRBI Testobooster",
+        short: "D-aspartic acid · maca · fenugreek · zinc",
+        descriptionHtml: `
+          <p class="lead">Food supplement “Testobooster” — an additional source of aspartic acid and zinc with maca and fenugreek extracts.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Actives (3 capsules)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Aspartic acid</td><td>1000 mg</td></tr>
+              <tr><td>Peruvian maca root extract</td><td>500 mg</td></tr>
+              <tr><td>Fenugreek extract</td><td>500 mg</td></tr>
+              <tr><td>Zinc</td><td>25 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Adults: 1 capsule 3 times daily with meals</li>
+            <li>Course: 1 month</li>
+          </ul>
+        `,
+      },
+      de: {
+        name: "HÖRBI Testobooster",
+        short: "D-Asparaginsäure · Maca · Bockshornklee · Zink",
+        descriptionHtml: `
+          <p class="lead">Nahrungsergänzung „Testobooster“ — zusätzliche Quelle von Asparaginsäure und Zink mit Maca- und Bockshornklee-Extrakten.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Wirkstoffe (3 Kapseln)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Asparaginsäure</td><td>1000 mg</td></tr>
+              <tr><td>Maca-Wurzelextrakt</td><td>500 mg</td></tr>
+              <tr><td>Bockshornklee-Extrakt</td><td>500 mg</td></tr>
+              <tr><td>Zink</td><td>25 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+        `,
+      },
+      it: {
+        name: "HÖRBI Testobooster",
+        short: "Acido D-aspartico · maca · fieno greco · zinco",
+        descriptionHtml: `
+          <p class="lead">Integratore “Testobooster” — fonte aggiuntiva di acido aspartico e zinco con estratti di maca e fieno greco.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Componenti attivi (3 capsule)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Acido aspartico</td><td>1000 mg</td></tr>
+              <tr><td>Estratto di radice di maca</td><td>500 mg</td></tr>
+              <tr><td>Estratto di fieno greco</td><td>500 mg</td></tr>
+              <tr><td>Zinco</td><td>25 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Modalità d’uso</h4>
+          <ul>
+            <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+        `,
       },
     },
   },

@@ -174,7 +174,10 @@
     const live = PRODUCTS.filter((p) => p.status === "live");
     const soon = PRODUCTS.filter((p) => p.status === "soon");
     $("grid-live").innerHTML = live.map(cardHTML).join("");
-    $("grid-soon").innerHTML = soon.map(cardHTML).join("");
+    const soonGrid = $("grid-soon");
+    const soonSec = document.querySelector(".section-soon");
+    if (soonGrid) soonGrid.innerHTML = soon.map(cardHTML).join("");
+    if (soonSec) soonSec.hidden = soon.length === 0;
     document.querySelectorAll(".card[data-id]").forEach((card) => {
       card.addEventListener("click", () => openProduct(card.dataset.id));
     });
