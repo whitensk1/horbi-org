@@ -485,7 +485,7 @@ window.HORBI_PRODUCTS = [
   },
   {
     id: "soon-lesnye-yagody",
-    status: "soon",
+    status: "live",
     flavorKey: "forest-berries",
     sku: "CHL-BERRY-500",
     images: [
@@ -507,49 +507,140 @@ window.HORBI_PRODUCTS = [
       "media/web/soon-lesnye-yagody/15.jpg",
       "media/web/soon-lesnye-yagody/16.jpg"
     ],
-    wb: "",
+    wb: "https://www.wildberries.ru/catalog/1798804395/detail.aspx",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Лесные ягоды» 500 мл",
-        short: "Новый вкус · скоро на Wildberries",
+        short: "Ягодный вкус · жидкая форма",
         descriptionHtml: `
-          <p class="lead">Жидкий хлорофилл-концентрат HÖRBI со вкусом лесных ягод. Объём 500 мл. Карточка готовится к выходу на Wildberries.</p>
-          <p class="note">Не является лекарственным средством. Ссылка на покупку появится, когда товар будет в продаже.</p>
-          <p class="soon-line">Скоро</p>
+          <p class="lead">Жидкий хлорофилл HÖRBI со вкусом лесных ягод — источник хлорофилла и дополнительный источник меди на основе медного комплекса хлорофиллина натрия из люцерны.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Источник хлорофилла</li>
+            <li>Дополнительный источник меди</li>
+            <li>Вкус лесных ягод</li>
+            <li>Импортное сырьё · натуральные ароматизаторы</li>
+            <li>Объём 500 мл · удобное применение</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная порция 20–40 мл:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <tbody>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг (130–260% АУП)</td></tr>
+            </tbody>
+          </table>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Перед употреблением взболтать</li>
+            <li>Взрослым: 2 ст. л. (20 мл) 1–2 раза в день во время еды</li>
+            <li>В чистом виде или развести в ½ стакана воды</li>
+            <li>Курс — 1 месяц</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Вода очищенная структурированная, хлорофилл (медный комплекс хлорофиллина натрия из люцерны), яблочная кислота, ксантановая камедь, консерванты (сорбат калия, бензоат натрия), ароматизаторы натуральные (лесные ягоды), стевиогликозиды.</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>После вскрытия хранить в холодильнике</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+          </ul>
         `,
       },
       en: {
         name: "HÖRBI Chlorophyll “Forest Berries” 500 ml",
-        short: "New flavor · coming soon on Wildberries",
+        short: "Berry taste · liquid concentrate",
         descriptionHtml: `
-          <p class="lead">HÖRBI liquid chlorophyll concentrate with forest-berry taste. 500 ml. Listing is being prepared for Wildberries.</p>
-          <p class="note">Not a medicinal product. The shop link will appear when the product is live.</p>
-          <p class="soon-line">Coming soon</p>
+          <p class="lead">Liquid chlorophyll with forest-berry taste — chlorophyll source plus additional copper, based on sodium copper chlorophyllin from alfalfa.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Benefits</h4>
+          <ul>
+            <li>Chlorophyll source</li>
+            <li>Additional copper</li>
+            <li>Forest-berry taste</li>
+            <li>500 ml convenient liquid format</li>
+          </ul>
+          <h4>Active compounds (20–40 ml / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Shake before use</li>
+            <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
+            <li>Straight or diluted in ½ glass of water</li>
+            <li>Course: 1 month</li>
+          </ul>
         `,
       },
       de: {
         name: "HÖRBI Chlorophyll „Waldbeeren“ 500 ml",
-        short: "Neuer Geschmack · bald auf Wildberries",
+        short: "Beerig im Geschmack · flüssig",
         descriptionHtml: `
-          <p class="lead">Flüssiges Chlorophyll-Konzentrat HÖRBI mit Waldbeerengeschmack. 500 ml. Die Karte wird für Wildberries vorbereitet.</p>
-          <p class="note">Kein Arzneimittel. Der Kauflink erscheint, sobald das Produkt live ist.</p>
-          <p class="soon-line">Bald</p>
+          <p class="lead">Flüssiges Chlorophyll mit Waldbeerengeschmack — Chlorophyllquelle und zusätzliche Kupferquelle.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Chlorophyll-Quelle</li>
+            <li>Zusätzliches Kupfer</li>
+            <li>Waldbeeriger Geschmack</li>
+            <li>500 ml Flüssigkonzentrat</li>
+          </ul>
+          <h4>Wirkstoffe (20–40 ml / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Vor Gebrauch schütteln</li>
+            <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
+            <li>Pur oder in ½ Glas Wasser</li>
+          </ul>
         `,
       },
       it: {
         name: "HÖRBI Clorofilla “Frutti di bosco” 500 ml",
-        short: "Nuovo gusto · presto su Wildberries",
+        short: "Gusto di frutti di bosco · liquido",
         descriptionHtml: `
-          <p class="lead">Concentrato liquido di clorofilla HÖRBI al gusto di frutti di bosco. 500 ml. La scheda è in preparazione su Wildberries.</p>
-          <p class="note">Non è un medicinale. Il link all’acquisto comparirà quando il prodotto sarà online.</p>
-          <p class="soon-line">Presto</p>
+          <p class="lead">Clorofilla liquida al gusto di frutti di bosco — fonte di clorofilla e fonte aggiuntiva di rame.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Fonte di clorofilla</li>
+            <li>Rame aggiuntivo</li>
+            <li>Gusto di frutti di bosco</li>
+            <li>Formato 500 ml</li>
+          </ul>
+          <h4>Componenti attivi (20–40 ml / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Come assumere</h4>
+          <ul>
+            <li>Agitare prima dell’uso</li>
+            <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
+            <li>Puro o diluito in ½ bicchiere d’acqua</li>
+          </ul>
         `,
       },
     },
   },
   {
     id: "soon-malina",
-    status: "soon",
+    status: "live",
     flavorKey: "raspberry",
     sku: "CHL-RASP-500",
     images: [
@@ -571,42 +662,133 @@ window.HORBI_PRODUCTS = [
       "media/web/soon-malina/15.jpg",
       "media/web/soon-malina/16.jpg"
     ],
-    wb: "",
+    wb: "https://www.wildberries.ru/catalog/1798701902/detail.aspx",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Отборная малина» 500 мл",
-        short: "Новый вкус · скоро на Wildberries",
+        short: "Малиновый вкус · жидкая форма",
         descriptionHtml: `
-          <p class="lead">Жидкий хлорофилл-концентрат HÖRBI со вкусом отборной малины. Объём 500 мл. Карточка готовится к выходу на Wildberries.</p>
-          <p class="note">Не является лекарственным средством. Ссылка на покупку появится, когда товар будет в продаже.</p>
-          <p class="soon-line">Скоро</p>
+          <p class="lead">Жидкий хлорофилл HÖRBI со вкусом отборной малины — источник хлорофилла и дополнительный источник меди на основе медного комплекса хлорофиллина натрия из люцерны.</p>
+          <p class="note">Не является лекарственным средством.</p>
+          <h4>Преимущества</h4>
+          <ul>
+            <li>Источник хлорофилла</li>
+            <li>Дополнительный источник меди</li>
+            <li>Вкус отборной малины</li>
+            <li>Импортное сырьё · натуральные ароматизаторы</li>
+            <li>Объём 500 мл · удобное применение</li>
+          </ul>
+          <h4>Активные компоненты</h4>
+          <p>Суточная порция 20–40 мл:</p>
+          <table class="spec">
+            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <tbody>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг (130–260% АУП)</td></tr>
+            </tbody>
+          </table>
+          <h4>Как принимать</h4>
+          <ul>
+            <li>Перед употреблением взболтать</li>
+            <li>Взрослым: 2 ст. л. (20 мл) 1–2 раза в день во время еды</li>
+            <li>В чистом виде или развести в ½ стакана воды</li>
+            <li>Курс — 1 месяц</li>
+          </ul>
+          <h4>Состав</h4>
+          <p>Вода очищенная структурированная, хлорофилл (медный комплекс хлорофиллина натрия из люцерны), яблочная кислота, ксантановая камедь, консерванты (сорбат калия, бензоат натрия), ароматизаторы натуральные (малина), стевиогликозиды.</p>
+          <h4>Важно</h4>
+          <ul>
+            <li>После вскрытия хранить в холодильнике</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+          </ul>
         `,
       },
       en: {
         name: "HÖRBI Chlorophyll “Select Raspberry” 500 ml",
-        short: "New flavor · coming soon on Wildberries",
+        short: "Raspberry taste · liquid concentrate",
         descriptionHtml: `
-          <p class="lead">HÖRBI liquid chlorophyll concentrate with select raspberry taste. 500 ml. Listing is being prepared for Wildberries.</p>
-          <p class="note">Not a medicinal product. The shop link will appear when the product is live.</p>
-          <p class="soon-line">Coming soon</p>
+          <p class="lead">Liquid chlorophyll with select raspberry taste — chlorophyll source plus additional copper, based on sodium copper chlorophyllin from alfalfa.</p>
+          <p class="note">Not a medicinal product.</p>
+          <h4>Benefits</h4>
+          <ul>
+            <li>Chlorophyll source</li>
+            <li>Additional copper</li>
+            <li>Raspberry taste</li>
+            <li>500 ml convenient liquid format</li>
+          </ul>
+          <h4>Active compounds (20–40 ml / day)</h4>
+          <table class="spec">
+            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>How to use</h4>
+          <ul>
+            <li>Shake before use</li>
+            <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
+            <li>Straight or diluted in ½ glass of water</li>
+            <li>Course: 1 month</li>
+          </ul>
         `,
       },
       de: {
         name: "HÖRBI Chlorophyll „Auserlesene Himbeere“ 500 ml",
-        short: "Neuer Geschmack · bald auf Wildberries",
+        short: "Himbeer-Geschmack · flüssig",
         descriptionHtml: `
-          <p class="lead">Flüssiges Chlorophyll-Konzentrat HÖRBI mit auserlesenem Himbeergeschmack. 500 ml. Die Karte wird für Wildberries vorbereitet.</p>
-          <p class="note">Kein Arzneimittel. Der Kauflink erscheint, sobald das Produkt live ist.</p>
-          <p class="soon-line">Bald</p>
+          <p class="lead">Flüssiges Chlorophyll mit auserlesenem Himbeergeschmack — Chlorophyllquelle und zusätzliche Kupferquelle.</p>
+          <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Chlorophyll-Quelle</li>
+            <li>Zusätzliches Kupfer</li>
+            <li>Himbeergeschmack</li>
+            <li>500 ml Flüssigkonzentrat</li>
+          </ul>
+          <h4>Wirkstoffe (20–40 ml / Tag)</h4>
+          <table class="spec">
+            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <tbody>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Vor Gebrauch schütteln</li>
+            <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
+            <li>Pur oder in ½ Glas Wasser</li>
+          </ul>
         `,
       },
       it: {
         name: "HÖRBI Clorofilla “Lampone selezionato” 500 ml",
-        short: "Nuovo gusto · presto su Wildberries",
+        short: "Gusto lampone · liquido",
         descriptionHtml: `
-          <p class="lead">Concentrato liquido di clorofilla HÖRBI al gusto di lampone selezionato. 500 ml. La scheda è in preparazione su Wildberries.</p>
-          <p class="note">Non è un medicinale. Il link all’acquisto comparirà quando il prodotto sarà online.</p>
-          <p class="soon-line">Presto</p>
+          <p class="lead">Clorofilla liquida al gusto di lampone selezionato — fonte di clorofilla e fonte aggiuntiva di rame.</p>
+          <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Fonte di clorofilla</li>
+            <li>Rame aggiuntivo</li>
+            <li>Gusto di lampone</li>
+            <li>Formato 500 ml</li>
+          </ul>
+          <h4>Componenti attivi (20–40 ml / giorno)</h4>
+          <table class="spec">
+            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <tbody>
+              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+            </tbody>
+          </table>
+          <h4>Come assumere</h4>
+          <ul>
+            <li>Agitare prima dell’uso</li>
+            <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
+            <li>Puro o diluito in ½ bicchiere d’acqua</li>
+          </ul>
         `,
       },
     },
