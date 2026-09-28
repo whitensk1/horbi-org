@@ -483,6 +483,134 @@ window.HORBI_PRODUCTS = [
       },
     },
   },
+  {
+    id: "soon-lesnye-yagody",
+    status: "soon",
+    flavorKey: "forest-berries",
+    sku: "CHL-BERRY-500",
+    images: [
+      "media/web/soon-lesnye-yagody/00.jpg",
+      "media/web/soon-lesnye-yagody/01.jpg",
+      "media/web/soon-lesnye-yagody/02.jpg",
+      "media/web/soon-lesnye-yagody/03.jpg",
+      "media/web/soon-lesnye-yagody/04.jpg",
+      "media/web/soon-lesnye-yagody/05.jpg",
+      "media/web/soon-lesnye-yagody/06.jpg",
+      "media/web/soon-lesnye-yagody/07.jpg",
+      "media/web/soon-lesnye-yagody/08.jpg",
+      "media/web/soon-lesnye-yagody/09.jpg",
+      "media/web/soon-lesnye-yagody/10.jpg",
+      "media/web/soon-lesnye-yagody/11.jpg",
+      "media/web/soon-lesnye-yagody/12.jpg",
+      "media/web/soon-lesnye-yagody/13.jpg",
+      "media/web/soon-lesnye-yagody/14.jpg",
+      "media/web/soon-lesnye-yagody/15.jpg",
+      "media/web/soon-lesnye-yagody/16.jpg"
+    ],
+    wb: "",
+    i18n: {
+      ru: {
+        name: "HÖRBI Хлорофилл «Лесные ягоды» 500 мл",
+        short: "Новый вкус · скоро на Wildberries",
+        descriptionHtml: `
+          <p class="lead">Жидкий хлорофилл-концентрат HÖRBI со вкусом лесных ягод. Объём 500 мл. Карточка готовится к выходу на Wildberries.</p>
+          <p class="note">Не является лекарственным средством. Ссылка на покупку появится, когда товар будет в продаже.</p>
+          <p class="soon-line">Скоро</p>
+        `,
+      },
+      en: {
+        name: "HÖRBI Chlorophyll “Forest Berries” 500 ml",
+        short: "New flavor · coming soon on Wildberries",
+        descriptionHtml: `
+          <p class="lead">HÖRBI liquid chlorophyll concentrate with forest-berry taste. 500 ml. Listing is being prepared for Wildberries.</p>
+          <p class="note">Not a medicinal product. The shop link will appear when the product is live.</p>
+          <p class="soon-line">Coming soon</p>
+        `,
+      },
+      de: {
+        name: "HÖRBI Chlorophyll „Waldbeeren“ 500 ml",
+        short: "Neuer Geschmack · bald auf Wildberries",
+        descriptionHtml: `
+          <p class="lead">Flüssiges Chlorophyll-Konzentrat HÖRBI mit Waldbeerengeschmack. 500 ml. Die Karte wird für Wildberries vorbereitet.</p>
+          <p class="note">Kein Arzneimittel. Der Kauflink erscheint, sobald das Produkt live ist.</p>
+          <p class="soon-line">Bald</p>
+        `,
+      },
+      it: {
+        name: "HÖRBI Clorofilla “Frutti di bosco” 500 ml",
+        short: "Nuovo gusto · presto su Wildberries",
+        descriptionHtml: `
+          <p class="lead">Concentrato liquido di clorofilla HÖRBI al gusto di frutti di bosco. 500 ml. La scheda è in preparazione su Wildberries.</p>
+          <p class="note">Non è un medicinale. Il link all’acquisto comparirà quando il prodotto sarà online.</p>
+          <p class="soon-line">Presto</p>
+        `,
+      },
+    },
+  },
+  {
+    id: "soon-malina",
+    status: "soon",
+    flavorKey: "raspberry",
+    sku: "CHL-RASP-500",
+    images: [
+      "media/web/soon-malina/00.jpg",
+      "media/web/soon-malina/01.jpg",
+      "media/web/soon-malina/02.jpg",
+      "media/web/soon-malina/03.jpg",
+      "media/web/soon-malina/04.jpg",
+      "media/web/soon-malina/05.jpg",
+      "media/web/soon-malina/06.jpg",
+      "media/web/soon-malina/07.jpg",
+      "media/web/soon-malina/08.jpg",
+      "media/web/soon-malina/09.jpg",
+      "media/web/soon-malina/10.jpg",
+      "media/web/soon-malina/11.jpg",
+      "media/web/soon-malina/12.jpg",
+      "media/web/soon-malina/13.jpg",
+      "media/web/soon-malina/14.jpg",
+      "media/web/soon-malina/15.jpg",
+      "media/web/soon-malina/16.jpg"
+    ],
+    wb: "",
+    i18n: {
+      ru: {
+        name: "HÖRBI Хлорофилл «Отборная малина» 500 мл",
+        short: "Новый вкус · скоро на Wildberries",
+        descriptionHtml: `
+          <p class="lead">Жидкий хлорофилл-концентрат HÖRBI со вкусом отборной малины. Объём 500 мл. Карточка готовится к выходу на Wildberries.</p>
+          <p class="note">Не является лекарственным средством. Ссылка на покупку появится, когда товар будет в продаже.</p>
+          <p class="soon-line">Скоро</p>
+        `,
+      },
+      en: {
+        name: "HÖRBI Chlorophyll “Select Raspberry” 500 ml",
+        short: "New flavor · coming soon on Wildberries",
+        descriptionHtml: `
+          <p class="lead">HÖRBI liquid chlorophyll concentrate with select raspberry taste. 500 ml. Listing is being prepared for Wildberries.</p>
+          <p class="note">Not a medicinal product. The shop link will appear when the product is live.</p>
+          <p class="soon-line">Coming soon</p>
+        `,
+      },
+      de: {
+        name: "HÖRBI Chlorophyll „Auserlesene Himbeere“ 500 ml",
+        short: "Neuer Geschmack · bald auf Wildberries",
+        descriptionHtml: `
+          <p class="lead">Flüssiges Chlorophyll-Konzentrat HÖRBI mit auserlesenem Himbeergeschmack. 500 ml. Die Karte wird für Wildberries vorbereitet.</p>
+          <p class="note">Kein Arzneimittel. Der Kauflink erscheint, sobald das Produkt live ist.</p>
+          <p class="soon-line">Bald</p>
+        `,
+      },
+      it: {
+        name: "HÖRBI Clorofilla “Lampone selezionato” 500 ml",
+        short: "Nuovo gusto · presto su Wildberries",
+        descriptionHtml: `
+          <p class="lead">Concentrato liquido di clorofilla HÖRBI al gusto di lampone selezionato. 500 ml. La scheda è in preparazione su Wildberries.</p>
+          <p class="note">Non è un medicinale. Il link all’acquisto comparirà quando il prodotto sarà online.</p>
+          <p class="soon-line">Presto</p>
+        `,
+      },
+    },
+  },
   // Capsule BADs — live on Wildberries (labels from manufacturer docs)
   {
     id: "soon-magnesium-chelate",
