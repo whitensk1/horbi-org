@@ -101,12 +101,25 @@
       "tg-channel-title": "tg_title",
       "tg-channel-sub": "tg_sub",
       "tg-channel-cta": "tg_cta",
+      "hero-kicker": "hero_kicker",
       "hero-title": "hero_title",
       "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
       "hero-cta2": "hero_cta2",
+      "sec-live-kicker": "sec_live_kicker",
       "sec-live": "section_live",
+      "sec-caps-kicker": "sec_caps_kicker",
+      "sec-caps": "sec_caps",
       "sec-soon": "section_soon",
+      "fact-liquid": "fact_liquid",
+      "fact-tastes": "fact_tastes",
+      "fact-shop": "fact_shop",
+      "journal-teaser-kicker": "journal_teaser_kicker",
+      "journal-teaser-title": "journal_teaser_title",
+      "journal-teaser-lead": "journal_teaser_lead",
+      "journal-teaser-cta": "journal_teaser_cta",
+      "journal-teaser-all": "journal_teaser_all",
+      "modal-close-2": "modal_close",
       "about-title": "about_title",
       "about-body": "about_body",
       "about-body-2": "about_body_2",
@@ -144,6 +157,17 @@
     if (tgCard) tgCard.href = TELEGRAM;
     const wbHero = $("hero-cta2");
     if (wbHero) wbHero.href = WB_BRAND;
+    const heroScroll = $("hero-scroll");
+    if (heroScroll) heroScroll.setAttribute("aria-label", t("section_live"));
+    const modalX = $("modal-close");
+    if (modalX) modalX.setAttribute("aria-label", t("modal_close"));
+    const articleHref = `article.html?id=chlorophyll-green-ritual&lang=${lang}`;
+    const teaserCta = $("journal-teaser-cta");
+    if (teaserCta) teaserCta.href = articleHref;
+    const teaserMedia = $("journal-teaser-media");
+    if (teaserMedia) teaserMedia.href = articleHref;
+    const teaserAll = $("journal-teaser-all");
+    if (teaserAll) teaserAll.href = `articles.html?lang=${lang}`;
     const shop = $("nav-shop");
     if (shop) {
       shop.href = WB_BRAND;
@@ -170,10 +194,28 @@
     return (p.images && p.images[0]) || "";
   }
 
+  const FLAVOR_KEYS = {
+    mint: "flavor_mint",
+    blackcurrant: "flavor_blackcurrant",
+    passionfruit: "flavor_passionfruit",
+    "forest-berries": "flavor_forest",
+    raspberry: "flavor_raspberry",
+  };
+
   function renderCards() {
     const live = PRODUCTS.filter((p) => p.status === "live");
     const soon = PRODUCTS.filter((p) => p.status === "soon");
-    $("grid-live").innerHTML = live.map(cardHTML).join("");
+    const liquid = live.filter((p) => p.flavorKey);
+    const caps = live.filter((p) => !p.flavorKey);
+    const liquidGrid = $("grid-liquid") || $("grid-live");
+    if (liquidGrid) liquidGrid.innerHTML = liquid.map(cardHTML).join("");
+    const capsGrid = $("grid-caps");
+    const capsBlock = document.querySelector(".caps-block");
+    if (capsGrid) {
+      capsGrid.innerHTML = caps.map(cardHTML).join("");
+      capsGrid.hidden = caps.length === 0;
+    }
+    if (capsBlock) capsBlock.hidden = caps.length === 0;
     const soonGrid = $("grid-soon");
     const soonSec = document.querySelector(".section-soon");
     if (soonGrid) soonGrid.innerHTML = soon.map(cardHTML).join("");
@@ -181,12 +223,43 @@
     document.querySelectorAll(".card[data-id]").forEach((card) => {
       card.addEventListener("click", () => openProduct(card.dataset.id));
     });
+    renderFlavorRail();
+  }
+
+  function renderFlavorRail() {
+    const rail = $("flavor-rail");
+    if (!rail) return;
+    const liquids = PRODUCTS.filter((p) => p.flavorKey && p.status === "live");
+    rail.innerHTML = liquids
+      .map((p) => {
+        const label = t(FLAVOR_KEYS[p.flavorKey] || "card_open");
+        return `<a href="#products" data-open="${esc(p.id)}">${esc(label)}</a>`;
+      })
+      .join("");
+    rail.querySelectorAll("[data-open]").forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = a.dataset.open;
+        const card = document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.remove("is-pulse");
+          void card.offsetWidth;
+          card.classList.add("is-pulse");
+          window.setTimeout(() => card.classList.remove("is-pulse"), 1800);
+        } else {
+          $("products")?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
   }
 
   function cardHTML(p) {
     const tx = productText(p);
     const cover = coverOf(p);
     const soon = p.status === "soon";
+    const flavorName = p.flavorKey ? t(FLAVOR_KEYS[p.flavorKey] || "card_open") : "";
+    const heading = flavorName || tx.name;
     // Live products with photos: only <img>. Never render «фото скоро» over real images.
     // Soon products without photos: placeholder badge only.
     let media;
@@ -198,14 +271,14 @@
       media = `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
     }
     return `
-      <button type="button" class="card ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
+      <button type="button" class="card ${p.flavorKey ? "card-liquid" : "card-capsule"} ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
         <div class="card-media">
           ${soon ? `<span class="badge">${esc(t("soon_badge"))}</span>` : ""}
           ${media}
         </div>
         <div class="card-body">
-          <h3>${esc(tx.name)}</h3>
-          <p>${esc(tx.short)}</p>
+          <h3>${esc(heading)}</h3>
+          <p>${esc(tx.short || tx.name)}</p>
           <div class="more">${esc(soon ? t("soon_badge") : t("card_open"))} →</div>
         </div>
       </button>`;
@@ -615,6 +688,13 @@
       if (!document.hidden) tryPlay();
     });
   });
+
+  const siteNav = $("site-nav");
+  if (siteNav) {
+    const onScroll = () => siteNav.classList.toggle("is-scrolled", window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
 
   applyStatic();
   renderCards();
