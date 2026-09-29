@@ -231,9 +231,10 @@
     if (!rail) return;
     const liquids = PRODUCTS.filter((p) => p.flavorKey && p.status === "live");
     rail.innerHTML = liquids
-      .map((p) => {
+      .map((p, i) => {
         const label = t(FLAVOR_KEYS[p.flavorKey] || "card_open");
-        return `<a href="#products" data-open="${esc(p.id)}">${esc(label)}</a>`;
+        const n = String(i + 1).padStart(2, "0");
+        return `<a href="#products" data-open="${esc(p.id)}"><span>${n}</span>${esc(label)}</a>`;
       })
       .join("");
     rail.querySelectorAll("[data-open]").forEach((a) => {
@@ -277,9 +278,10 @@
           ${media}
         </div>
         <div class="card-body">
+          ${p.sku ? `<div class="card-sku">${esc(p.sku)}</div>` : ""}
           <h3>${esc(heading)}</h3>
           <p>${esc(tx.short || tx.name)}</p>
-          <div class="more">${esc(soon ? t("soon_badge") : t("card_open"))} →</div>
+          <div class="more">${esc(soon ? t("soon_badge") : t("card_open"))}</div>
         </div>
       </button>`;
   }
