@@ -88,10 +88,7 @@
     if (headSub) headSub.textContent = t("journal_sub");
 
     const cats = [...(DATA.categories || [])].sort((a, b) => (a.order || 0) - (b.order || 0));
-    const activeCat =
-      new URLSearchParams(location.search).get("cat") ||
-      (cats[0] && cats[0].id) ||
-      "";
+    const activeCat = new URLSearchParams(location.search).get("cat") || "all";
 
     let chips = `<button type="button" class="cat-chip ${!activeCat || activeCat === "all" ? "active" : ""}" data-cat="all">${t("journal_all")}</button>`;
     chips += cats
