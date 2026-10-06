@@ -1201,9 +1201,17 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
 #sheet-desc .spec th {
   background: var(--green-soft);
   color: var(--ink);
-  width: 40%;
 }
-#sheet-desc .spec td { width: 60%; }
+#sheet-desc .spec th:nth-child(1),
+#sheet-desc .spec td:nth-child(1) { width: 46%; }
+#sheet-desc .spec th:nth-child(2),
+#sheet-desc .spec td:nth-child(2) { width: 30%; }
+#sheet-desc .spec th:nth-child(3),
+#sheet-desc .spec td:nth-child(3) { width: 24%; }
+#sheet-desc .spec td:nth-child(3) {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
 #sheet-desc .soon-line {
   font-size: clamp(1.1rem, 4.5vw, 1.6rem);
   font-weight: 900;
@@ -1401,6 +1409,18 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   #sheet-desc .spec td {
     font-weight: 600;
     color: var(--ink);
+  }
+  #sheet-desc .spec td:nth-child(1) {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--green);
+    background: var(--green-soft);
+  }
+  #sheet-desc .spec td:nth-child(3) {
+    color: var(--gold);
+    font-weight: 700;
   }
   #sheet-desc .spec th {
     background: var(--green-soft);

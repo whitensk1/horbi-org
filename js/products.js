@@ -61,12 +61,13 @@ window.HORBI_PRODUCTS = [
           <h4>Активные компоненты</h4>
           <p>Суточная дозировка 5–15 мл:</p>
           <table class="spec">
-            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Хлорофилл</td><td>15–45 мг</td></tr>
-              <tr><td>Медь</td><td>0,75–2,25 мг (75–225% нормы)</td></tr>
+              <tr><td>Хлорофилл</td><td>15–45 мг</td><td>—</td></tr>
+              <tr><td>Медь</td><td>0,75–2,25 мг</td><td>75–225% нормы</td></tr>
             </tbody>
           </table>
+          <p class="note">Процент меди — от нормы потребления. Прочерк: для хлорофилла процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Перед употреблением взболтать</li>
@@ -102,18 +103,29 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Active compounds (5–15 ml / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>15–45 mg</td></tr>
-              <tr><td>Copper</td><td>0.75–2.25 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>15–45 mg</td><td>—</td></tr>
+              <tr><td>Copper</td><td>0.75–2.25 mg</td><td>75–225% of the reference</td></tr>
             </tbody>
           </table>
+          <p class="note">The copper percentage is of the reference intake. A dash means the label gives no percentage for chlorophyll.</p>
           <h4>How to use</h4>
           <ul>
             <li>Shake before use</li>
             <li>Adults: 1 tsp (5 ml), 1–3 times daily with meals</li>
             <li>Dilute in ½ glass of water or juice</li>
-            <li>Course: 1 month</li>
+            <li>Course: 1 month; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Purified water, glycerin, natural mint flavour, sorbitol, chlorophyll (sodium copper chlorophyllin), preservatives (potassium sorbate, sodium benzoate). Contains the sweetener sorbitol.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 2 years</li>
+            <li>Store at up to +25 °C, out of direct sun</li>
+            <li>Refrigerate after opening</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
           </ul>
         `,
       },
@@ -132,17 +144,29 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Wirkstoffe (5–15 ml / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>15–45 mg</td></tr>
-              <tr><td>Kupfer</td><td>0,75–2,25 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>15–45 mg</td><td>—</td></tr>
+              <tr><td>Kupfer</td><td>0,75–2,25 mg</td><td>75–225% der Referenz</td></tr>
             </tbody>
           </table>
+          <p class="note">Der Kupferwert ist ein Anteil der Referenzmenge. Ein Strich: für Chlorophyll steht auf dem Etikett kein Prozent.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Vor Gebrauch schütteln</li>
             <li>Erwachsene: 1 TL (5 ml), 1–3× täglich zu den Mahlzeiten</li>
             <li>In ½ Glas Wasser oder Saft verdünnen</li>
+            <li>Kur: 1 Monat; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Gereinigtes Wasser, Glycerin, natürliches Minzaroma, Sorbit, Chlorophyll (Natrium-Kupfer-Chlorophyllin), Konservierungsstoffe (Kaliumsorbat, Natriumbenzoat). Enthält den Süßstoff Sorbit.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 2 Jahre</li>
+            <li>Lagern bis +25 °C, ohne direkte Sonne</li>
+            <li>Nach dem Öffnen im Kühlschrank</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
           </ul>
         `,
       },
@@ -161,17 +185,29 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Componenti attivi (5–15 ml / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Clorofilla</td><td>15–45 mg</td></tr>
-              <tr><td>Rame</td><td>0,75–2,25 mg</td></tr>
+              <tr><td>Clorofilla</td><td>15–45 mg</td><td>—</td></tr>
+              <tr><td>Rame</td><td>0,75–2,25 mg</td><td>75–225% del riferimento</td></tr>
             </tbody>
           </table>
+          <p class="note">La percentuale del rame è rispetto al riferimento. Il trattino: in etichetta non c’è una percentuale per la clorofilla.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Agitare prima dell’uso</li>
             <li>Adulti: 1 cucchiaino (5 ml), 1–3 volte al giorno con i pasti</li>
             <li>Diluire in ½ bicchiere d’acqua o succo</li>
+            <li>Ciclo: 1 mese; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acqua depurata, glicerina, aroma naturale di menta, sorbitolo, clorofilla (complesso rameico di clorofillina sodica), conservanti (sorbato di potassio, benzoato di sodio). Contiene l’edulcorante sorbitolo.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 2 anni</li>
+            <li>Conservare fino a +25 °C, al riparo dal sole</li>
+            <li>Dopo l’apertura, in frigorifero</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
           </ul>
         `,
       },
@@ -232,12 +268,13 @@ window.HORBI_PRODUCTS = [
           <h4>Активные компоненты</h4>
           <p>Суточная порция 20–40 мл:</p>
           <table class="spec">
-            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
-              <tr><td>Медь</td><td>1,3–2,6 мг (130–260% АУП)</td></tr>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td><td>—</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг</td><td>130–260% АУП</td></tr>
             </tbody>
           </table>
+          <p class="note">АУП — адекватный уровень потребления. Прочерк: для хлорофилла процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Перед употреблением взболтать</li>
@@ -249,8 +286,8 @@ window.HORBI_PRODUCTS = [
           <p>Вода очищенная структурированная, хлорофилл (медный комплекс хлорофиллина натрия из люцерны), яблочная кислота, ксантановая камедь, консерванты (сорбат калия, бензоат натрия), ароматизаторы натуральные (мята, чёрная смородина), стевиогликозиды.</p>
           <h4>Важно</h4>
           <ul>
-            <li>После вскрытия хранить в холодильнике</li>
-            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+            <li>Хранить до +25 °C; после вскрытия — в холодильнике</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
           </ul>
         `,
       },
@@ -269,17 +306,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Active compounds (20–40 ml / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — adequate intake. A dash means the label gives no percentage for chlorophyll.</p>
           <h4>How to use</h4>
           <ul>
             <li>Shake before use</li>
             <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
             <li>Straight or diluted in ½ glass of water</li>
+            <li>Course: 1 month</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Structured purified water, chlorophyll (sodium copper chlorophyllin from alfalfa), malic acid, xanthan gum, preservatives (potassium sorbate, sodium benzoate), natural flavours (mint, blackcurrant), steviol glycosides.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Store at up to +25 °C; refrigerate after opening</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
           </ul>
         `,
       },
@@ -298,12 +344,27 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Wirkstoffe (20–40 ml / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — angemessene Zufuhr. Ein Strich: für Chlorophyll steht auf dem Etikett kein Prozent.</p>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Vor Gebrauch schütteln</li>
+            <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
+            <li>Pur oder in ½ Glas Wasser</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Strukturiertes gereinigtes Wasser, Chlorophyll (Natrium-Kupfer-Chlorophyllin aus Luzerne), Äpfelsäure, Xanthan, Konservierungsstoffe (Kaliumsorbat, Natriumbenzoat), natürliche Aromen (Minze, schwarze Johannisbeere), Steviolglycoside.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Lagern bis +25 °C; nach dem Öffnen im Kühlschrank</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+          </ul>
         `,
       },
       it: {
@@ -321,12 +382,27 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Componenti attivi (20–40 ml / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
-              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Clorofilla</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — assunzione adeguata. Il trattino: in etichetta non c’è una percentuale per la clorofilla.</p>
+          <h4>Come assumere</h4>
+          <ul>
+            <li>Agitare prima dell’uso</li>
+            <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
+            <li>Puro o diluito in ½ bicchiere d’acqua</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acqua depurata strutturata, clorofilla (complesso rameico di clorofillina sodica da erba medica), acido malico, gomma di xantano, conservanti (sorbato di potassio, benzoato di sodio), aromi naturali (menta, ribes nero), glicosidi steviolici.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Conservare fino a +25 °C; dopo l’apertura, in frigorifero</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+          </ul>
         `,
       },
     },
@@ -390,12 +466,13 @@ window.HORBI_PRODUCTS = [
           <h4>Активные компоненты</h4>
           <p>Суточная порция 20–40 мл:</p>
           <table class="spec">
-            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
-              <tr><td>Медь</td><td>1,3–2,6 мг</td></tr>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td><td>—</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг</td><td>130–260% АУП</td></tr>
             </tbody>
           </table>
+          <p class="note">АУП — адекватный уровень потребления. Прочерк: для хлорофилла процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Перед употреблением взболтать</li>
@@ -408,7 +485,7 @@ window.HORBI_PRODUCTS = [
           <h4>Важно</h4>
           <ul>
             <li>Хранить до +25 °C; после вскрытия — в холодильнике</li>
-            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
           </ul>
         `,
       },
@@ -427,12 +504,27 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Active compounds (20–40 ml / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — adequate intake. A dash means the label gives no percentage for chlorophyll.</p>
+          <h4>How to use</h4>
+          <ul>
+            <li>Shake before use</li>
+            <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
+            <li>Straight or diluted in water</li>
+            <li>Course: 1 month</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Structured purified water, chlorophyll (sodium copper chlorophyllin from alfalfa), malic acid, xanthan gum, preservatives (potassium sorbate, sodium benzoate), natural flavours (mint, passion fruit), steviol glycosides.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Store at up to +25 °C; refrigerate after opening</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+          </ul>
         `,
       },
       de: {
@@ -450,12 +542,27 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Wirkstoffe (20–40 ml / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — angemessene Zufuhr. Ein Strich: für Chlorophyll steht auf dem Etikett kein Prozent.</p>
+          <h4>Anwendung</h4>
+          <ul>
+            <li>Vor Gebrauch schütteln</li>
+            <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
+            <li>Pur oder mit Wasser verdünnen</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Strukturiertes gereinigtes Wasser, Chlorophyll (Natrium-Kupfer-Chlorophyllin aus Luzerne), Äpfelsäure, Xanthan, Konservierungsstoffe (Kaliumsorbat, Natriumbenzoat), natürliche Aromen (Minze, Maracuja), Steviolglycoside.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Lagern bis +25 °C; nach dem Öffnen im Kühlschrank</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+          </ul>
         `,
       },
       it: {
@@ -473,12 +580,27 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Componenti attivi (20–40 ml / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
-              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Clorofilla</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — assunzione adeguata. Il trattino: in etichetta non c’è una percentuale per la clorofilla.</p>
+          <h4>Come assumere</h4>
+          <ul>
+            <li>Agitare prima dell’uso</li>
+            <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
+            <li>Puro o diluito in acqua</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acqua depurata strutturata, clorofilla (complesso rameico di clorofillina sodica da erba medica), acido malico, gomma di xantano, conservanti (sorbato di potassio, benzoato di sodio), aromi naturali (menta, maracuja), glicosidi steviolici.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Conservare fino a +25 °C; dopo l’apertura, in frigorifero</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+          </ul>
         `,
       },
     },
@@ -526,12 +648,13 @@ window.HORBI_PRODUCTS = [
           <h4>Активные компоненты</h4>
           <p>Суточная порция 20–40 мл:</p>
           <table class="spec">
-            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
-              <tr><td>Медь</td><td>1,3–2,6 мг (130–260% АУП)</td></tr>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td><td>—</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг</td><td>130–260% АУП</td></tr>
             </tbody>
           </table>
+          <p class="note">АУП — адекватный уровень потребления. Прочерк: для хлорофилла процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Перед употреблением взболтать</li>
@@ -543,8 +666,8 @@ window.HORBI_PRODUCTS = [
           <p>Вода очищенная структурированная, хлорофилл (медный комплекс хлорофиллина натрия из люцерны), яблочная кислота, ксантановая камедь, консерванты (сорбат калия, бензоат натрия), ароматизаторы натуральные (лесные ягоды), стевиогликозиды.</p>
           <h4>Важно</h4>
           <ul>
-            <li>После вскрытия хранить в холодильнике</li>
-            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+            <li>Хранить до +25 °C; после вскрытия — в холодильнике</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
           </ul>
         `,
       },
@@ -563,18 +686,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Active compounds (20–40 ml / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — adequate intake. A dash means the label gives no percentage for chlorophyll.</p>
           <h4>How to use</h4>
           <ul>
             <li>Shake before use</li>
             <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
             <li>Straight or diluted in ½ glass of water</li>
             <li>Course: 1 month</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Structured purified water, chlorophyll (sodium copper chlorophyllin from alfalfa), malic acid, xanthan gum, preservatives (potassium sorbate, sodium benzoate), natural flavour (forest berries), steviol glycosides.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Store at up to +25 °C; refrigerate after opening</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
           </ul>
         `,
       },
@@ -593,17 +724,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Wirkstoffe (20–40 ml / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — angemessene Zufuhr. Ein Strich: für Chlorophyll steht auf dem Etikett kein Prozent.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Vor Gebrauch schütteln</li>
             <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
             <li>Pur oder in ½ Glas Wasser</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Strukturiertes gereinigtes Wasser, Chlorophyll (Natrium-Kupfer-Chlorophyllin aus Luzerne), Äpfelsäure, Xanthan, Konservierungsstoffe (Kaliumsorbat, Natriumbenzoat), natürliches Aroma (Waldbeeren), Steviolglycoside.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Lagern bis +25 °C; nach dem Öffnen im Kühlschrank</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
           </ul>
         `,
       },
@@ -622,17 +762,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Componenti attivi (20–40 ml / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
-              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Clorofilla</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — assunzione adeguata. Il trattino: in etichetta non c’è una percentuale per la clorofilla.</p>
           <h4>Come assumere</h4>
           <ul>
             <li>Agitare prima dell’uso</li>
             <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
             <li>Puro o diluito in ½ bicchiere d’acqua</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acqua depurata strutturata, clorofilla (complesso rameico di clorofillina sodica da erba medica), acido malico, gomma di xantano, conservanti (sorbato di potassio, benzoato di sodio), aroma naturale (frutti di bosco), glicosidi steviolici.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Conservare fino a +25 °C; dopo l’apertura, in frigorifero</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
           </ul>
         `,
       },
@@ -681,12 +830,13 @@ window.HORBI_PRODUCTS = [
           <h4>Активные компоненты</h4>
           <p>Суточная порция 20–40 мл:</p>
           <table class="spec">
-            <thead><tr><th>Компонент</th><th>Содержание</th></tr></thead>
+            <thead><tr><th>Компонент</th><th>Содержание</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Хлорофилл</td><td>25–50 мг</td></tr>
-              <tr><td>Медь</td><td>1,3–2,6 мг (130–260% АУП)</td></tr>
+              <tr><td>Хлорофилл</td><td>25–50 мг</td><td>—</td></tr>
+              <tr><td>Медь</td><td>1,3–2,6 мг</td><td>130–260% АУП</td></tr>
             </tbody>
           </table>
+          <p class="note">АУП — адекватный уровень потребления. Прочерк: для хлорофилла процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Перед употреблением взболтать</li>
@@ -698,8 +848,8 @@ window.HORBI_PRODUCTS = [
           <p>Вода очищенная структурированная, хлорофилл (медный комплекс хлорофиллина натрия из люцерны), яблочная кислота, ксантановая камедь, консерванты (сорбат калия, бензоат натрия), ароматизаторы натуральные (малина), стевиогликозиды.</p>
           <h4>Важно</h4>
           <ul>
-            <li>После вскрытия хранить в холодильнике</li>
-            <li>Противопоказания: индивидуальная непереносимость, беременность, ГВ</li>
+            <li>Хранить до +25 °C; после вскрытия — в холодильнике</li>
+            <li>Противопоказания: индивидуальная непереносимость, беременность, кормление грудью</li>
           </ul>
         `,
       },
@@ -718,18 +868,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Active compounds (20–40 ml / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Copper</td><td>1.3–2.6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Copper</td><td>1.3–2.6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — adequate intake. A dash means the label gives no percentage for chlorophyll.</p>
           <h4>How to use</h4>
           <ul>
             <li>Shake before use</li>
             <li>Adults: 2 tbsp (20 ml), 1–2 times daily with meals</li>
             <li>Straight or diluted in ½ glass of water</li>
             <li>Course: 1 month</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Structured purified water, chlorophyll (sodium copper chlorophyllin from alfalfa), malic acid, xanthan gum, preservatives (potassium sorbate, sodium benzoate), natural flavour (raspberry), steviol glycosides.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Store at up to +25 °C; refrigerate after opening</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
           </ul>
         `,
       },
@@ -748,17 +906,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Wirkstoffe (20–40 ml / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Chlorophyll</td><td>25–50 mg</td></tr>
-              <tr><td>Kupfer</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Chlorophyll</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Kupfer</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — angemessene Zufuhr. Ein Strich: für Chlorophyll steht auf dem Etikett kein Prozent.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Vor Gebrauch schütteln</li>
             <li>Erwachsene: 2 EL (20 ml), 1–2× täglich zu den Mahlzeiten</li>
             <li>Pur oder in ½ Glas Wasser</li>
+            <li>Kur: 1 Monat</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Strukturiertes gereinigtes Wasser, Chlorophyll (Natrium-Kupfer-Chlorophyllin aus Luzerne), Äpfelsäure, Xanthan, Konservierungsstoffe (Kaliumsorbat, Natriumbenzoat), natürliches Aroma (Himbeere), Steviolglycoside.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Lagern bis +25 °C; nach dem Öffnen im Kühlschrank</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
           </ul>
         `,
       },
@@ -777,17 +944,26 @@ window.HORBI_PRODUCTS = [
           </ul>
           <h4>Componenti attivi (20–40 ml / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>%</th></tr></thead>
             <tbody>
-              <tr><td>Clorofilla</td><td>25–50 mg</td></tr>
-              <tr><td>Rame</td><td>1,3–2,6 mg</td></tr>
+              <tr><td>Clorofilla</td><td>25–50 mg</td><td>—</td></tr>
+              <tr><td>Rame</td><td>1,3–2,6 mg</td><td>130–260% AI</td></tr>
             </tbody>
           </table>
+          <p class="note">AI — assunzione adeguata. Il trattino: in etichetta non c’è una percentuale per la clorofilla.</p>
           <h4>Come assumere</h4>
           <ul>
             <li>Agitare prima dell’uso</li>
             <li>Adulti: 2 cucchiai (20 ml), 1–2 volte al giorno ai pasti</li>
             <li>Puro o diluito in ½ bicchiere d’acqua</li>
+            <li>Ciclo: 1 mese</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acqua depurata strutturata, clorofilla (complesso rameico di clorofillina sodica da erba medica), acido malico, gomma di xantano, conservanti (sorbato di potassio, benzoato di sodio), aroma naturale (lampone), glicosidi steviolici.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Conservare fino a +25 °C; dopo l’apertura, in frigorifero</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
           </ul>
         `,
       },
@@ -832,6 +1008,7 @@ window.HORBI_PRODUCTS = [
             <li>Хелатная форма магния</li>
             <li>Дополнительный источник магния и витамина B6</li>
             <li>Капсулы массой 800 мг</li>
+            <li>В упаковке 120 капсул</li>
           </ul>
           <h4>Активные компоненты</h4>
           <p>Суточная доза — 3 капсулы:</p>
@@ -842,7 +1019,7 @@ window.HORBI_PRODUCTS = [
               <tr><td>Витамин B6 (пиридоксина гидрохлорид)</td><td>6 мг</td><td>300%*</td></tr>
             </tbody>
           </table>
-          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <p class="note">%РСП — рекомендуемое суточное потребление. * не превышает верхнего допустимого уровня.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
@@ -871,19 +1048,31 @@ window.HORBI_PRODUCTS = [
             <li>Chelated magnesium form</li>
             <li>Additional magnesium and vitamin B6</li>
             <li>800 mg capsules</li>
+            <li>120 capsules in the pack</li>
           </ul>
           <h4>Actives (3 capsules / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesium</td><td>402 mg</td></tr>
-              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesium</td><td>402 mg</td><td>102%*</td></tr>
+              <tr><td>Vitamin B6 (pyridoxine hydrochloride)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — share of the recommended daily intake. * does not exceed the upper permitted level.</p>
           <h4>How to use</h4>
           <ul>
             <li>Adults: 1 capsule 3 times daily with meals</li>
-            <li>Course: 1 month</li>
+            <li>Course: 1 month; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Magnesium chelate, gelatin (shell), silicon dioxide (E551), magnesium or calcium stearate, vitamin B6 (pyridoxine hydrochloride).</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 2 years</li>
+            <li>Store at up to +25 °C, out of direct sun, out of reach of children</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+            <li>State registration: AM.01.11.01.003.R.000577.10.24 of 24.10.2024 · TU 10.89.19-031-26264713-2024</li>
           </ul>
         `,
       },
@@ -898,19 +1087,31 @@ window.HORBI_PRODUCTS = [
             <li>Chelatiertes Magnesium</li>
             <li>Zusätzliches Magnesium und Vitamin B6</li>
             <li>Kapseln à 800 mg</li>
+            <li>120 Kapseln in der Packung</li>
           </ul>
           <h4>Wirkstoffe (3 Kapseln / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesium</td><td>402 mg</td></tr>
-              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesium</td><td>402 mg</td><td>102%*</td></tr>
+              <tr><td>Vitamin B6 (Pyridoxinhydrochlorid)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — Anteil der empfohlenen Tageszufuhr. * überschreitet die zulässige Höchstmenge nicht.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
-            <li>Kur: 1 Monat</li>
+            <li>Kur: 1 Monat; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Magnesiumchelat, Gelatine (Hülle), Siliciumdioxid (E551), Magnesium- oder Calciumstearat, Vitamin B6 (Pyridoxinhydrochlorid).</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 2 Jahre</li>
+            <li>Lagern bis +25 °C, ohne direkte Sonne, außerhalb der Reichweite von Kindern</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+            <li>Staatliche Registrierung: AM.01.11.01.003.R.000577.10.24 vom 24.10.2024 · TU 10.89.19-031-26264713-2024</li>
           </ul>
         `,
       },
@@ -925,19 +1126,31 @@ window.HORBI_PRODUCTS = [
             <li>Forma chelata di magnesio</li>
             <li>Magnesio e vitamina B6</li>
             <li>Capsule da 800 mg</li>
+            <li>120 capsule nella confezione</li>
           </ul>
           <h4>Componenti attivi (3 capsule / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesio</td><td>402 mg</td></tr>
-              <tr><td>Vitamina B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesio</td><td>402 mg</td><td>102%*</td></tr>
+              <tr><td>Vitamina B6 (piridossina cloridrato)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — quota dell’assunzione giornaliera raccomandata. * non supera il livello massimo consentito.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
-            <li>Ciclo: 1 mese</li>
+            <li>Ciclo: 1 mese; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Chelato di magnesio, gelatina (involucro), biossido di silicio (E551), sale di magnesio o di calcio dell’acido stearico, vitamina B6 (piridossina cloridrato).</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 2 anni</li>
+            <li>Conservare fino a +25 °C, al riparo dal sole, fuori dalla portata dei bambini</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+            <li>Registrazione: AM.01.11.01.003.R.000577.10.24 del 24.10.2024 · TU 10.89.19-031-26264713-2024</li>
           </ul>
         `,
       },
@@ -981,6 +1194,7 @@ window.HORBI_PRODUCTS = [
             <li>Инозитол 1000 мг в суточной дозе</li>
             <li>Фолиевая кислота 400 мкг</li>
             <li>Капсулы массой 620 мг</li>
+            <li>В упаковке 120 капсул</li>
           </ul>
           <h4>Активные компоненты</h4>
           <p>Суточная доза — 2 капсулы:</p>
@@ -991,7 +1205,7 @@ window.HORBI_PRODUCTS = [
               <tr><td>Фолиевая кислота (витамин B9)</td><td>400 мкг</td><td>200%*</td></tr>
             </tbody>
           </table>
-          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <p class="note">%АУП — адекватный уровень потребления. * не превышает верхнего допустимого уровня.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Взрослым по 2 капсулы в день во время еды</li>
@@ -1015,18 +1229,36 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Food supplement “Inositol + folic acid complex” — a source of inositol (vitamin B8) and folic acid (vitamin B9).</p>
           <p class="note">Not a medicinal product.</p>
+          <h4>Key benefits</h4>
+          <ul>
+            <li>Inositol 1000 mg in the daily dose</li>
+            <li>Folic acid 400 µg</li>
+            <li>620 mg capsules</li>
+            <li>120 capsules in the pack</li>
+          </ul>
           <h4>Actives (2 capsules / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>% AI</th></tr></thead>
             <tbody>
-              <tr><td>Inositol (vitamin B8)</td><td>1000 mg</td></tr>
-              <tr><td>Folic acid (vitamin B9)</td><td>400 µg</td></tr>
+              <tr><td>Inositol (vitamin B8)</td><td>1000 mg</td><td>200%*</td></tr>
+              <tr><td>Folic acid (vitamin B9)</td><td>400 µg</td><td>200%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% AI — share of the adequate intake. * does not exceed the upper permitted level.</p>
           <h4>How to use</h4>
           <ul>
             <li>Adults: 2 capsules daily with meals</li>
-            <li>Course: 1 month</li>
+            <li>Course: 1 month; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Myo-inositol, gelatin (shell), silicon dioxide, magnesium stearate, folic acid.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 3 years</li>
+            <li>Store at up to +25 °C, out of direct sun, out of reach of children</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+            <li>State registration: AM.01.11.01.003.R.000073.02.24 of 07.02.2024 · TU 10.89.19-001-26264713-2023</li>
           </ul>
         `,
       },
@@ -1036,18 +1268,36 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Nahrungsergänzung „Inositol + Folsäure“ — Quelle von Inositol (Vitamin B8) und Folsäure (Vitamin B9).</p>
           <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Inositol 1000 mg in der Tagesdosis</li>
+            <li>Folsäure 400 µg</li>
+            <li>Kapseln à 620 mg</li>
+            <li>120 Kapseln in der Packung</li>
+          </ul>
           <h4>Wirkstoffe (2 Kapseln / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>% AI</th></tr></thead>
             <tbody>
-              <tr><td>Inositol (Vitamin B8)</td><td>1000 mg</td></tr>
-              <tr><td>Folsäure (Vitamin B9)</td><td>400 µg</td></tr>
+              <tr><td>Inositol (Vitamin B8)</td><td>1000 mg</td><td>200%*</td></tr>
+              <tr><td>Folsäure (Vitamin B9)</td><td>400 µg</td><td>200%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% AI — Anteil der angemessenen Zufuhr. * überschreitet die zulässige Höchstmenge nicht.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Erwachsene: 2 Kapseln täglich zu den Mahlzeiten</li>
-            <li>Kur: 1 Monat</li>
+            <li>Kur: 1 Monat; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Myo-Inositol, Gelatine (Hülle), Siliciumdioxid, Magnesiumstearat, Folsäure.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 3 Jahre</li>
+            <li>Lagern bis +25 °C, ohne direkte Sonne, außerhalb der Reichweite von Kindern</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+            <li>Staatliche Registrierung: AM.01.11.01.003.R.000073.02.24 vom 07.02.2024 · TU 10.89.19-001-26264713-2023</li>
           </ul>
         `,
       },
@@ -1057,18 +1307,36 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Integratore “Inositolo + acido folico” — fonte di inositolo (vitamina B8) e acido folico (vitamina B9).</p>
           <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Inositolo 1000 mg nella dose giornaliera</li>
+            <li>Acido folico 400 µg</li>
+            <li>Capsule da 620 mg</li>
+            <li>120 capsule nella confezione</li>
+          </ul>
           <h4>Componenti attivi (2 capsule / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>% AI</th></tr></thead>
             <tbody>
-              <tr><td>Inositolo (vitamina B8)</td><td>1000 mg</td></tr>
-              <tr><td>Acido folico (vitamina B9)</td><td>400 µg</td></tr>
+              <tr><td>Inositolo (vitamina B8)</td><td>1000 mg</td><td>200%*</td></tr>
+              <tr><td>Acido folico (vitamina B9)</td><td>400 µg</td><td>200%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% AI — quota dell’assunzione adeguata. * non supera il livello massimo consentito.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Adulti: 2 capsule al giorno con i pasti</li>
-            <li>Ciclo: 1 mese</li>
+            <li>Ciclo: 1 mese; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Mio-inositolo, gelatina (involucro), biossido di silicio, stearato di magnesio, acido folico.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 3 anni</li>
+            <li>Conservare fino a +25 °C, al riparo dal sole, fuori dalla portata dei bambini</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+            <li>Registrazione: AM.01.11.01.003.R.000073.02.24 del 07.02.2024 · TU 10.89.19-001-26264713-2023</li>
           </ul>
         `,
       },
@@ -1114,6 +1382,7 @@ window.HORBI_PRODUCTS = [
             <li>Гиалуроновая кислота</li>
             <li>Витамин C</li>
             <li>Капсулы массой 530 мг</li>
+            <li>В упаковке 120 капсул</li>
           </ul>
           <h4>Активные компоненты</h4>
           <p>Суточная доза — 3 капсулы:</p>
@@ -1125,13 +1394,14 @@ window.HORBI_PRODUCTS = [
               <tr><td>Гиалуроновая кислота</td><td>45 мг</td><td>90%</td></tr>
             </tbody>
           </table>
-          <p class="note">* не превышает верхний допустимый уровень потребления.</p>
+          <p class="note">%РСП — рекомендуемое суточное потребление, %АУП — адекватный уровень потребления. * не превышает верхний допустимый уровень потребления. Прочерк: для коллагена процента на этикетке нет.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
             <li>Курс — 3 месяца; при необходимости повторить</li>
             <li>Перед применением рекомендуется консультация врача</li>
           </ul>
+          <p class="note">В упаковке 120 капсул. При трёх капсулах в день банки хватает на 40 дней, курс на этикетке — 3 месяца.</p>
           <h4>Состав</h4>
           <p>Коллаген гидролизованный рыбный (пептиды коллагена), желатин (оболочка), витамин C (аскорбиновая кислота), гиалуроновая кислота, диоксид кремния, стеарат магния или кальция.</p>
           <h4>Важно</h4>
@@ -1149,19 +1419,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Food supplement with hydrolyzed fish collagen peptides, hyaluronic acid and vitamin C.</p>
           <p class="note">Not a medicinal product.</p>
+          <h4>Key benefits</h4>
+          <ul>
+            <li>Hydrolyzed fish collagen peptides</li>
+            <li>Hyaluronic acid and vitamin C</li>
+            <li>530 mg capsules</li>
+            <li>120 capsules in the pack</li>
+          </ul>
           <h4>Actives (3 capsules / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>% RDI / % AI</th></tr></thead>
             <tbody>
-              <tr><td>Collagen</td><td>1050 mg</td></tr>
-              <tr><td>Vitamin C</td><td>100.5 mg</td></tr>
-              <tr><td>Hyaluronic acid</td><td>45 mg</td></tr>
+              <tr><td>Collagen</td><td>1050 mg</td><td>—</td></tr>
+              <tr><td>Vitamin C</td><td>100.5 mg</td><td>168%*</td></tr>
+              <tr><td>Hyaluronic acid</td><td>45 mg</td><td>90%</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — recommended daily intake, % AI — adequate intake. * does not exceed the upper tolerable intake. A dash means the label gives no percentage for collagen.</p>
           <h4>How to use</h4>
           <ul>
             <li>Adults: 1 capsule 3 times daily with meals</li>
-            <li>Course: 3 months</li>
+            <li>Course: 3 months; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <p class="note">The pack holds 120 capsules. At 3 a day that is 40 days; the labelled course is 3 months.</p>
+          <h4>Composition</h4>
+          <p>Hydrolyzed fish collagen (collagen peptides), gelatin (shell), vitamin C (ascorbic acid), hyaluronic acid, silicon dioxide, magnesium or calcium stearate.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 3 years</li>
+            <li>Store at up to +25 °C, out of direct sun, out of reach of children</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+            <li>State registration: AM.01.11.01.003.R.000042.01.24 of 26.01.2024 · TU 10.89.19-004-26264713-2023</li>
           </ul>
         `,
       },
@@ -1171,19 +1460,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Nahrungsergänzung mit hydrolysiertem Fischkollagen, Hyaluronsäure und Vitamin C.</p>
           <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Hydrolysierte Fischkollagenpeptide</li>
+            <li>Hyaluronsäure und Vitamin C</li>
+            <li>Kapseln à 530 mg</li>
+            <li>120 Kapseln in der Packung</li>
+          </ul>
           <h4>Wirkstoffe (3 Kapseln / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>% RDI / % AI</th></tr></thead>
             <tbody>
-              <tr><td>Kollagen</td><td>1050 mg</td></tr>
-              <tr><td>Vitamin C</td><td>100,5 mg</td></tr>
-              <tr><td>Hyaluronsäure</td><td>45 mg</td></tr>
+              <tr><td>Kollagen</td><td>1050 mg</td><td>—</td></tr>
+              <tr><td>Vitamin C</td><td>100,5 mg</td><td>168%*</td></tr>
+              <tr><td>Hyaluronsäure</td><td>45 mg</td><td>90%</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — empfohlene Tageszufuhr, % AI — angemessene Zufuhr. * überschreitet die tolerierbare Höchstmenge nicht. Ein Strich: für Kollagen steht auf dem Etikett kein Prozent.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
-            <li>Kur: 3 Monate</li>
+            <li>Kur: 3 Monate; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <p class="note">Die Packung enthält 120 Kapseln. Bei 3 am Tag reicht das für 40 Tage; die Kur auf dem Etikett dauert 3 Monate.</p>
+          <h4>Zusammensetzung</h4>
+          <p>Hydrolysiertes Fischkollagen (Kollagenpeptide), Gelatine (Hülle), Vitamin C (Ascorbinsäure), Hyaluronsäure, Siliciumdioxid, Magnesium- oder Calciumstearat.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 3 Jahre</li>
+            <li>Lagern bis +25 °C, ohne direkte Sonne, außerhalb der Reichweite von Kindern</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+            <li>Staatliche Registrierung: AM.01.11.01.003.R.000042.01.24 vom 26.01.2024 · TU 10.89.19-004-26264713-2023</li>
           </ul>
         `,
       },
@@ -1193,19 +1501,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Integratore con collagene idrolizzato di pesce, acido ialuronico e vitamina C.</p>
           <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Peptidi di collagene idrolizzato di pesce</li>
+            <li>Acido ialuronico e vitamina C</li>
+            <li>Capsule da 530 mg</li>
+            <li>120 capsule nella confezione</li>
+          </ul>
           <h4>Componenti attivi (3 capsule / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>% RDI / % AI</th></tr></thead>
             <tbody>
-              <tr><td>Collagene</td><td>1050 mg</td></tr>
-              <tr><td>Vitamina C</td><td>100,5 mg</td></tr>
-              <tr><td>Acido ialuronico</td><td>45 mg</td></tr>
+              <tr><td>Collagene</td><td>1050 mg</td><td>—</td></tr>
+              <tr><td>Vitamina C</td><td>100,5 mg</td><td>168%*</td></tr>
+              <tr><td>Acido ialuronico</td><td>45 mg</td><td>90%</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — assunzione giornaliera raccomandata, % AI — assunzione adeguata. * non supera il livello massimo tollerabile. Il trattino: in etichetta non c’è una percentuale per il collagene.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
-            <li>Ciclo: 3 mesi</li>
+            <li>Ciclo: 3 mesi; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <p class="note">La confezione contiene 120 capsule. Con 3 al giorno bastano per 40 giorni; il ciclo in etichetta è di 3 mesi.</p>
+          <h4>Composizione</h4>
+          <p>Collagene idrolizzato di pesce (peptidi di collagene), gelatina (involucro), vitamina C (acido ascorbico), acido ialuronico, biossido di silicio, stearato di magnesio o di calcio.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 3 anni</li>
+            <li>Conservare fino a +25 °C, al riparo dal sole, fuori dalla portata dei bambini</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+            <li>Registrazione: AM.01.11.01.003.R.000042.01.24 del 26.01.2024 · TU 10.89.19-004-26264713-2023</li>
           </ul>
         `,
       },
@@ -1245,12 +1572,14 @@ window.HORBI_PRODUCTS = [
         short: "Магний 480 мг · витамин B6 · капсулы",
         descriptionHtml: `
           <p class="lead">Биологически активная добавка к пище «Цитрат магния 800 мг + B6» — дополнительный источник магния и витамина B6.</p>
+          <p>В названии стоит «800 мг». В таблице — 480 мг магния в суточной дозе из 4 капсул.</p>
           <p class="note">Не является лекарственным средством.</p>
           <h4>Преимущества</h4>
           <ul>
             <li>Цитрат магния</li>
             <li>Витамин B6</li>
             <li>Капсулы массой 1120 мг</li>
+            <li>В упаковке 120 капсул</li>
           </ul>
           <h4>Активные компоненты</h4>
           <p>Суточная доза — 4 капсулы:</p>
@@ -1261,7 +1590,7 @@ window.HORBI_PRODUCTS = [
               <tr><td>Витамин B6 (пиридоксина гидрохлорид)</td><td>6 мг</td><td>300%*</td></tr>
             </tbody>
           </table>
-          <p class="note">* не превышает верхнего допустимого уровня.</p>
+          <p class="note">%РСП — рекомендуемое суточное потребление. * не превышает верхнего допустимого уровня.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Взрослым по 2 капсулы 2 раза в день во время еды</li>
@@ -1284,19 +1613,38 @@ window.HORBI_PRODUCTS = [
         short: "Magnesium 480 mg · vitamin B6 · capsules",
         descriptionHtml: `
           <p class="lead">Food supplement “Magnesium citrate 800 mg + B6” — an additional source of magnesium and vitamin B6.</p>
+          <p>“800 mg” is in the product name. The table lists 480 mg of magnesium in the daily dose of 4 capsules.</p>
           <p class="note">Not a medicinal product.</p>
+          <h4>Key benefits</h4>
+          <ul>
+            <li>Magnesium citrate</li>
+            <li>Vitamin B6</li>
+            <li>1120 mg capsules</li>
+            <li>120 capsules in the pack</li>
+          </ul>
           <h4>Actives (4 capsules / day)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesium</td><td>480 mg</td></tr>
-              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesium</td><td>480 mg</td><td>120%*</td></tr>
+              <tr><td>Vitamin B6 (pyridoxine hydrochloride)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — share of the recommended daily intake. * does not exceed the upper permitted level.</p>
           <h4>How to use</h4>
           <ul>
             <li>Adults: 2 capsules twice daily with meals</li>
-            <li>Course: 1 month</li>
+            <li>Course: 1 month; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>Magnesium citrate, microcrystalline cellulose (E460), gelatin (shell), silicon dioxide (E551), magnesium or calcium stearate, vitamin B6 (pyridoxine hydrochloride).</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 3 years</li>
+            <li>Store at up to +25 °C, out of direct sun, out of reach of children</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+            <li>State registration: AM.01.11.01.003.R.000155.03.24 of 04.03.2024 · TU 10.89.19-009-26264713-2023</li>
           </ul>
         `,
       },
@@ -1305,19 +1653,38 @@ window.HORBI_PRODUCTS = [
         short: "Magnesium 480 mg · Vitamin B6 · Kapseln",
         descriptionHtml: `
           <p class="lead">Nahrungsergänzung „Magnesiumcitrat 800 mg + B6“ — zusätzliche Quelle von Magnesium und Vitamin B6.</p>
+          <p>„800 mg“ steht im Produktnamen. Die Tabelle nennt 480 mg Magnesium in der Tagesdosis aus 4 Kapseln.</p>
           <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>Magnesiumcitrat</li>
+            <li>Vitamin B6</li>
+            <li>Kapseln à 1120 mg</li>
+            <li>120 Kapseln in der Packung</li>
+          </ul>
           <h4>Wirkstoffe (4 Kapseln / Tag)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesium</td><td>480 mg</td></tr>
-              <tr><td>Vitamin B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesium</td><td>480 mg</td><td>120%*</td></tr>
+              <tr><td>Vitamin B6 (Pyridoxinhydrochlorid)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — Anteil der empfohlenen Tageszufuhr. * überschreitet die zulässige Höchstmenge nicht.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Erwachsene: 2 Kapseln 2× täglich zu den Mahlzeiten</li>
-            <li>Kur: 1 Monat</li>
+            <li>Kur: 1 Monat; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>Magnesiumcitrat, mikrokristalline Cellulose (E460), Gelatine (Hülle), Siliciumdioxid (E551), Magnesium- oder Calciumstearat, Vitamin B6 (Pyridoxinhydrochlorid).</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 3 Jahre</li>
+            <li>Lagern bis +25 °C, ohne direkte Sonne, außerhalb der Reichweite von Kindern</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+            <li>Staatliche Registrierung: AM.01.11.01.003.R.000155.03.24 vom 04.03.2024 · TU 10.89.19-009-26264713-2023</li>
           </ul>
         `,
       },
@@ -1326,19 +1693,38 @@ window.HORBI_PRODUCTS = [
         short: "Magnesio 480 mg · vitamina B6 · capsule",
         descriptionHtml: `
           <p class="lead">Integratore “Citrato di magnesio 800 mg + B6” — fonte aggiuntiva di magnesio e vitamina B6.</p>
+          <p>«800 mg» è nel nome del prodotto. La tabella indica 480 mg di magnesio nella dose giornaliera di 4 capsule.</p>
           <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Citrato di magnesio</li>
+            <li>Vitamina B6</li>
+            <li>Capsule da 1120 mg</li>
+            <li>120 capsule nella confezione</li>
+          </ul>
           <h4>Componenti attivi (4 capsule / giorno)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>% RDI</th></tr></thead>
             <tbody>
-              <tr><td>Magnesio</td><td>480 mg</td></tr>
-              <tr><td>Vitamina B6</td><td>6 mg</td></tr>
+              <tr><td>Magnesio</td><td>480 mg</td><td>120%*</td></tr>
+              <tr><td>Vitamina B6 (piridossina cloridrato)</td><td>6 mg</td><td>300%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — quota dell’assunzione giornaliera raccomandata. * non supera il livello massimo consentito.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Adulti: 2 capsule 2 volte al giorno con i pasti</li>
-            <li>Ciclo: 1 mese</li>
+            <li>Ciclo: 1 mese; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Citrato di magnesio, cellulosa microcristallina (E460), gelatina (involucro), biossido di silicio (E551), sale di magnesio o di calcio dell’acido stearico, vitamina B6 (piridossina cloridrato).</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 3 anni</li>
+            <li>Conservare fino a +25 °C, al riparo dal sole, fuori dalla portata dei bambini</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+            <li>Registrazione: AM.01.11.01.003.R.000155.03.24 del 04.03.2024 · TU 10.89.19-009-26264713-2023</li>
           </ul>
         `,
       },
@@ -1383,6 +1769,7 @@ window.HORBI_PRODUCTS = [
             <li>Экстракт пажитника</li>
             <li>Цинк</li>
             <li>Капсулы массой 820 мг</li>
+            <li>В упаковке 120 капсул</li>
           </ul>
           <h4>Активные компоненты</h4>
           <p>Порция — 3 капсулы:</p>
@@ -1395,7 +1782,7 @@ window.HORBI_PRODUCTS = [
               <tr><td>Цинк</td><td>25 мг</td><td>166,6%*</td></tr>
             </tbody>
           </table>
-          <p class="note">* не превышает верхнего допустимого уровня. В составе также экстракт чёрного перца.</p>
+          <p class="note">%РСП — рекомендуемое суточное потребление, АУП — адекватный уровень потребления. * не превышает верхнего допустимого уровня. Прочерк: процента на этикетке нет. Экстракт чёрного перца есть в составе, миллиграммы на этикетке не указаны.</p>
           <h4>Как принимать</h4>
           <ul>
             <li>Взрослым по 1 капсуле 3 раза в день во время еды</li>
@@ -1419,20 +1806,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Food supplement “Testobooster” — an additional source of aspartic acid and zinc with maca and fenugreek extracts.</p>
           <p class="note">Not a medicinal product.</p>
+          <h4>Key benefits</h4>
+          <ul>
+            <li>D-aspartic acid</li>
+            <li>Peruvian maca root extract and fenugreek extract</li>
+            <li>Zinc</li>
+            <li>820 mg capsules · 120 capsules in the pack</li>
+          </ul>
           <h4>Actives (3 capsules)</h4>
           <table class="spec">
-            <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+            <thead><tr><th>Component</th><th>Amount</th><th>% RDI / AI</th></tr></thead>
             <tbody>
-              <tr><td>Aspartic acid</td><td>1000 mg</td></tr>
-              <tr><td>Peruvian maca root extract</td><td>500 mg</td></tr>
-              <tr><td>Fenugreek extract</td><td>500 mg</td></tr>
-              <tr><td>Zinc</td><td>25 mg</td></tr>
+              <tr><td>Aspartic acid</td><td>1000 mg</td><td>8.2%</td></tr>
+              <tr><td>Peruvian maca root extract</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Fenugreek extract</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Zinc</td><td>25 mg</td><td>166.6%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — recommended daily intake, AI — adequate intake. * does not exceed the upper permitted level. A dash means the label gives no percentage. Black-pepper extract is in the composition; the label gives no milligrams for it.</p>
           <h4>How to use</h4>
           <ul>
             <li>Adults: 1 capsule 3 times daily with meals</li>
-            <li>Course: 1 month</li>
+            <li>Course: 1 month; repeat if needed</li>
+            <li>A doctor’s advice is recommended before use</li>
+          </ul>
+          <h4>Composition</h4>
+          <p>D-aspartic acid, Peruvian maca root extract, fenugreek extract, gelatin (shell), zinc citrate, black-pepper extract.</p>
+          <h4>Important</h4>
+          <ul>
+            <li>Shelf life: 2 years</li>
+            <li>Store at +5…+25 °C, out of direct sun, out of reach of children</li>
+            <li>Contraindications: individual intolerance, pregnancy, breastfeeding</li>
+            <li>State registration: AM.01.11.01.003.R.000355.06.24 of 03.06.2024 · TU 10.89.19-026-26264713-2024</li>
           </ul>
         `,
       },
@@ -1442,20 +1847,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Nahrungsergänzung „Testobooster“ — zusätzliche Quelle von Asparaginsäure und Zink mit Maca- und Bockshornklee-Extrakten.</p>
           <p class="note">Kein Arzneimittel.</p>
+          <h4>Vorteile</h4>
+          <ul>
+            <li>D-Asparaginsäure</li>
+            <li>Maca-Wurzelextrakt und Bockshornklee-Extrakt</li>
+            <li>Zink</li>
+            <li>Kapseln à 820 mg · 120 Kapseln in der Packung</li>
+          </ul>
           <h4>Wirkstoffe (3 Kapseln)</h4>
           <table class="spec">
-            <thead><tr><th>Komponente</th><th>Gehalt</th></tr></thead>
+            <thead><tr><th>Komponente</th><th>Gehalt</th><th>% RDI / AI</th></tr></thead>
             <tbody>
-              <tr><td>Asparaginsäure</td><td>1000 mg</td></tr>
-              <tr><td>Maca-Wurzelextrakt</td><td>500 mg</td></tr>
-              <tr><td>Bockshornklee-Extrakt</td><td>500 mg</td></tr>
-              <tr><td>Zink</td><td>25 mg</td></tr>
+              <tr><td>Asparaginsäure</td><td>1000 mg</td><td>8,2%</td></tr>
+              <tr><td>Maca-Wurzelextrakt</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Bockshornklee-Extrakt</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Zink</td><td>25 mg</td><td>166,6%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — empfohlene Tageszufuhr, AI — angemessene Zufuhr. * überschreitet die zulässige Höchstmenge nicht. Ein Strich: auf dem Etikett steht kein Prozent. Schwarzer-Pfeffer-Extrakt ist in der Zusammensetzung, ohne Milligrammangabe.</p>
           <h4>Anwendung</h4>
           <ul>
             <li>Erwachsene: 1 Kapsel 3× täglich zu den Mahlzeiten</li>
-            <li>Kur: 1 Monat</li>
+            <li>Kur: 1 Monat; bei Bedarf wiederholen</li>
+            <li>Vor der Anwendung wird eine ärztliche Beratung empfohlen</li>
+          </ul>
+          <h4>Zusammensetzung</h4>
+          <p>D-Asparaginsäure, Maca-Wurzelextrakt, Bockshornklee-Extrakt, Gelatine (Hülle), Zinkcitrat, Extrakt aus schwarzem Pfeffer.</p>
+          <h4>Wichtig</h4>
+          <ul>
+            <li>Haltbarkeit: 2 Jahre</li>
+            <li>Lagern bei +5…+25 °C, ohne direkte Sonne, außerhalb der Reichweite von Kindern</li>
+            <li>Gegenanzeigen: individuelle Unverträglichkeit, Schwangerschaft, Stillzeit</li>
+            <li>Staatliche Registrierung: AM.01.11.01.003.R.000355.06.24 vom 03.06.2024 · TU 10.89.19-026-26264713-2024</li>
           </ul>
         `,
       },
@@ -1465,20 +1888,38 @@ window.HORBI_PRODUCTS = [
         descriptionHtml: `
           <p class="lead">Integratore “Testobooster” — fonte aggiuntiva di acido aspartico e zinco con estratti di maca e fieno greco.</p>
           <p class="note">Non è un medicinale.</p>
+          <h4>Vantaggi</h4>
+          <ul>
+            <li>Acido D-aspartico</li>
+            <li>Estratto di radice di maca e estratto di fieno greco</li>
+            <li>Zinco</li>
+            <li>Capsule da 820 mg · 120 capsule nella confezione</li>
+          </ul>
           <h4>Componenti attivi (3 capsule)</h4>
           <table class="spec">
-            <thead><tr><th>Componente</th><th>Quantità</th></tr></thead>
+            <thead><tr><th>Componente</th><th>Quantità</th><th>% RDI / AI</th></tr></thead>
             <tbody>
-              <tr><td>Acido aspartico</td><td>1000 mg</td></tr>
-              <tr><td>Estratto di radice di maca</td><td>500 mg</td></tr>
-              <tr><td>Estratto di fieno greco</td><td>500 mg</td></tr>
-              <tr><td>Zinco</td><td>25 mg</td></tr>
+              <tr><td>Acido aspartico</td><td>1000 mg</td><td>8,2%</td></tr>
+              <tr><td>Estratto di radice di maca</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Estratto di fieno greco</td><td>500 mg</td><td>—</td></tr>
+              <tr><td>Zinco</td><td>25 mg</td><td>166,6%*</td></tr>
             </tbody>
           </table>
+          <p class="note">% RDI — assunzione giornaliera raccomandata, AI — assunzione adeguata. * non supera il livello massimo consentito. Il trattino: in etichetta non c’è una percentuale. L’estratto di pepe nero è nella composizione, senza milligrammi.</p>
           <h4>Modalità d’uso</h4>
           <ul>
             <li>Adulti: 1 capsula 3 volte al giorno con i pasti</li>
-            <li>Ciclo: 1 mese</li>
+            <li>Ciclo: 1 mese; se necessario, ripetere</li>
+            <li>Prima dell’uso si consiglia di consultare un medico</li>
+          </ul>
+          <h4>Composizione</h4>
+          <p>Acido D-aspartico, estratto di radice di maca peruviana, estratto di fieno greco, gelatina (involucro), citrato di zinco, estratto di pepe nero.</p>
+          <h4>Importante</h4>
+          <ul>
+            <li>Scadenza: 2 anni</li>
+            <li>Conservare a +5…+25 °C, al riparo dal sole, fuori dalla portata dei bambini</li>
+            <li>Controindicazioni: intolleranza individuale, gravidanza, allattamento</li>
+            <li>Registrazione: AM.01.11.01.003.R.000355.06.24 del 03.06.2024 · TU 10.89.19-026-26264713-2024</li>
           </ul>
         `,
       },
