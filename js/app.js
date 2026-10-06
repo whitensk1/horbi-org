@@ -239,7 +239,7 @@
     "soon-magnesium-citrate": "hero_citrate",
     "soon-testobooster": "hero_testo",
   };
-  const HERO_DWELL = 5600;
+  const HERO_DWELL = 4000;
   let heroIndex = 0;
   let heroTimer = 0;
   let heroHold = null;
@@ -249,6 +249,7 @@
   function heroLoop() {
     const chloro = {
       id: "chlorophyll",
+      rail: "smorodina",
       title: t("hero_chlorophyll"),
       sub: t("hero_sub"),
       src: "media/web/smorodina/00.jpg",
@@ -297,8 +298,18 @@
     document.querySelectorAll("#flavor-rail a[data-open]").forEach((a) => {
       const on = a.dataset.open === id;
       a.classList.toggle("is-on", on);
-      if (on) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
+      if (!on) {
+        a.removeAttribute("aria-current");
+        return;
+      }
+      a.setAttribute("aria-current", "true");
+      const row = a.parentElement;
+      if (row && row.scrollWidth > row.clientWidth + 8) {
+        const aRect = a.getBoundingClientRect();
+        const rRect = row.getBoundingClientRect();
+        const delta = aRect.left + aRect.width / 2 - (rRect.left + rRect.width / 2);
+        row.scrollBy({ left: delta, behavior: "smooth" });
+      }
     });
   }
 
@@ -310,11 +321,11 @@
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const apply = () => {
       title.textContent = slide.title;
-      title.classList.toggle("is-long", slide.title.length > 16);
+      title.classList.toggle("is-long", slide.title.length > 18);
       sub.textContent = slide.sub;
       photo.src = slide.src;
       photo.alt = slide.alt;
-      markHeroRail(slide.id);
+      markHeroRail(slide.rail || slide.id);
     };
     heroToken += 1;
     const token = heroToken;

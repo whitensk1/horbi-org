@@ -1333,7 +1333,7 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
     padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
   }
   .hero-logo { width: min(78vw, 300px); }
-  .hero h1 { font-size: clamp(2.1rem, 9vw, 3.2rem); }
+  .hero h1 { font-size: clamp(2.8rem, 12vw, 4.4rem); }
   .hero-fade { height: 48px; }
   .sheet-nav { width: 36px; height: 36px; font-size: 20px; }
   .sheet-nav.prev { left: 6px; }
@@ -1594,17 +1594,17 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   margin: 16px 0 0;
   color: var(--navy);
   font-weight: 500;
-  font-size: clamp(2.7rem, 1.4rem + 4.2vw, 5rem);
-  letter-spacing: -0.03em;
-  line-height: 0.98;
+  font-size: clamp(3.6rem, 1.8rem + 6.4vw, 7.6rem);
+  letter-spacing: -0.035em;
+  line-height: 0.9;
   text-shadow: none;
   text-align: left;
   width: 100%;
-  min-height: 2.05em;
+  min-height: 0;
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .hero h1.is-long {
-  font-size: clamp(2rem, 1rem + 2.8vw, 3.5rem);
+  font-size: clamp(2.8rem, 1.3rem + 4.2vw, 5.4rem);
 }
 .hero h1.is-out,
 .hero .sub.is-out,
@@ -1729,7 +1729,7 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   border: 0;
   background: transparent;
   border-radius: 0;
-  padding: 8px 18px 8px 0;
+  padding: 7px 12px;
   font-family: var(--serif);
   font-size: 1.05rem;
   font-weight: 500;
@@ -1747,15 +1747,21 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   font-weight: 650;
 }
 .flavor-rail a:hover { background: transparent; color: var(--navy); }
-.flavor-rail a.is-on { background: transparent; }
+.flavor-rail a.is-on {
+  background: rgba(141, 115, 68, 0.22);
+  color: var(--navy);
+  box-shadow: 0 0 0 1px rgba(141, 115, 68, 0.45);
+}
+.flavor-rail a.is-on span { color: var(--navy); }
 .flavor-rail a.is-on::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 18px;
-  bottom: 2px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 3px;
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(141, 115, 68, 0.9);
 }
 
 .catalog-band {
