@@ -190,8 +190,14 @@
     setNavOpen(false);
   }
 
+  const MEDIA_REV = "20261006jar";
+  function mediaSrc(src) {
+    if (!src) return "";
+    return src + (src.includes("?") ? "&" : "?") + "v=" + MEDIA_REV;
+  }
+
   function coverOf(p) {
-    return (p.images && p.images[0]) || "";
+    return mediaSrc((p.images && p.images[0]) || "");
   }
 
   const FLAVOR_KEYS = {
@@ -481,7 +487,7 @@
       wb.hidden = true;
     }
 
-    galleryImages = (p.images || []).filter(Boolean);
+    galleryImages = (p.images || []).filter(Boolean).map(mediaSrc);
     galleryIndex = 0;
     const main = $("sheet-main");
     const thumbs = $("sheet-thumbs");
