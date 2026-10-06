@@ -1566,6 +1566,7 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   max-height: none;
   object-fit: contain;
   object-position: center;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .hero-media,
 .hero-fade,
@@ -1595,6 +1596,17 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   letter-spacing: -0.03em;
   line-height: 0.98;
   text-shadow: none;
+  min-height: 2.05em;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.hero h1.is-long {
+  font-size: clamp(2rem, 1rem + 2.8vw, 3.5rem);
+}
+.hero h1.is-out,
+.hero .sub.is-out,
+.hero-still img.is-out {
+  opacity: 0;
+  transform: translateY(10px);
 }
 .hero-rule {
   width: 48px;
@@ -1607,6 +1619,8 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   color: var(--muted);
   max-width: 42ch;
   font-size: 1.02rem;
+  min-height: 4.6em;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .hero .btn-fill {
   background: var(--navy);
@@ -1623,7 +1637,8 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
 .flavor-rail {
   grid-column: 1 / -1;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: stretch;
   gap: 0;
   margin-top: 8px;
@@ -1631,6 +1646,29 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   width: 100%;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+.rail-row {
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+}
+.rail-row + .rail-row { border-top: 1px solid var(--line); }
+.rail-label {
+  flex: 0 0 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-right: 1px solid var(--line);
+}
+.rail-links {
+  display: flex;
+  flex: 1;
+  min-width: 0;
 }
 .flavor-rail a {
   display: inline-flex;
@@ -1643,13 +1681,14 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   border-right: 1px solid var(--line);
   background: transparent;
   border-radius: 0;
-  padding: 14px 10px;
+  padding: 14px 8px;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  text-align: center;
   backdrop-filter: none;
 }
-.flavor-rail a:last-child { border-right: 0; }
+.rail-links a:last-child { border-right: 0; }
 .flavor-rail a span {
   font-size: 10px;
   letter-spacing: 0.14em;
@@ -1657,6 +1696,7 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   font-weight: 650;
 }
 .flavor-rail a:hover { background: rgba(35, 37, 82, 0.04); color: var(--navy); }
+.flavor-rail a.is-on { background: rgba(35, 37, 82, 0.06); }
 
 .catalog-band {
   background: transparent;
@@ -1875,12 +1915,17 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   .hero-copy { align-items: center; text-align: center; }
   .hero .actions,
   .flavor-rail { justify-content: center; }
-  .hero-still { max-width: 420px; justify-self: center; aspect-ratio: 1 / 1; }
+  .hero { padding-top: 92px; padding-bottom: 16px; gap: 14px; }
+  .hero h1 { min-height: 1.15em; }
+  .hero .sub { min-height: 0; }
+  .hero-still { max-width: 200px; justify-self: center; aspect-ratio: 4 / 5; }
   .about-facts,
   .closer { grid-template-columns: 1fr; }
   .about-facts li { border-right: 0; border-bottom: 1px solid var(--line); }
   .about-facts li:last-child { border-bottom: 0; }
-  .flavor-rail a { border-right: 0; border-bottom: 1px solid var(--line); flex: 1 1 40%; justify-content: center; }
+  .rail-label { flex-basis: 72px; padding: 0 8px; }
+  .rail-links { overflow-x: auto; }
+  .flavor-rail a { flex: 0 0 auto; padding: 12px 14px; }
 }
 @media (max-width: 760px) {
   .grid.grid-liquid,
@@ -1893,6 +1938,11 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
     min-height: 0;
     padding-top: 104px;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .hero .sub,
+  .hero-still img { transition: none; }
 }
 @media (max-width: 520px) {
   .grid.grid-liquid,

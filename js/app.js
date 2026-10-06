@@ -102,8 +102,6 @@
       "tg-channel-sub": "tg_sub",
       "tg-channel-cta": "tg_cta",
       "hero-kicker": "hero_kicker",
-      "hero-title": "hero_title",
-      "hero-sub": "hero_sub",
       "hero-cta": "hero_cta",
       "hero-cta2": "hero_cta2",
       "sec-live-kicker": "sec_live_kicker",
@@ -226,21 +224,188 @@
     renderFlavorRail();
   }
 
+  const HERO_CAP_KEYS = {
+    "soon-magnesium-chelate": "hero_chelate",
+    "soon-inositol": "hero_inositol",
+    "soon-collagen": "hero_collagen",
+    "soon-magnesium-citrate": "hero_citrate",
+    "soon-testobooster": "hero_testo",
+  };
+  const HERO_DWELL = 5600;
+  let heroIndex = 0;
+  let heroTimer = 0;
+  let heroHold = null;
+  let heroStarted = false;
+  let heroToken = 0;
+
+  function heroLoop() {
+    const chloro = {
+      id: "chlorophyll",
+      title: t("hero_chlorophyll"),
+      sub: t("hero_sub"),
+      src: "media/web/smorodina/00.jpg",
+      alt: t("hero_chlorophyll"),
+    };
+    const caps = PRODUCTS.filter((p) => p.status === "live" && !p.flavorKey).map((p) => {
+      const tx = productText(p);
+      return {
+        id: p.id,
+        title: t(HERO_CAP_KEYS[p.id] || "sec_caps"),
+        sub: tx.short || tx.name,
+        src: coverOf(p),
+        alt: tx.name,
+      };
+    });
+    return [chloro, ...caps];
+  }
+
+  function slideForProduct(p) {
+    const tx = productText(p);
+    if (p.flavorKey) {
+      return {
+        id: p.id,
+        title: t(FLAVOR_KEYS[p.flavorKey] || "hero_chlorophyll"),
+        sub: tx.short || tx.name,
+        src: coverOf(p),
+        alt: tx.name,
+      };
+    }
+    return {
+      id: p.id,
+      title: t(HERO_CAP_KEYS[p.id] || "sec_caps"),
+      sub: tx.short || tx.name,
+      src: coverOf(p),
+      alt: tx.name,
+    };
+  }
+
+  function currentHeroSlide() {
+    if (heroHold) return heroHold;
+    const slides = heroLoop();
+    return slides[heroIndex % slides.length];
+  }
+
+  function markHeroRail(id) {
+    document.querySelectorAll("#flavor-rail a[data-open]").forEach((a) => {
+      const on = a.dataset.open === id;
+      a.classList.toggle("is-on", on);
+      if (on) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  }
+
+  function paintHero(slide, animate) {
+    const title = $("hero-title");
+    const sub = $("hero-sub");
+    const photo = $("hero-photo");
+    if (!title || !sub || !photo || !slide) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const apply = () => {
+      title.textContent = slide.title;
+      title.classList.toggle("is-long", slide.title.length > 16);
+      sub.textContent = slide.sub;
+      photo.src = slide.src;
+      photo.alt = slide.alt;
+      markHeroRail(slide.id);
+    };
+    heroToken += 1;
+    const token = heroToken;
+    if (!animate || reduce) {
+      title.classList.remove("is-out");
+      sub.classList.remove("is-out");
+      photo.classList.remove("is-out");
+      apply();
+      return;
+    }
+    const preload = new Image();
+    preload.src = slide.src;
+    title.classList.add("is-out");
+    sub.classList.add("is-out");
+    photo.classList.add("is-out");
+    window.setTimeout(() => {
+      if (token !== heroToken) return;
+      apply();
+      requestAnimationFrame(() => {
+        title.classList.remove("is-out");
+        sub.classList.remove("is-out");
+        photo.classList.remove("is-out");
+      });
+    }, 420);
+  }
+
+  function armHero() {
+    window.clearTimeout(heroTimer);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    heroTimer = window.setTimeout(() => {
+      heroHold = null;
+      const slides = heroLoop();
+      heroIndex = (heroIndex + 1) % slides.length;
+      paintHero(slides[heroIndex], true);
+      armHero();
+    }, HERO_DWELL);
+  }
+
+  function showHeroProduct(p) {
+    if (!p) return;
+    if (p.flavorKey) {
+      heroHold = slideForProduct(p);
+      paintHero(heroHold, true);
+    } else {
+      heroHold = null;
+      const slides = heroLoop();
+      const idx = slides.findIndex((s) => s.id === p.id);
+      if (idx >= 0) heroIndex = idx;
+      paintHero(slides[heroIndex] || slideForProduct(p), true);
+    }
+    armHero();
+  }
+
+  function startHero() {
+    paintHero(currentHeroSlide(), false);
+    if (heroStarted) return;
+    heroStarted = true;
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      hero.addEventListener("pointerenter", (e) => {
+        if (e.pointerType === "mouse") window.clearTimeout(heroTimer);
+      });
+      hero.addEventListener("pointerleave", (e) => {
+        if (e.pointerType === "mouse") armHero();
+      });
+    }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) window.clearTimeout(heroTimer);
+      else armHero();
+    });
+    armHero();
+  }
+
   function renderFlavorRail() {
     const rail = $("flavor-rail");
     if (!rail) return;
+    rail.setAttribute("aria-label", t("rail_aria"));
     const liquids = PRODUCTS.filter((p) => p.flavorKey && p.status === "live");
-    rail.innerHTML = liquids
-      .map((p, i) => {
-        const label = t(FLAVOR_KEYS[p.flavorKey] || "card_open");
-        const n = String(i + 1).padStart(2, "0");
-        return `<a href="#products" data-open="${esc(p.id)}"><span>${n}</span>${esc(label)}</a>`;
-      })
-      .join("");
+    const caps = PRODUCTS.filter((p) => !p.flavorKey && p.status === "live");
+    const links = (list, offset) =>
+      list
+        .map((p, i) => {
+          const label = p.flavorKey
+            ? t(FLAVOR_KEYS[p.flavorKey] || "card_open")
+            : t(HERO_CAP_KEYS[p.id] || "sec_caps");
+          const n = String(offset + i + 1).padStart(2, "0");
+          return `<a href="#products" data-open="${esc(p.id)}"><span>${n}</span>${esc(label)}</a>`;
+        })
+        .join("");
+    const row = (label, html) =>
+      `<div class="rail-row"><span class="rail-label">${esc(label)}</span><div class="rail-links">${html}</div></div>`;
+    rail.innerHTML =
+      row(t("rail_tastes"), links(liquids, 0)) + row(t("rail_caps"), links(caps, liquids.length));
     rail.querySelectorAll("[data-open]").forEach((a) => {
       a.addEventListener("click", (e) => {
         e.preventDefault();
         const id = a.dataset.open;
+        const product = PRODUCTS.find((p) => p.id === id);
+        showHeroProduct(product);
         const card = document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
         if (card) {
           card.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -253,6 +418,7 @@
         }
       });
     });
+    markHeroRail(currentHeroSlide()?.id);
   }
 
   function cardHTML(p) {
@@ -612,6 +778,7 @@
       localStorage.setItem("horbi_lang", lang);
       applyStatic();
       renderCards();
+      paintHero(currentHeroSlide(), false);
     });
   });
 
@@ -700,4 +867,5 @@
 
   applyStatic();
   renderCards();
+  startHero();
 })();
