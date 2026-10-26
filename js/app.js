@@ -5,6 +5,7 @@
   const PRODUCTS = window.HORBI_PRODUCTS || [];
   const LANGS = ["en", "de", "ru", "it"];
   const WB_BRAND = "https://www.wildberries.ru/brands/312311510-horbi";
+  const OZON_BRAND = "https://www.ozon.ru/category/bad-dlya-korrektsii-vesa-35174/horbi-102087142/";
   const CONTACT = "https://dluck.ru/#kontact";
   const TELEGRAM = "https://t.me/horbiorg";
   const SITE = "https://horbi.org/";
@@ -104,6 +105,7 @@
       "hero-kicker": "hero_kicker",
       "hero-cta": "hero_cta",
       "hero-cta2": "hero_cta2",
+      "hero-cta-ozon": "hero_cta_ozon",
       "sec-live-kicker": "sec_live_kicker",
       "sec-live": "section_live",
       "sec-caps-kicker": "sec_caps_kicker",
@@ -157,6 +159,8 @@
     if (tgCard) tgCard.href = TELEGRAM;
     const wbHero = $("hero-cta2");
     if (wbHero) wbHero.href = WB_BRAND;
+    const ozonHero = $("hero-cta-ozon");
+    if (ozonHero) ozonHero.href = OZON_BRAND;
     const heroScroll = $("hero-scroll");
     if (heroScroll) heroScroll.setAttribute("aria-label", t("section_live"));
     const modalX = $("modal-close");
@@ -172,6 +176,11 @@
     if (shop) {
       shop.href = WB_BRAND;
       shop.textContent = t("nav_shop");
+    }
+    const ozonNav = $("nav-ozon");
+    if (ozonNav) {
+      ozonNav.href = OZON_BRAND;
+      ozonNav.textContent = t("nav_ozon");
     }
     document.querySelectorAll(".lang button").forEach((b) => {
       b.classList.toggle("active", b.dataset.lang === lang);
@@ -227,7 +236,17 @@
     if (soonGrid) soonGrid.innerHTML = soon.map(cardHTML).join("");
     if (soonSec) soonSec.hidden = soon.length === 0;
     document.querySelectorAll(".card[data-id]").forEach((card) => {
-      card.addEventListener("click", () => openProduct(card.dataset.id));
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("a")) return;
+        openProduct(card.dataset.id);
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.target.closest("a")) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openProduct(card.dataset.id);
+        }
+      });
     });
     renderFlavorRail();
   }
@@ -440,6 +459,23 @@
     markHeroRail(currentHeroSlide()?.id);
   }
 
+  function shopLinksHTML(p) {
+    if (p.status !== "live") return "";
+    const bits = [];
+    if (p.wb) {
+      bits.push(
+        `<a class="card-shop" href="${esc(p.wb)}" target="_blank" rel="noopener">${esc(t("nav_shop"))}</a>`
+      );
+    }
+    if (p.ozon) {
+      bits.push(
+        `<a class="card-shop" href="${esc(p.ozon)}" target="_blank" rel="noopener">${esc(t("nav_ozon"))}</a>`
+      );
+    }
+    if (!bits.length) return "";
+    return `<div class="card-shops">${bits.join("")}</div>`;
+  }
+
   function cardHTML(p) {
     const tx = productText(p);
     const cover = coverOf(p);
@@ -457,7 +493,7 @@
       media = `<div class="ph"><span class="soon-big">${esc(t("soon_badge"))}</span></div>`;
     }
     return `
-      <button type="button" class="card ${p.flavorKey ? "card-liquid" : "card-capsule"} ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
+      <article class="card ${p.flavorKey ? "card-liquid" : "card-capsule"} ${soon ? "soon" : ""}" data-id="${esc(p.id)}">
         <div class="card-media">
           ${soon ? `<span class="badge">${esc(t("soon_badge"))}</span>` : ""}
           ${media}
@@ -466,9 +502,10 @@
           ${p.sku ? `<div class="card-sku">${esc(p.sku)}</div>` : ""}
           <h3>${esc(heading)}</h3>
           <p>${esc(tx.short || tx.name)}</p>
+          ${shopLinksHTML(p)}
           <div class="more">${esc(soon ? t("soon_badge") : t("card_open"))}</div>
         </div>
-      </button>`;
+      </article>`;
   }
 
   let galleryImages = [];
@@ -496,6 +533,17 @@
       wb.textContent = t("modal_wb");
     } else {
       wb.hidden = true;
+    }
+    const ozon = $("sheet-ozon");
+    if (ozon) {
+      if (p.status === "live" && p.ozon) {
+        ozon.href = p.ozon;
+        ozon.hidden = false;
+        ozon.textContent = t("modal_ozon");
+      } else {
+        ozon.hidden = true;
+        ozon.removeAttribute("href");
+      }
     }
 
     galleryImages = (p.images || []).filter(Boolean).map(mediaSrc);

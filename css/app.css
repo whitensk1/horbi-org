@@ -185,14 +185,16 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   background: rgba(47, 107, 58, 0.08);
   color: var(--ink);
 }
-.nav-links > a.nav-shop {
+.nav-links > a.nav-shop,
+.nav-links > a.nav-ozon {
   color: #fff;
   font-weight: 600;
   background: var(--green);
   text-align: center;
   margin-top: 4px;
 }
-.nav-links > a.nav-shop:hover {
+.nav-links > a.nav-shop:hover,
+.nav-links > a.nav-ozon:hover {
   background: var(--green-mid);
   color: #fff;
 }
@@ -272,6 +274,7 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
     color: var(--ink);
   }
   .nav-links > a.nav-shop,
+  .nav-links > a.nav-ozon,
   .nav-links > a.nav-tg {
     background: transparent;
     margin-top: 0;
@@ -1512,14 +1515,16 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
 .nav-links > a {
   letter-spacing: 0.01em;
 }
-.nav-links > a.nav-shop {
+.nav-links > a.nav-shop,
+.nav-links > a.nav-ozon {
   background: var(--navy);
   color: #f7f4ee;
   box-shadow: none;
   border-radius: 2px;
 }
 @media (min-width: 900px) {
-  .nav-links > a.nav-shop {
+  .nav-links > a.nav-shop,
+  .nav-links > a.nav-ozon {
     display: inline-flex;
     align-items: center;
     background: var(--navy);
@@ -1531,7 +1536,8 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
     text-transform: uppercase;
     font-size: 11px;
   }
-  .nav-links > a.nav-shop:hover {
+  .nav-links > a.nav-shop:hover,
+  .nav-links > a.nav-ozon:hover {
     background: #12142e;
     color: #f7f4ee;
   }
@@ -1860,6 +1866,27 @@ h1, h2, h3, .section h2, .about h2, .contact-block h2, .hero h1 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.card-shops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+.card-shop {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--navy);
+}
+.card-shop:hover {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #f7f4ee;
 }
 .card-body .more {
   color: var(--navy);

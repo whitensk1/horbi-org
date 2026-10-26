@@ -42,6 +42,7 @@ window.HORBI_PRODUCTS = [
       "media/web/myata/30.jpg"
     ],
     wb: "https://www.wildberries.ru/catalog/1094870954/detail.aspx",
+    ozon: "https://www.ozon.ru/product/hlorofill-zhidkiy-500-ml-horbi-myata-4743124644/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Дикая мята» 500 мл",
@@ -250,6 +251,7 @@ window.HORBI_PRODUCTS = [
       "media/web/smorodina/28.jpg"
     ],
     wb: "https://www.wildberries.ru/catalog/1095345290/detail.aspx",
+    ozon: "https://www.ozon.ru/product/hlorofill-zhidkiy-500-ml-horbi-chernaya-smorodina-4743335791/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Сочная смородина» 500 мл",
@@ -448,6 +450,7 @@ window.HORBI_PRODUCTS = [
       "media/web/marakuya/32.jpg"
     ],
     wb: "https://www.wildberries.ru/catalog/1095385962/detail.aspx",
+    ozon: "https://www.ozon.ru/product/hlorofill-zhidkiy-500-ml-horbi-marakuyya-4655801651/",
     i18n: {
       ru: {
         name: "HÖRBI Хлорофилл «Тропическая маракуйя» 500 мл",

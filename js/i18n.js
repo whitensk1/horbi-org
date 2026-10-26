@@ -4,6 +4,7 @@ window.HORBI_I18N = {
     nav_products: "Products",
     nav_about: "About",
     nav_shop: "Wildberries",
+    nav_ozon: "Ozon",
     nav_telegram: "Telegram",
     nav_contact: "Contact",
     nav_articles: "Journal",
@@ -37,6 +38,7 @@ window.HORBI_I18N = {
     rail_aria: "Chlorophyll tastes and capsules",
     hero_cta: "Explore products",
     hero_cta2: "Brand on Wildberries",
+    hero_cta_ozon: "Brand on Ozon",
     section_live: "Liquid chlorophyll",
     sec_live_kicker: "Line · 500 ml",
     sec_caps: "Capsules",
@@ -56,6 +58,7 @@ window.HORBI_I18N = {
     card_open: "Details",
     modal_close: "Close",
     modal_wb: "Buy on Wildberries",
+    modal_ozon: "Buy on Ozon",
     about_title: "About the brand",
     about_body:
       "HÖRBI is a brand that makes food supplements on the basis of a German formula. The composition stays clear, and the dose is the one printed on the label.",
@@ -77,15 +80,16 @@ window.HORBI_I18N = {
     photo_soon: "Photo coming soon",
     seo_title: "HÖRBI — Liquid Chlorophyll & Food Supplements | Five tastes, 500 ml",
     seo_description:
-      "HÖRBI — liquid chlorophyll concentrate, 500 ml, in five tastes: wild mint, blackcurrant, passion fruit, forest berries and raspberry. Capsules on the same shelf. Clean formulas on Wildberries.",
+      "HÖRBI — liquid chlorophyll concentrate, 500 ml, in five tastes: wild mint, blackcurrant, passion fruit, forest berries and raspberry. Capsules on the same shelf. Clean formulas on Wildberries and Ozon.",
     seo_keywords:
-      "HÖRBI, liquid chlorophyll, chlorophyll concentrate, food supplements, dietary supplements, mint chlorophyll, blackcurrant chlorophyll, passion fruit chlorophyll, Wildberries",
+      "HÖRBI, liquid chlorophyll, chlorophyll concentrate, food supplements, dietary supplements, mint chlorophyll, blackcurrant chlorophyll, passion fruit chlorophyll, Wildberries, Ozon",
     seo_og_locale: "en_US",
   },
   de: {
     nav_products: "Produkte",
     nav_about: "Über uns",
     nav_shop: "Wildberries",
+    nav_ozon: "Ozon",
     nav_telegram: "Telegram",
     nav_contact: "Kontakt",
     nav_articles: "Journal",
@@ -119,6 +123,7 @@ window.HORBI_I18N = {
     rail_aria: "Chlorophyll-Geschmäcker und Kapseln",
     hero_cta: "Produkte entdecken",
     hero_cta2: "Marke auf Wildberries",
+    hero_cta_ozon: "Marke auf Ozon",
     section_live: "Flüssigchlorophyll",
     sec_live_kicker: "Linie · 500 ml",
     sec_caps: "Kapseln",
@@ -138,6 +143,7 @@ window.HORBI_I18N = {
     card_open: "Details",
     modal_close: "Schließen",
     modal_wb: "Bei Wildberries kaufen",
+    modal_ozon: "Bei Ozon kaufen",
     about_title: "Über die Marke",
     about_body:
       "HÖRBI ist eine Marke, die Nahrungsergänzungsmittel auf Grundlage einer deutschen Formel herstellt. Die Zusammensetzung bleibt klar, die Dosis steht auf dem Etikett.",
@@ -161,13 +167,14 @@ window.HORBI_I18N = {
     seo_description:
       "HÖRBI — flüssiges Chlorophyll-Konzentrat, 500 ml, in fünf Geschmäckern: Minze, Johannisbeere, Maracuja, Waldbeeren und Himbeere. Kapseln im selben Regal.",
     seo_keywords:
-      "HÖRBI, Flüssigchlorophyll, Chlorophyll-Konzentrat, Nahrungsergänzungsmittel, Minze, Johannisbeere, Maracuja, Wildberries",
+      "HÖRBI, Flüssigchlorophyll, Chlorophyll-Konzentrat, Nahrungsergänzungsmittel, Minze, Johannisbeere, Maracuja, Wildberries, Ozon",
     seo_og_locale: "de_DE",
   },
   ru: {
     nav_products: "Продукты",
     nav_about: "О бренде",
     nav_shop: "Wildberries",
+    nav_ozon: "Ozon",
     nav_telegram: "Telegram",
     nav_contact: "Контакты",
     nav_articles: "Журнал",
@@ -201,6 +208,7 @@ window.HORBI_I18N = {
     rail_aria: "Вкусы хлорофилла и капсульные БАДы",
     hero_cta: "Смотреть продукты",
     hero_cta2: "Бренд на Wildberries",
+    hero_cta_ozon: "Бренд на Ozon",
     section_live: "Жидкий хлорофилл",
     sec_live_kicker: "Линейка · 500 мл",
     sec_caps: "Капсулы",
@@ -220,6 +228,7 @@ window.HORBI_I18N = {
     card_open: "Подробнее",
     modal_close: "Закрыть",
     modal_wb: "Купить на Wildberries",
+    modal_ozon: "Купить на Ozon",
     about_title: "О бренде",
     about_body:
       "HÖRBI — бренд, который создаёт БАДы на основании немецкой формулы. Состав понятный, доза — та, что указана на этикетке.",
@@ -243,13 +252,14 @@ window.HORBI_I18N = {
     seo_description:
       "HÖRBI — жидкий хлорофилл-концентрат, 500 мл, в пяти вкусах: мята, смородина, маракуйя, лесные ягоды и малина. Капсулы на той же полке. Официальный сайт horbi.org.",
     seo_keywords:
-      "HÖRBI, хёрби, жидкий хлорофилл, хлорофилл концентрат, БАД, БАДы, хлорофилл мята, хлорофилл смородина, хлорофилл маракуйя, Wildberries, детокс",
+      "HÖRBI, хёрби, жидкий хлорофилл, хлорофилл концентрат, БАД, БАДы, хлорофилл мята, хлорофилл смородина, хлорофилл маракуйя, Wildberries, Ozon, детокс",
     seo_og_locale: "ru_RU",
   },
   it: {
     nav_products: "Prodotti",
     nav_about: "Il brand",
     nav_shop: "Wildberries",
+    nav_ozon: "Ozon",
     nav_telegram: "Telegram",
     nav_contact: "Contatti",
     nav_articles: "Journal",
@@ -283,6 +293,7 @@ window.HORBI_I18N = {
     rail_aria: "Gusti di clorofilla e capsule",
     hero_cta: "Esplora i prodotti",
     hero_cta2: "Brand su Wildberries",
+    hero_cta_ozon: "Brand su Ozon",
     section_live: "Clorofilla liquida",
     sec_live_kicker: "Linea · 500 ml",
     sec_caps: "Capsule",
@@ -302,6 +313,7 @@ window.HORBI_I18N = {
     card_open: "Dettagli",
     modal_close: "Chiudi",
     modal_wb: "Acquista su Wildberries",
+    modal_ozon: "Acquista su Ozon",
     about_title: "Il brand",
     about_body:
       "HÖRBI è un brand che crea integratori sulla base di una formula tedesca. Composizione chiara, dose come indicata in etichetta.",
@@ -325,7 +337,7 @@ window.HORBI_I18N = {
     seo_description:
       "HÖRBI — concentrato di clorofilla liquida, 500 ml, in cinque gusti: menta, ribes, maracuja, frutti di bosco e lampone. Capsule nello stesso scaffale.",
     seo_keywords:
-      "HÖRBI, clorofilla liquida, concentrato di clorofilla, integratori, menta, ribes, maracuja, Wildberries",
+      "HÖRBI, clorofilla liquida, concentrato di clorofilla, integratori, menta, ribes, maracuja, Wildberries, Ozon",
     seo_og_locale: "it_IT",
   },
 };
